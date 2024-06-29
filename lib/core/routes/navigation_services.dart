@@ -16,4 +16,8 @@ class NavigationServices {
   pop() {
     return navigatorKey.currentContext!.pop();
   }
+
+  pushRepleshmentName(name) {
+    return navigatorKey.currentContext!.pushReplacementNamed(name);
+  }
 }
