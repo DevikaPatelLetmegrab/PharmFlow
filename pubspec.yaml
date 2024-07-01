@@ -34,6 +34,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  gap:
+  flutter_otp_text_field:
+  advanced_chips_input:
+  dotted_border:
+  carousel_slider:
 
   bloc: ^8.1.4
   equatable: ^2.0.5
@@ -73,6 +78,7 @@ flutter:
      
 
 
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -106,6 +112,5 @@ flutter:
           style: normal
           weight: 200
      
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
