@@ -17,7 +17,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.welcomePage,
         name: AppRoutes.welcomePage,
-        builder: (context, state) => const WelcomePage(),
+        builder: (context, state) => WelcomePage(),
       ),
     ],
   );
