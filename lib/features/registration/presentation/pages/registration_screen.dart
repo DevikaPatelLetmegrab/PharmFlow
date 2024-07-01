@@ -30,8 +30,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Gap(AppDimens.space40),
-            const Gap(AppDimens.space40),
+            const Gap(AppDimens.space80),
             Squircle(
               height: AppDimens.space50,
               width: AppDimens.space50,
@@ -76,13 +75,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   content: "Account Created Succesfully",
                   onTap: (){
                     NavigationServices().pushName(AppRoutes.registrationprofile);
-                  }
+                  }, btnName: 'Continue'
                 );
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,
               borderRadius: BorderRadius.circular(AppDimens.borderRadius30),
-              height: context.getHeight * 0.070,
+              // height: context.getHeight * 0.070,
               childWidget: Text(
                 'Verify OTP',
                 style: context.md14.withWhite.weigh400,

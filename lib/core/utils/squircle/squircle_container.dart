@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:pharm_flow/core/utils/squircle/squircle_decordation.dart';
 
-import '../../config/app_colors.dart';
-import '../app_constants.dart';
+import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/utils/app_constants.dart';
 @immutable
 class Squircle extends Container {
   // final Widget schild;
   final BorderSide? side;
-  final double? height;
-  final double? width;
   final Color? backgroundColor;
   final Color borderColor;
   final double radius;
@@ -26,13 +24,14 @@ class Squircle extends Container {
     this.borderColor = AppColors.grey78Color,
     this.side,
     this.gradient,
-    this.height,
-    this.width,
+
     this.customRadius,
     this.image,
     this.customShape,
     this.clipBehavior = Clip.hardEdge,
     super.key,
+    super.height,
+    super.width,
     super.alignment,
     super.constraints,
     super.foregroundDecoration,

@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
-import '../config/app_colors.dart';
-import '../config/app_dimension.dart';
-import '../utils/squircle/squircle_inputborder.dart';
+import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/utils/squircle/squircle_inputborder.dart';
 
 class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;

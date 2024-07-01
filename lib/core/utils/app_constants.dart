@@ -1,7 +1,7 @@
 import 'package:pharm_flow/core/config/app_assets.dart';
 
-import '../model/chip_model.dart';
-import '../model/gender_model.dart';
+import 'package:pharm_flow/core/model/chip_model.dart';
+import 'package:pharm_flow/core/model/gender_model.dart';
 
 class AppConstants {
   static const Duration gridAnimDuration375 = Duration(milliseconds: 375);

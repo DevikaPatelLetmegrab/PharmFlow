@@ -8,7 +8,7 @@ import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../bloc/counter_cubit.dart';
+import 'package:pharm_flow/features/welcome/presentation/bloc/counter_cubit.dart';
 
 class PageviewItem extends StatelessWidget {
   final String imgString;

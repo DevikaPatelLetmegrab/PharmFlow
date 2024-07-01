@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 
-import '../config/app_colors.dart';
+import 'package:pharm_flow/core/config/app_colors.dart';
 
 class InputChipWidget extends StatefulWidget {
   final String title;

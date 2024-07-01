@@ -94,7 +94,7 @@ class WelcomePage extends StatelessWidget {
                       ],
                     )
                   : SizedBox(
-                      height: 95,
+                      height: 120,
                       child: Column(
                         children: [
                           AppElevatedButton(

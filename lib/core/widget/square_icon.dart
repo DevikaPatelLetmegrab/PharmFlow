@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
-import '../config/app_colors.dart';
+import 'package:pharm_flow/core/config/app_colors.dart';
 
-class RoundIcon extends StatelessWidget {
-  const RoundIcon({
+class SquareIcon extends StatelessWidget {
+  const SquareIcon({
     super.key,
     required this.iconPath,
     this.backgroundColor = AppColors.primary,
@@ -31,8 +31,6 @@ class RoundIcon extends StatelessWidget {
       decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(context.w(radius))),
-      // radius: context.w(radius),
-      // backgroundColor: backgroundColor.withOpacity(bgopacity),
       child: Padding(
         padding: iconPadding ?? const EdgeInsets.all(8),
         child: Image.asset(
