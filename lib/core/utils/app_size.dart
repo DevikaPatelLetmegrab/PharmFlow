@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 extension CustomSize on BuildContext {
   /// Dynamic Height based on screen pixel ration
 
@@ -17,4 +18,5 @@ extension CustomSize on BuildContext {
 
   double get getHeight => MediaQuery.of(this).size.height;
   double get getWidth => MediaQuery.of(this).size.width;
+
 }

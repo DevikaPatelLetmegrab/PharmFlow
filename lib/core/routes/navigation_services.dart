@@ -20,4 +20,9 @@ class NavigationServices {
   pushRepleshmentName(name) {
     return navigatorKey.currentContext!.pushReplacementNamed(name);
   }
+
+
+  BuildContext getNavigationContext() {
+    return navigatorKey.currentState!.context;
+  }
 }
