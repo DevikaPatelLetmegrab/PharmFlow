@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class AppColors{
   static const Color primary = Color(0xff015C91);
   static const Color subPrimary = Color(0xff9DA7C0);

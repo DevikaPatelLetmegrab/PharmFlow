@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:pharm_flow/core/utils/squircle/squircle_decordation.dart';
 
 import '../../config/app_colors.dart';
@@ -31,10 +32,7 @@ class Squircle extends Container {
     super.alignment,
     super.constraints,
     super.foregroundDecoration,
-    super.height,
-    super.width,
-    super.margin,
-    super.padding,
+
   }) : super(
           decoration: SquircleDecoration(
               gradient: backgroundColor != null ? null : gradient,
@@ -44,6 +42,6 @@ class Squircle extends Container {
               radius: radius,
               customShape: customShape,
               customBorderRadius: customRadius),
-          clipBehavior: clipBehavior,
+          clipBehavior: clipBehavior
         );
 }
