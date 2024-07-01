@@ -8,7 +8,7 @@ import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
-import 'package:pharm_flow/core/widgets/app_assets_image.dart';
+import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -33,7 +33,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Stack(
         alignment: Alignment.center,
         children: [
-          SquircleContainer(
+          Squircle(
             height: context.getHeight,
             width: context.getWidth,
             radius: 0,
@@ -42,7 +42,7 @@ class _SplashPageState extends State<SplashPage> {
           Column(
             children: [
               const Spacer(),
-              AppAssetsImage(
+              AppAssetImage(
                 imagePath: AppAssets.logoLight,
                 size: 100,
               ),
@@ -54,7 +54,7 @@ class _SplashPageState extends State<SplashPage> {
               const Gap(AppDimens.space20),
             ],
           ),
-          AppAssetsImage(imagePath: AppAssets.splashBg)
+          AppAssetImage(imagePath: AppAssets.splashBg)
         ],
       ),
     );

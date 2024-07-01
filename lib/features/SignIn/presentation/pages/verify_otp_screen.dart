@@ -10,7 +10,6 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/core/widget/app_textform_field.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({super.key});
@@ -24,7 +23,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(AppDimens.space16),
+        padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -66,7 +65,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
             OtpTextField(
               numberOfFields: 4,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              fieldWidth: context.getWidth*0.15,
+              fieldWidth: context.getWidth * 0.15,
               borderRadius: BorderRadius.circular(AppDimens.borderRadius15),
               borderColor: AppColors.primary,
               showFieldAsBox: true,
@@ -78,7 +77,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: Text("Verification Code"),
+                        title: const Text("Verification Code"),
                         content: Text('Code entered is $verificationCode'),
                       );
                     });

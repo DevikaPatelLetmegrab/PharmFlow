@@ -1,11 +1,11 @@
 class AppAssets {
 
 
-  static String medicalPerson = 'assets/image/medical_person.png';
-  static String allergyImage = 'assets/image/allergy_image.png';
-  static String avtar1 = 'assets/image/avtar1.png';
-  static String avtar2 = 'assets/image/avtar2.png';
-  static String avtar3 = 'assets/image/avtar3.png';
+  static String medicalPerson = 'assets/images/medical_person.png';
+  static String allergyImage = 'assets/images/allergy_image.png';
+  static String avtar1 = 'assets/images/avtar1.png';
+  static String avtar2 = 'assets/images/avtar2.png';
+  static String avtar3 = 'assets/images/avtar3.png';
 
   ///icons
 

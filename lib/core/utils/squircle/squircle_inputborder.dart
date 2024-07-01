@@ -1,10 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-
-import '../../config/app_colors.dart';
-
+import 'package:pharm_flow/core/config/app_colors.dart';
 
 class SquircleInputBorder extends OutlineInputBorder {
   const SquircleInputBorder({

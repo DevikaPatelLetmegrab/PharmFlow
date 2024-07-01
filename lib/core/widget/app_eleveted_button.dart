@@ -129,7 +129,7 @@ class AppElevatedButton extends StatelessWidget {
     };
 
     return SizedBox(
-      height: height ?? context.h(56),
+      height: height ?? context.h(40),
       width: width,
       child: widget,
     );

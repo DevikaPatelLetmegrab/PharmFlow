@@ -3,14 +3,15 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/core/widget/app_textform_field.dart';
-import 'package:pharm_flow/feature/SignIn/presentation/pages/verify_otp_screen.dart';
-
-import '../../../../core/config/app_dimension.dart';
+import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -24,7 +25,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(AppDimens.space16),
+        padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -35,12 +36,10 @@ class _SignInScreenState extends State<SignInScreen> {
               width: AppDimens.space50,
               borderColor: AppColors.whiteColor,
               gradient: const LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    AppColors.lightPrimary,
-                    AppColors.primary,
-                  ]),
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [AppColors.lightPrimary, AppColors.primary],
+              ),
               child: AppAssetImage(
                 imagePath: AppAssets.logo,
                 height: 35,
@@ -57,18 +56,14 @@ class _SignInScreenState extends State<SignInScreen> {
               style: context.md14.withGrey78.weigh400,
             ),
             const Gap(AppDimens.space30),
-            AppTextFormField(
+            const AppTextFormField(
               keyboardType: TextInputType.number,
               label: 'Phone Number',
             ),
             const Gap(AppDimens.space30),
             AppElevatedButton(
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => VerifyOtpScreen(),
-                  ),
-                );
+                NavigationServices().pushName(AppRoutes.verifyPage);
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,
@@ -79,18 +74,21 @@ class _SignInScreenState extends State<SignInScreen> {
                 style: context.md14.withWhite.weigh400,
               ),
             ),
-            Gap(AppDimens.space20),
+            const Gap(AppDimens.space20),
             Align(
               alignment: Alignment.center,
               child: RichText(
-                  text: TextSpan(
-                      style: context.md14.weigh400.withBlack,
-                      text: 'Don\'t have account?',
-                      children: [
+                text: TextSpan(
+                  style: context.md14.weigh400.withBlack,
+                  text: 'Don\'t have account?',
+                  children: [
                     TextSpan(
-                        text: ' Sign Up',
-                        style: context.md14.weigh400.withPrimary)
-                  ])),
+                      text: ' Sign Up',
+                      style: context.md14.weigh400.withPrimary,
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),

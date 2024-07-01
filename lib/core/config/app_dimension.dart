@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppDimens {
-   static const double space1 = 1;
+  static const double space1 = 1;
 
   static const double space2 = 2;
   static const double space3 = 3;
@@ -23,11 +23,6 @@ class AppDimens {
   static const double space80 = 80;
 
   static const imageSize8 = 10.0;
-
-  static const double space60 = 60;
-  static const double space80 = 80;
-
-   static const imageSize8 = 10.0;
 
   static const imageSize10 = 10.0;
   static const double imageSize15 = 15.0;
@@ -70,9 +65,8 @@ class AppDimens {
   static const double inputFieldHeight = 45;
   static const double buttonHeight = 49;
 
-  static const Size defaultIconSize20 = Size(20,20);
+  static const Size defaultIconSize20 = Size(20, 20);
 
   static double mainTextShimmerRadius = 3;
   static double productRatingShimmerRadius = 5;
-
 }

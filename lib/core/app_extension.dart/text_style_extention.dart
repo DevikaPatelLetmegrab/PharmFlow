@@ -16,7 +16,7 @@ extension TextStyleExtention on BuildContext {
 
 extension StyleExtension on TextStyle {
   TextStyle get withPrimary => copyWith(color: AppColors.primary);
-  TextStyle get withWhite => copyWith(color: AppColors.white);
+  TextStyle get withWhite => copyWith(color: AppColors.whiteColor);
 
   TextStyle get weight300 => copyWith(fontWeight: FontWeight.w300);
   TextStyle get weight500 => copyWith(fontWeight: FontWeight.w500);
