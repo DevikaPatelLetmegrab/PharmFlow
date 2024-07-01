@@ -4,8 +4,10 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
-import 'package:pharm_flow/core/widgets/app_elevated_button.dart';
+import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/features/welcome/presentation/bloc/counter_cubit.dart';
 import 'package:pharm_flow/features/welcome/presentation/widgets/pageview_item.dart';
 
@@ -82,8 +84,13 @@ class WelcomePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         AppElevatedButton(
-                            buttonName: state.index == 0 ? 'Skip' : 'Prev'),
-                        const AppElevatedButton(buttonName: 'Next')
+                          buttonType: ButtonType.elevated,
+                          buttonName: state.index == 0 ? 'Skip' : 'Prev',
+                        ),
+                        const AppElevatedButton(
+                          buttonType: ButtonType.elevated,
+                          buttonName: 'Next',
+                        )
                       ],
                     )
                   : SizedBox(
@@ -91,16 +98,26 @@ class WelcomePage extends StatelessWidget {
                       child: Column(
                         children: [
                           AppElevatedButton(
+                            buttonType: ButtonType.elevated,
                             buttonName: 'Login Now',
                             width: context.getWidth,
+                            onTap: () {
+                              NavigationServices()
+                                  .pushName(AppRoutes.loginPage);
+                            },
                           ),
                           const Gap(AppDimens.space15),
                           AppElevatedButton(
+                            buttonType: ButtonType.elevated,
                             buttonName: 'Create your account',
                             width: context.getWidth,
-                            buttonColor: AppColors.white,
+                            buttonColor: AppColors.whiteColor,
                             fontColor: AppColors.primary,
-                          )
+                            onTap: () {
+                              NavigationServices()
+                                  .pushName(AppRoutes.registrationPage);
+                            },
+                          ),
                         ],
                       ),
                     ),

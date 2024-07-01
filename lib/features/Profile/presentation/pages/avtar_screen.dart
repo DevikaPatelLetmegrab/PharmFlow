@@ -5,14 +5,16 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
-import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
+
+
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_title_content.dart';
+import 'package:pharm_flow/core/config/app_dimension.dart';
 
 class AvtarScreen extends StatefulWidget {
   final PageController controller;
@@ -31,14 +33,15 @@ class _AvtarScreenState extends State<AvtarScreen> {
     return Scaffold(
       body: Column(
         children: [
-          const Gap(AppDimens.space20),
-          const CommonRow(),
-          const Gap(AppDimens.space20),
-          const CommonTitleContent(
+          Gap(AppDimens.space20),
+          CommonRow(),
+          Gap(AppDimens.space20),
+          CommonTitleContent(
               title: 'Upload your avatar',
               content:
                   'You can upload your image from gallery or we have some premade avatar for you '),
-          const Gap(AppDimens.space40),
+          Gap(AppDimens.space40),
+
           CarouselSlider.builder(
             itemCount: AppConstants.avtarList.length,
             itemBuilder: (BuildContext context, int index, int realIndex) {
@@ -54,47 +57,43 @@ class _AvtarScreenState extends State<AvtarScreen> {
                   ));
             },
             options: CarouselOptions(
-              onPageChanged: (index, value) {
-                setState(() {
-                  currentIndex = index;
-                });
-              },
-              initialPage: currentIndex,
-              autoPlay: false,
-              aspectRatio: 2.0,
-              enlargeCenterPage: true,
-              enlargeFactor: 0.4,
-              enableInfiniteScroll: false,
-              viewportFraction: 0.3,
-            ),
+                onPageChanged: (index, value) {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                initialPage: currentIndex,
+                autoPlay: false,
+                aspectRatio: 2.0,
+                enlargeCenterPage: true,
+                enlargeFactor: 0.4,
+                enableInfiniteScroll: false,
+                viewportFraction: 0.3),
           ),
-          const Gap(AppDimens.space20),
+          Gap(AppDimens.space20),
           DottedBorder(
-            radius: const Radius.circular(AppDimens.borderRadius15),
-            borderType: BorderType.RRect,
-            dashPattern: [6],
-            color: AppColors.grey96Color,
-            child: Squircle(
-              height: context.h(80),
-              width: context.getWidth,
-              borderColor: AppColors.whiteColor,
-              child: Center(
-                child: AppElevatedButton(
-                  icon: AppAssetImage(
-                    imagePath: AppAssets.downloadIcon,
-                  ),
-                  buttonColor: AppColors.whiteColor,
+              radius: Radius.circular(AppDimens.borderRadius15),
+              borderType: BorderType.RRect,
+              dashPattern: [6],
+              color: AppColors.grey96Color,
+              child: Squircle(
+                  height: context.h(80),
+                  width: context.getWidth,
                   borderColor: AppColors.whiteColor,
-                  buttonType: ButtonType.outLineWithIcon,
-                  childWidget: Text(
-                    'upload from gallery',
-                    style: context.x16.withBlack.weigh400,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          const Spacer(),
+                  child: Center(
+                      child: AppElevatedButton(
+                    icon: AppAssetImage(
+                      imagePath: AppAssets.downloadIcon,
+                    ),
+                    buttonColor: AppColors.whiteColor,
+                    borderColor: AppColors.whiteColor,
+                    buttonType: ButtonType.outLineWithIcon,
+                    childWidget: Text(
+                      'upload from gallery',
+                      style: context.x16.withBlack.weigh400,
+                    ),
+                  )))),
+          Spacer(),
           AppElevatedButton(
             onTap: () {
               widget.controller.jumpToPage(6);

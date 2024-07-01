@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
-import 'package:pharm_flow/feature/Profile/presentation/pages/allergy_screen.dart';
-import 'package:pharm_flow/feature/Profile/presentation/pages/avtar_screen.dart';
-import 'package:pharm_flow/feature/Profile/presentation/pages/gender_screen.dart';
-import 'package:pharm_flow/feature/Profile/presentation/pages/medical_condition_list.dart';
-import 'package:pharm_flow/feature/Profile/presentation/pages/medical_condition_screen.dart';
-import 'package:pharm_flow/feature/Profile/presentation/pages/primary_goal_screen.dart';
+import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/allergy_screen.dart';
+import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/avtar_screen.dart';
+import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/gender_screen.dart';
+import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/medical_condition_list.dart';
+import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/medical_condition_screen.dart';
+import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/primary_goal_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

@@ -8,6 +8,8 @@ import '../app_constants.dart';
 class Squircle extends Container {
   // final Widget schild;
   final BorderSide? side;
+  final double? height;
+  final double? width;
   final Color? backgroundColor;
   final Color borderColor;
   final double radius;
@@ -24,6 +26,8 @@ class Squircle extends Container {
     this.borderColor = AppColors.grey78Color,
     this.side,
     this.gradient,
+    this.height,
+    this.width,
     this.customRadius,
     this.image,
     this.customShape,

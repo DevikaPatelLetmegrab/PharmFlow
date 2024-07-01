@@ -8,38 +8,27 @@ import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import '../config/app_colors.dart';
 import '../widget/circle_info_image.dart';
 
-
 class AppDialogs {
-  // static void planDialog({required Widget child}) {
-  //   showGeneralDialog(
-  //       context: NavigationService().getNavigationContext(),
-  //       pageBuilder: (context, animation, secondaryAnimation) {
-  //         return child;
-  //       });
-  // }
+ 
 
-  static void customGeneralDialog({
-     String ?rightButtonText,
-     void Function()? rightButtonOnTap,
-    String? leftButtonText,
-    void Function(bool)? onDismissDialog,
-    void Function()? leftButtonOnTap,
-    Color? topIconColor = AppColors.primary,
-    Color? titleColor = AppColors.blackColor,
-    Color? descriptionColor = AppColors.errorRed,
-    String? topIconPath,
-    String? titleText,
-    String? descriptionText,
-    Widget? child,
-    required BuildContext context
-  }) {
+  static void customGeneralDialog(
+      {String? rightButtonText,
+      void Function()? rightButtonOnTap,
+      String? leftButtonText,
+      void Function(bool)? onDismissDialog,
+      void Function()? leftButtonOnTap,
+      Color? topIconColor = AppColors.primary,
+      Color? titleColor = AppColors.blackColor,
+      Color? descriptionColor = AppColors.errorRed,
+      String? topIconPath,
+      String? titleText,
+      String? descriptionText,
+      Widget? child,
+      required BuildContext context}) {
     showGeneralDialog(
-
       context: context,
       barrierDismissible: true,
-      barrierLabel:
-          MaterialLocalizations.of(context)
-              .modalBarrierDismissLabel,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       barrierColor: AppColors.blackColor.withOpacity(0.1),
       pageBuilder: (context, animation, secondaryAnimation) {
         return PopScope(
@@ -50,15 +39,10 @@ class AppDialogs {
                 bottom: MediaQuery.of(context).viewInsets.bottom),
             child: Center(
               child: Squircle(
-                // height: deviceHeight * 0.3,
-                // width: double.infinity,
+               
                 borderColor: AppColors.whiteColor,
                 customRadius: BorderRadius.circular(10),
-                margin: EdgeInsets.symmetric(horizontal: context.w(20)),
-                padding: EdgeInsets.symmetric(
-                  horizontal: context.w(20),
-                  vertical: context.w(20),
-                ),
+               
                 backgroundColor: AppColors.whiteColor,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -164,60 +148,5 @@ class AppDialogs {
     );
   }
 
-  // static Future<dynamic> confirmationDialog({
-  //   required String confirmationTitle,
-  //   String positiveText = 'Yes',
-  //   String negativeText = 'No',
-  //   VoidCallback? onPositiveClick,
-  //   VoidCallback? onNegativeClick,
-  // }) {
-  //   return showGeneralDialog(
-  //     context: NavigationService().getNavigationContext(),
-  //     barrierDismissible: true,
-  //     barrierLabel:
-  //         MaterialLocalizations.of(NavigationService().getNavigationContext())
-  //             .modalBarrierDismissLabel,
-  //     barrierColor: AppColors.black.withOpacity(0.1),
-  //     pageBuilder: (context, animation, secondaryAnimation) {
-  //       return AlertDialog(
-  //         backgroundColor: Colors.white,
-  //         surfaceTintColor: Colors.white,
-  //         insetPadding: EdgeInsets.symmetric(horizontal: context.w(20)),
-  //         shape: SquircleDecoration().sqShape,
-  //         content: Padding(
-  //           padding: const EdgeInsets.symmetric(vertical: 10),
-  //           child: Text(
-  //             getText(confirmationTitle),
-  //             textAlign: TextAlign.center,
-  //             style: context.lg16.weigh500,
-  //           ),
-  //         ),
-  //         actions: [
-  //           DialogConfirmationButton(
-  //             negativeText: negativeText,
-  //             positiveText: positiveText,
-  //             onNegativeClick: onNegativeClick ??
-  //                 () {
-  //                   NavigationService().pop();
-  //                 },
-  //             onPositiveClick: onPositiveClick,
-  //           ),
-  //         ],
-  //       );
-  //     },
-  //     transitionBuilder: (_, anim, __, child) {
-  //       Tween<Offset> tween;
-  //       if (anim.status == AnimationStatus.reverse) {
-  //         tween = Tween(begin: const Offset(0, 0), end: Offset.zero);
-  //       } else {
-  //         tween = Tween(begin: const Offset(0, 0), end: Offset.zero);
-  //       }
-  //
-  //       return FadeTransition(
-  //         opacity: anim,
-  //         child: child,
-  //       );
-  //     },
-  //   );
-  // }
+ 
 }

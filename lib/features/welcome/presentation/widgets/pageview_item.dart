@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension.dart/text_style_extention.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
-import 'package:pharm_flow/core/widgets/app_assets_image.dart';
+import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/features/welcome/presentation/bloc/counter_cubit.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -23,7 +23,7 @@ class PageviewItem extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                AppAssetsImage(
+                AppAssetImage(
                   imagePath: imgString,
                   size: 270,
                 ),

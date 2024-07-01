@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 
 import '../model/chip_model.dart';

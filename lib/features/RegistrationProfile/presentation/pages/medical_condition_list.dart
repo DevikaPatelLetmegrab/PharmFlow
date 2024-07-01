@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
-import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
-import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/core/widget/input_chip_widget.dart';
-import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_row.dart';
-import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_title_content.dart';
-import 'package:pharm_flow/core/config/app_dimension.dart';
-
-
-
+import '../../../../core/config/app_dimension.dart';
+import '../../../../core/utils/app_constants.dart';
+import '../../../../core/widget/app_eleveted_button.dart';
+import '../../../../core/widget/input_chip_widget.dart';
+import '../widgets/common_row.dart';
+import '../widgets/common_title_content.dart';
 
 class MedicalConditionListScreen extends StatefulWidget {
   final PageController controller;

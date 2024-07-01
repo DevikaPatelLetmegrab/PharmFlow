@@ -6,7 +6,6 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
-
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_title_content.dart';
@@ -26,7 +25,6 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-
         children: [
           Gap(AppDimens.space20),
           CommonRow(),

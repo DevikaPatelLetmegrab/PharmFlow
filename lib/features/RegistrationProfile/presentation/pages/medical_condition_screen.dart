@@ -6,11 +6,10 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
-
-import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_row.dart';
-import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_title_content.dart';
-import 'package:pharm_flow/core/config/app_dimension.dart';
+import '../../../../core/config/app_dimension.dart';
+import '../../../../core/widget/app_eleveted_button.dart';
+import '../widgets/common_row.dart';
+import '../widgets/common_title_content.dart';
 
 class MedicalConditionScreen extends StatefulWidget {
   final PageController controller;

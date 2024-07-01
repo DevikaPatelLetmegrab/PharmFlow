@@ -6,7 +6,6 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/model/gender_model.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
-import 'package:pharm_flow/core/widget/round_icon.dart';
 
 class CustomRadio extends StatelessWidget {
   GenderModel _gender;
@@ -37,7 +36,7 @@ class CustomRadio extends StatelessWidget {
                             : AppColors.darkGrey,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       _gender.name,
                       style: context.x16.weigh800.copyWith(
@@ -54,7 +53,7 @@ class CustomRadio extends StatelessWidget {
                     ),
                   ],
                 ),
-                if(_gender.isSelected)
+                if (_gender.isSelected)
                   Align(
                     alignment: Alignment.topLeft,
                     child: CircleAvatar(

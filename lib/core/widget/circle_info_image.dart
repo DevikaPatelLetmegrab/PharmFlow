@@ -15,8 +15,7 @@ class CircleInfoImage extends StatelessWidget {
       height: context.w(65),
       width: context.w(65),
       padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        // color: AppColors.lightPrimary,
+      decoration:const BoxDecoration(
         shape: BoxShape.circle,
       ),
       child: Center(
