@@ -35,6 +35,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  gap:
+  flutter_otp_text_field:
+  advanced_chips_input:
+  dotted_border:
+  carousel_slider:
 
 dev_dependencies:
   flutter_test:
@@ -59,8 +64,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/image/
+    - assets/icon/
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -74,12 +81,24 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+     - family: Lexend
+       fonts:
+         - asset: assets/font/Lexend-Bold.ttf
+           style: normal
+           weight: 700
+         - asset: assets/font/Lexend-Regular.ttf
+           style: normal
+           weight: 400
+         - asset: assets/font/Lexend-Light.ttf
+           style: normal
+           weight: 300
+         - asset: assets/font/Lexend-Light.ttf
+           style: normal
+           weight: 200
+         - asset: assets/font/Lexend-Medium.ttf
+           style: normal
+           weight: 700
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
