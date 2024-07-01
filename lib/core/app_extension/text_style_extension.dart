@@ -50,6 +50,7 @@ extension StyleExtension on TextStyle {
   TextStyle get withBlack => copyWith(color: AppColors.blackColor);
 
   TextStyle get withGrey78 => copyWith(color: AppColors.grey78Color);
+  TextStyle get withGreyD9 => copyWith(color: AppColors.borderColorGrey);
 
   TextStyle get withPrimary => copyWith(color: AppColors.primary);
 
