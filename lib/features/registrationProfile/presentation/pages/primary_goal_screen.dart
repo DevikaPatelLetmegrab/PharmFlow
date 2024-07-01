@@ -27,13 +27,13 @@ class _PrimaryGoalScreenState extends State<PrimaryGoalScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Gap(AppDimens.space20),
-        CommonRow(),
-        Gap(AppDimens.space20),
-        CommonTitleContent(
+        const Gap(AppDimens.space20),
+        const CommonRow(),
+        const Gap(AppDimens.space20),
+        const CommonTitleContent(
             title: 'What’s your primary goal for this app?',
             content: 'Select any of 4 in given list you would like to choose'),
-        Gap(AppDimens.space20),
+        const Gap(AppDimens.space20),
         Expanded(
           child: Wrap(
             spacing: 15,
@@ -51,7 +51,8 @@ class _PrimaryGoalScreenState extends State<PrimaryGoalScreen> {
         ),
         AppElevatedButton(
           onTap: () {
-            widget.controller.jumpToPage(1);
+            widget.controller.nextPage(
+                duration: Duration(milliseconds: 300), curve: Curves.linear);
           },
           buttonType: ButtonType.elevated,
           width: context.getWidth,

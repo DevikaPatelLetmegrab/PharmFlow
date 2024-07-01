@@ -56,7 +56,8 @@ class _MedicalConditionListScreenState
           ),
           AppElevatedButton(
             onTap: () {
-              widget.controller.jumpToPage(4);
+              widget.controller.nextPage(
+                  duration: Duration(milliseconds: 300), curve: Curves.linear);
             },
             buttonType: ButtonType.elevated,
             width: context.getWidth,

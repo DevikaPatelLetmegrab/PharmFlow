@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:pharm_flow/core/app_extension.dart/text_style_extention.dart';
+import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
@@ -49,7 +49,7 @@ class _SplashPageState extends State<SplashPage> {
               const Spacer(),
               Text(
                 'Streamlining your Pharmacy',
-                style: context.l16.withWhite,
+                style: context.x16.withWhite,
               ),
               const Gap(AppDimens.space20),
             ],

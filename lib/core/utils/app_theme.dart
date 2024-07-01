@@ -15,7 +15,6 @@ class AppTheme{
       secondary: AppColors.primary.withOpacity(0.2),
     ),
     buttonTheme: const ButtonThemeData(textTheme: ButtonTextTheme.primary),
-
     appBarTheme: AppBarTheme(
       centerTitle: false,
       backgroundColor: Colors.white,

@@ -4,7 +4,7 @@ import 'package:pharm_flow/core/utils/squircle/squircle_decordation.dart';
 
 import '../../config/app_colors.dart';
 import '../app_constants.dart';
-
+@immutable
 class Squircle extends Container {
   // final Widget schild;
   final BorderSide? side;
