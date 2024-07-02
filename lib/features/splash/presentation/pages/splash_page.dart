@@ -22,7 +22,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     Future.delayed(
       const Duration(seconds: 3),
-      () => NavigationServices().pushRepleshmentName(AppRoutes.welcomePage),
+      () => NavigationServices().pushRemoveUntil(AppRoutes.welcomePage),
     );
     super.initState();
   }
