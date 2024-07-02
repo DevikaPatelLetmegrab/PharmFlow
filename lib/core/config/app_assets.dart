@@ -29,6 +29,10 @@ class AppAssets {
   static String profileIcon = 'assets/icon/profile.png';
   static String backIcon = 'assets/icon/back.png';
   static String searchIcon = 'assets/icon/search.png';
+  static String bagIcon = 'assets/icon/bag_icon.png';
+  static String locationIcon = 'assets/icon/location_icon.png';
+  static String notificationIcon = 'assets/icon/notification_icon.png';
+  static String filterIcon = 'assets/icon/filter_icon.png';
 
   ///logo
 
@@ -36,4 +40,8 @@ class AppAssets {
   static String logoLight = 'assets/logo/logo_light.png';
   static String splashBg = 'assets/logo/splash_background.png';
   static String splashImage = 'assets/logo/splash_image.png';
+
+  //app images
+  static String image = 'assets/image.png';
+  static String image1 = 'assets/image1.png';
 }

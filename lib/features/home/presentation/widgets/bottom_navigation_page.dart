@@ -64,7 +64,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         child: IndexedStack(
           index: _selectedIndex,
           children: [
-            const HomePage(),
+             HomePage(),
             const MyBookingPage(),
             Container(),
             Container(),

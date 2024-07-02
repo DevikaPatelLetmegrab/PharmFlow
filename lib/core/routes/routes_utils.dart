@@ -39,11 +39,11 @@ class RoutesUtils {
           return VerifyOtpScreen(isLogin: arg);
         },
       ),
-      // GoRoute(
-      //   path: AppRoutes.registrationPage,
-      //   name: AppRoutes.registrationPage,
-      //   builder: (context, state) =>  RegistrationScreen(),
-      // ),
+      GoRoute(
+        path: AppRoutes.registrationPage,
+        name: AppRoutes.registrationPage,
+        builder: (context, state) => RegistrationScreen(),
+      ),
       GoRoute(
         path: AppRoutes.registrationprofile,
         name: AppRoutes.registrationprofile,
@@ -52,7 +52,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.homePage,
         name: AppRoutes.homePage,
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => HomePage(),
       ),
       GoRoute(
         path: AppRoutes.bookingPage,
