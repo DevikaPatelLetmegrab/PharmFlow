@@ -31,93 +31,87 @@ class AvtarScreen extends StatefulWidget {
 }
 
 class _AvtarScreenState extends State<AvtarScreen> {
-
   @override
   Widget build(BuildContext context) {
-
     return BlocProvider(
       create: (context) => CarouselSlideCubit(),
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(AppDimens.space16),
-          child: Column(
-            children: [
-              CommonTitleContent(
-                  title: 'Upload your avatar',
-                  content:
-                      'You can upload your image from gallery or we have some premade avatar for you '),
-              Gap(AppDimens.space40),
-              BlocBuilder<CarouselSlideCubit, CarouselSlideState>(
-                  builder: (context, state) {
-                return CarouselSlider.builder(
-                  itemCount: AppConstants.avtarList.length,
-                  itemBuilder:
-                      (BuildContext context, int index, int realIndex) {
-                    return Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: AppColors.greyDE96Color),
-                            color: (index == state.currentIndex)
-                                ? AppColors.primary.withOpacity(0.5)
-                                : AppColors.greyECColor),
-                        child: AppAssetImage(
-                          imagePath: AppConstants.avtarList[index],
-                        ));
-                  },
-                  options: CarouselOptions(
-                      initialPage: state.currentIndex,
-                      onPageChanged: (index, value) {
-                        context
-                            .read<CarouselSlideCubit>()
-                            .changeCurrentIndex(index);
-                      },
-                      autoPlay: false,
-                      aspectRatio: 2.0,
-                      enlargeCenterPage: true,
-                      enlargeFactor: 0.4,
-                      enableInfiniteScroll: false,
-                      viewportFraction: 0.3),
-                );
-              }),
-              Gap(AppDimens.space20),
-              DottedBorder(
+          child: Column(children: [
+            CommonTitleContent(
+                title: 'Upload your avatar',
+                content:
+                    'You can upload your image from gallery or we have some premade avatar for you '),
+            Gap(AppDimens.space40),
+            BlocBuilder<CarouselSlideCubit, CarouselSlideState>(
+                builder: (context, state) {
+              return CarouselSlider.builder(
+                itemCount: AppConstants.avtarList.length,
+                itemBuilder: (BuildContext context, int index, int realIndex) {
+                  return Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: AppColors.greyDE96Color),
+                          color: (index == state.currentIndex)
+                              ? AppColors.primary.withOpacity(0.5)
+                              : AppColors.greyECColor),
+                      child: AppAssetImage(
+                        imagePath: AppConstants.avtarList[index],
+                      ));
+                },
+                options: CarouselOptions(
+                    initialPage: state.currentIndex,
+                    onPageChanged: (index, value) {
+                      context
+                          .read<CarouselSlideCubit>()
+                          .changeCurrentIndex(index);
+                    },
+                    autoPlay: false,
+                    aspectRatio: 2.0,
+                    enlargeCenterPage: true,
+                    enlargeFactor: 0.4,
+                    enableInfiniteScroll: false,
+                    viewportFraction: 0.3),
+              );
+            }),
+            Gap(AppDimens.space20),
+            DottedBorder(
                 radius: Radius.circular(AppDimens.borderRadius20),
                 borderType: BorderType.RRect,
                 dashPattern: [6],
                 color: AppColors.grey96Color,
                 child: Squircle(
-
-    
-                  height: context.h(80),
-                  width: context.getWidth,
-                  borderColor: AppColors.whiteColor,
-                  child: Center(
-                    child: AppElevatedButton(
-                      icon: AppAssetImage(
-                        imagePath: AppAssets.downloadIcon,
+                    height: context.h(80),
+                    width: context.getWidth,
+                    borderColor: AppColors.whiteColor,
+                    child: Center(
+                      child: AppElevatedButton(
+                        icon: AppAssetImage(
+                          imagePath: AppAssets.downloadIcon,
+                        ),
+                        buttonColor: AppColors.whiteColor,
+                        borderColor: AppColors.whiteColor,
+                        buttonType: ButtonType.outLineWithIcon,
+                        childWidget: Text(
+                          'upload from gallery',
+                          style: context.x16.withBlack.weigh400,
+                        ),
                       ),
-                      buttonColor: AppColors.whiteColor,
-                      borderColor: AppColors.whiteColor,
-                      buttonType: ButtonType.outLineWithIcon,
-                      childWidget: Text(
-                        'upload from gallery',
-                        style: context.x16.withBlack.weigh400,
-                      ),
-                    ),
-                  ))),
-          const Spacer(),
-          AppElevatedButton(
-            onTap: () {
-              NavigationServices().pushName(AppRoutes.bottomBar);
-            },
-            buttonType: ButtonType.elevated,
-            width: context.getWidth,
-            childWidget: Text(
-              'Continue',
-              style: context.md14.weigh400.withWhite,
+                    ))),
+            const Spacer(),
+            AppElevatedButton(
+              onTap: () {
+                NavigationServices().pushName(AppRoutes.bottomBar);
+              },
+              buttonType: ButtonType.elevated,
+              width: context.getWidth,
+              childWidget: Text(
+                'Continue',
+                style: context.md14.weigh400.withWhite,
+              ),
             ),
-
-          ),
+          ]),
         ),
       ),
     );

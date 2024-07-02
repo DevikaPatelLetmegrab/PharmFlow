@@ -32,7 +32,6 @@ class _AllergyScreenState extends State<AllergyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               CommonTitleContent(
                   title: 'Do you have any ongoing allergy ?',
                   content:
@@ -75,7 +74,8 @@ class _AllergyScreenState extends State<AllergyScreen> {
               AppElevatedButton(
                 onTap: () {
                   widget.controller.nextPage(
-                      duration: AppConstants.animDuration300, curve: Curves.easeIn);
+                      duration: AppConstants.animDuration300,
+                      curve: Curves.easeIn);
                 },
                 buttonType: ButtonType.outLineWithIcon,
                 width: context.getWidth,
@@ -89,19 +89,20 @@ class _AllergyScreenState extends State<AllergyScreen> {
                   style: context.md14.weigh400.withPrimary,
                 ),
               ),
-            Gap(AppDimens.space20),
-            AppElevatedButton(
-              onTap: () {
-                widget.controller.nextPage(
-                    duration: Duration(milliseconds: 300),
-                    curve: Curves.linear);
-              },
-              buttonType: ButtonType.elevated,
-              width: context.getWidth,
-              childWidget: Text(
-                'Continue',
-                style: context.md14.weigh400.withWhite,
-              ),
+              Gap(AppDimens.space20),
+              AppElevatedButton(
+                onTap: () {
+                  widget.controller.nextPage(
+                      duration: Duration(milliseconds: 300),
+                      curve: Curves.linear);
+                },
+                buttonType: ButtonType.elevated,
+                width: context.getWidth,
+                childWidget: Text(
+                  'Continue',
+                  style: context.md14.weigh400.withWhite,
+                ),
+              )
             ],
           ),
         ),
