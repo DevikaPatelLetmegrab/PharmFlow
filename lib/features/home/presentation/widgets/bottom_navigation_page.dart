@@ -3,10 +3,16 @@ import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
 
-class BottomNavigationPage extends StatelessWidget {
+class BottomNavigationPage extends StatefulWidget {
   BottomNavigationPage({super.key});
 
+  @override
+  State<BottomNavigationPage> createState() => _BottomNavigationPageState();
+}
+
+class _BottomNavigationPageState extends State<BottomNavigationPage> {
   int _selectedIndex = 0;
 
   @override
@@ -17,12 +23,12 @@ class BottomNavigationPage extends StatelessWidget {
         unselectedItemColor: AppColors.grey78Color,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        // currentIndex: tabIndex,
-        // onTap: (int index) {
-        //   setState(() {
-        //     tabIndex = index;
-        //   });
-        // },
+        currentIndex: _selectedIndex,
+        onTap: (int index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
         items: [
           BottomNavigationBarItem(
             icon: AppAssetImage(
@@ -59,7 +65,7 @@ class BottomNavigationPage extends StatelessWidget {
           index: _selectedIndex,
           children: [
             const HomePage(),
-            Container(),
+            const MyBookingPage(),
             Container(),
             Container(),
           ],

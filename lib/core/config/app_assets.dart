@@ -1,5 +1,5 @@
 class AppAssets {
-  //images
+  ///images
 
   static String medicalPerson = 'assets/images/medical_person.png';
   static String allergyImage = 'assets/images/allergy_image.png';
@@ -27,8 +27,10 @@ class AppAssets {
   static String calendarIcon = 'assets/icon/calendar.png';
   static String shoppingCartIcon = 'assets/icon/shopping_cart.png';
   static String profileIcon = 'assets/icon/profile.png';
+  static String backIcon = 'assets/icon/back.png';
+  static String searchIcon = 'assets/icon/search.png';
 
-  //logo
+  ///logo
 
   static String logoDark = 'assets/logo/logo_dark.png';
   static String logoLight = 'assets/logo/logo_light.png';

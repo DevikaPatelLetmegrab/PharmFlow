@@ -7,6 +7,7 @@ import 'package:pharm_flow/features/SignIn/presentation/pages/sign_in_screen.dar
 import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 
@@ -52,6 +53,11 @@ class RoutesUtils {
         path: AppRoutes.homePage,
         name: AppRoutes.homePage,
         builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: AppRoutes.bookingPage,
+        name: AppRoutes.bookingPage,
+        builder: (context, state) => const MyBookingPage(),
       ),
       GoRoute(
         path: AppRoutes.bottomBar,
