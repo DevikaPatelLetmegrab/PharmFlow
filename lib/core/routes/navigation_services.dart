@@ -9,20 +9,23 @@ class NavigationServices {
 
   factory NavigationServices() => _instance;
 
-  Future<dynamic> pushName(route) {
-    return navigatorKey.currentContext!.pushNamed(route);
+  Future<dynamic> pushName(route, {Object? extra}) {
+    return navigatorKey.currentContext!.pushNamed(route, extra: extra);
   }
 
   pop() {
     return navigatorKey.currentContext!.pop();
   }
 
-  pushRepleshmentName(name) {
-    return navigatorKey.currentContext!.pushReplacementNamed(name);
-  }
-
+  // pushRepleshmentName(name) {
+  //   return navigatorKey.currentContext!.pushReplacementNamed(name);
+  // }
 
   BuildContext getNavigationContext() {
-    return navigatorKey.currentState!.context;
+    return navigatorKey.currentContext!;
+  }
+
+  pushRemoveUntil(name) {
+    return navigatorKey.currentContext!.go(name);
   }
 }

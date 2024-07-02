@@ -23,7 +23,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.welcomePage,
         name: AppRoutes.welcomePage,
-        builder: (context, state) => const WelcomePage(),
+        builder: (context, state) => WelcomePage(),
       ),
       GoRoute(
         path: AppRoutes.loginPage,
@@ -33,7 +33,10 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.verifyPage,
         name: AppRoutes.verifyPage,
-        builder: (context, state) => const VerifyOtpScreen(),
+        builder: (context, state) {
+          var arg = state.extra as bool;
+          return VerifyOtpScreen(isLogin: arg);
+        },
       ),
       GoRoute(
         path: AppRoutes.registrationPage,

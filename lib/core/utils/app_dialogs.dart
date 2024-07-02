@@ -159,31 +159,31 @@ class AppDialogs {
     void Function()? onTap,
   }) {
     showDialog(
-        context: NavigationServices().getNavigationContext(),
-        builder: (ctx) => AlertDialog(
-              actionsAlignment: MainAxisAlignment.center,
-              title: Text(
-                title,
-                style:
-                    NavigationServices().getNavigationContext().x16.withBlack,
-              ),
-              icon: AppAssetImage(
-                imagePath: AppAssets.done,
-                size: 70,
-              ),
-              content: Text(
-                content ?? '',
-                textAlign: TextAlign.center,
-                style:
-                    NavigationServices().getNavigationContext().md14.withGrey78,
-              ),
-              actions: [
-                AppElevatedButton(
-                  onTap: onTap,
-                  buttonType: ButtonType.elevated,
-                  buttonName: 'Continue',
-                ),
-              ],
-            ));
+      context: NavigationServices().getNavigationContext(),
+      builder: (ctx) => AlertDialog(
+        actionsAlignment: MainAxisAlignment.center,
+        title: Text(
+          title,
+          style: NavigationServices().getNavigationContext().x16.withBlack,
+        ),
+        icon: AppAssetImage(
+          imagePath: AppAssets.done,
+          size: 70,
+        ),
+        content: Text(
+          content ?? '',
+          textAlign: TextAlign.center,
+          style: NavigationServices().getNavigationContext().md14.withGrey78,
+        ),
+        actions: [
+          AppElevatedButton(
+            onTap: onTap,
+            buttonType: ButtonType.elevated,
+            buttonName: 'Continue',
+            
+          ),
+        ],
+      ),
+    );
   }
 }

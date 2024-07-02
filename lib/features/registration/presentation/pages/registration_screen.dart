@@ -70,13 +70,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const Gap(AppDimens.space30),
             AppElevatedButton(
               onTap: () {
-                AppDialogs.showAlertDialogBox(
-                    title: 'Yeay! Welcome Muzeeb',
-                    content: "Account Created Succesfully",
-                    onTap: () {
-                      NavigationServices()
-                          .pushName(AppRoutes.registrationprofile);
-                    });
+                NavigationServices()
+                    .pushName(AppRoutes.verifyPage, extra: false);
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,

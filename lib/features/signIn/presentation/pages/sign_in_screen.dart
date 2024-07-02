@@ -62,7 +62,8 @@ class _SignInScreenState extends State<SignInScreen> {
             const Gap(AppDimens.space30),
             AppElevatedButton(
               onTap: () {
-                NavigationServices().pushName(AppRoutes.verifyPage);
+                NavigationServices()
+                    .pushName(AppRoutes.verifyPage, extra: true);
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,
@@ -70,7 +71,7 @@ class _SignInScreenState extends State<SignInScreen> {
               height: context.getHeight * 0.070,
               childWidget: Text(
                 'Verify OTP',
-                style: context.md14.withWhite.weigh400,
+                style: context.md14.withWhite.weigh400, 
               ),
             ),
             const Gap(AppDimens.space20),

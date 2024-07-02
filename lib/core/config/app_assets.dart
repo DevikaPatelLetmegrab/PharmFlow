@@ -10,7 +10,7 @@ class AppAssets {
   static String welcomeDoc = 'assets/images/doctor.png';
   static String welcomePharm = 'assets/images/pharmacist.png';
   static String welcomePeople = 'assets/images/people.png';
-  static String welcomeNotification = 'assets/images/notification.png';
+  static String welcomeNotification = 'assets/images/notifications.png';
   static String welcomePharmAmico = 'assets/images/pharmacist_amico.png';
 
   ///icons

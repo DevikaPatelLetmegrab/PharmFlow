@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
+import 'package:pharm_flow/core/utils/app_dialogs.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
-
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
@@ -13,14 +13,10 @@ import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 
-class VerifyOtpScreen extends StatefulWidget {
-  const VerifyOtpScreen({super.key});
+class VerifyOtpScreen extends StatelessWidget {
+  final bool? isLogin;
+  const VerifyOtpScreen({super.key, @required this.isLogin});
 
-  @override
-  State<VerifyOtpScreen> createState() => _VerifyOtpScreenState();
-}
-
-class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,13 +72,14 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
               onCodeChanged: (String code) {},
               onSubmit: (String verificationCode) {
                 showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: const Text("Verification Code"),
-                        content: Text('Code entered is $verificationCode'),
-                      );
-                    });
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: const Text("Verification Code"),
+                      content: Text('Code entered is $verificationCode'),
+                    );
+                  },
+                );
               }, // end onSubmit
             ),
             const Gap(AppDimens.space30),
@@ -96,7 +93,16 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                 style: context.md14.withWhite.weigh400,
               ),
               onTap: () {
-                NavigationServices().pushName(AppRoutes.bottomBar);
+                AppDialogs.showAlertDialogBox(
+                  title: 'Yeay! Welcome Muzeeb',
+                  content: "Account Created Succesfully",
+                  onTap: () {
+                    var route = isLogin == true
+                        ? AppRoutes.bottomBar
+                        : AppRoutes.registrationprofile;
+                    NavigationServices().pushName(route);
+                  },
+                );
               },
             ),
           ],
