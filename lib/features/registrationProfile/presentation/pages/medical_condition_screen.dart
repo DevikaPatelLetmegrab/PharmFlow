@@ -25,7 +25,6 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-
         children: [
           Gap(AppDimens.space20),
           CommonRow(),
@@ -77,7 +76,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
           Gap(AppDimens.space20),
           AppElevatedButton(
             onTap: () {
-              widget.controller.jumpToPage(3);
+              widget.controller.nextPage(
+                  duration: Duration(milliseconds: 300), curve: Curves.linear);
             },
             buttonType: ButtonType.outline,
             width: context.getWidth,

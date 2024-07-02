@@ -12,7 +12,6 @@ import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/core/widget/app_textform_field.dart';
-import 'package:pharm_flow/features/Registration/presentation/widgets/account_confirmation.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -72,12 +71,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             AppElevatedButton(
               onTap: () {
                 AppDialogs.showAlertDialogBox(
-                  title: 'Yeay! Welcome Muzeeb',
-                  content: "Account Created Succesfully",
-                  onTap: (){
-                    NavigationServices().pushName(AppRoutes.registrationprofile);
-                  }
-                );
+                    title: 'Yeay! Welcome Muzeeb',
+                    content: "Account Created Succesfully",
+                    onTap: () {
+                      NavigationServices()
+                          .pushName(AppRoutes.registrationprofile);
+                    });
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,

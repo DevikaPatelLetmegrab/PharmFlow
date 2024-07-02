@@ -5,6 +5,8 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
@@ -32,15 +34,14 @@ class _AvtarScreenState extends State<AvtarScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Gap(AppDimens.space20),
-          CommonRow(),
-          Gap(AppDimens.space20),
-          CommonTitleContent(
+          const Gap(AppDimens.space20),
+          const CommonRow(),
+          const Gap(AppDimens.space20),
+          const CommonTitleContent(
               title: 'Upload your avatar',
               content:
                   'You can upload your image from gallery or we have some premade avatar for you '),
-          Gap(AppDimens.space40),
-
+          const Gap(AppDimens.space40),
           CarouselSlider.builder(
             itemCount: AppConstants.avtarList.length,
             itemBuilder: (BuildContext context, int index, int realIndex) {
@@ -69,9 +70,9 @@ class _AvtarScreenState extends State<AvtarScreen> {
                 enableInfiniteScroll: false,
                 viewportFraction: 0.3),
           ),
-          Gap(AppDimens.space20),
+          const Gap(AppDimens.space20),
           DottedBorder(
-              radius: Radius.circular(AppDimens.borderRadius15),
+              radius: const Radius.circular(AppDimens.borderRadius15),
               borderType: BorderType.RRect,
               dashPattern: [6],
               color: AppColors.grey96Color,
@@ -92,10 +93,10 @@ class _AvtarScreenState extends State<AvtarScreen> {
                       style: context.x16.withBlack.weigh400,
                     ),
                   )))),
-          Spacer(),
+          const Spacer(),
           AppElevatedButton(
             onTap: () {
-              widget.controller.jumpToPage(6);
+              NavigationServices().pushName(AppRoutes.bottomBar);
             },
             buttonType: ButtonType.elevated,
             width: context.getWidth,

@@ -89,7 +89,9 @@ class _AllergyScreenState extends State<AllergyScreen> {
             Gap(AppDimens.space20),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(5);
+                widget.controller.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.linear);
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,

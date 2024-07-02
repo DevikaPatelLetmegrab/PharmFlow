@@ -5,6 +5,8 @@ import 'package:pharm_flow/features/Registration/presentation/pages/registration
 import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/profile_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/sign_in_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
+import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
+import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 
@@ -42,6 +44,16 @@ class RoutesUtils {
         path: AppRoutes.registrationprofile,
         name: AppRoutes.registrationprofile,
         builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.homePage,
+        name: AppRoutes.homePage,
+        builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: AppRoutes.bottomBar,
+        name: AppRoutes.bottomBar,
+        builder: (context, state) => BottomNavigationPage(),
       )
     ],
   );
