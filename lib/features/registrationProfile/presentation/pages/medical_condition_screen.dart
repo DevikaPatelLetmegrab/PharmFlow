@@ -25,78 +25,69 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Padding(
         padding: const EdgeInsets.all(AppDimens.space16),
-        child: Column(
-
-          children: [
-
-            CommonTitleContent(
-                title: 'Do you have existing medical conditions?',
-                content:
-                    'Please select right option so our system gives you better result & outcomes'),
-            Gap(AppDimens.space40),
-            AppAssetImage(
-              imagePath: AppAssets.medicalPerson,
-              height: context.h(250),
-              width: context.w(250),
+        child: Column(children: [
+          CommonTitleContent(
+              title: 'Do you have existing medical conditions?',
+              content:
+                  'Please select right option so our system gives you better result & outcomes'),
+          Gap(AppDimens.space40),
+          AppAssetImage(
+            imagePath: AppAssets.medicalPerson,
+            height: context.h(250),
+            width: context.w(250),
           ),
-    
-            Spacer(),
-            AppElevatedButton(
-              onTap: () {
-                widget.controller.nextPage(
-                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
-              },
-              buttonType: ButtonType.elevatedWithIcon,
-              width: context.getWidth,
-              iconAlignment: IconAlignment.end,
-              icon: AppAssetImage(
-                imagePath: AppAssets.doneEmpty,
-                color: AppColors.whiteColor,
-              ),
-              childWidget: Text(
-                'Continue',
-                style: context.md14.weigh400.withWhite,
-              ),
+          Spacer(),
+          AppElevatedButton(
+            onTap: () {
+              widget.controller.nextPage(
+                  duration: AppConstants.animDuration300, curve: Curves.easeIn);
+            },
+            buttonType: ButtonType.elevatedWithIcon,
+            width: context.getWidth,
+            iconAlignment: IconAlignment.end,
+            icon: AppAssetImage(
+              imagePath: AppAssets.doneEmpty,
+              color: AppColors.whiteColor,
             ),
-            Gap(AppDimens.space20),
-            AppElevatedButton(
-              onTap: () {
-                widget.controller.nextPage(
-                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
-              },
-              buttonType: ButtonType.outLineWithIcon,
-              width: context.getWidth,
-              iconAlignment: IconAlignment.end,
-              icon: AppAssetImage(
-                imagePath: AppAssets.cancelIcon,
-                // color: AppColors.whiteColor,
-              ),
-              childWidget: Text(
-                'No I don\'t',
-                style: context.md14.weigh400.withPrimary,
-              ),
+            childWidget: Text(
+              'Continue',
+              style: context.md14.weigh400.withWhite,
             ),
-        Gap(AppDimens.space20),
-            AppElevatedButton(
-              onTap: () {
-                widget.controller.nextPage(
-                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
-              },
-              buttonType: ButtonType.outline,
-              width: context.getWidth,
-              childWidget: Text(
-                'I don’t know   ?',
-                style: context.md14.weigh400.withPrimary,
-              ),
-
           ),
-          
+          Gap(AppDimens.space20),
+          AppElevatedButton(
+            onTap: () {
+              widget.controller.nextPage(
+                  duration: AppConstants.animDuration300, curve: Curves.easeIn);
+            },
+            buttonType: ButtonType.outLineWithIcon,
+            width: context.getWidth,
+            iconAlignment: IconAlignment.end,
+            icon: AppAssetImage(
+              imagePath: AppAssets.cancelIcon,
+              // color: AppColors.whiteColor,
             ),
-          ],
-        ),
+            childWidget: Text(
+              'No I don\'t',
+              style: context.md14.weigh400.withPrimary,
+            ),
+          ),
+          Gap(AppDimens.space20),
+          AppElevatedButton(
+            onTap: () {
+              widget.controller.nextPage(
+                  duration: AppConstants.animDuration300, curve: Curves.easeIn);
+            },
+            buttonType: ButtonType.outline,
+            width: context.getWidth,
+            childWidget: Text(
+              'I don’t know   ?',
+              style: context.md14.weigh400.withPrimary,
+            ),
+          ),
+        ]),
       ),
     );
   }
