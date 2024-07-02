@@ -102,7 +102,14 @@ class _AvtarScreenState extends State<AvtarScreen> {
             const Spacer(),
             AppElevatedButton(
               onTap: () {
-                NavigationServices().pushName(AppRoutes.bottomBar);
+                AppDialogs.showAlertDialogBox(
+                  onTap: (){
+                    NavigationServices().pushName(AppRoutes.bottomBar);
+                  },
+                    popup: false,
+                    title: 'Profile Updated Successfully',
+                    content: 'Your Profile has been updated successfully',
+                    btnName: 'Go to Home');
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,
