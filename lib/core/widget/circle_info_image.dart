@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:pharm_flow/core/utils/app_size.dart';
 
-import '../config/app_colors.dart';
 
 class CircleInfoImage extends StatelessWidget {
   final String assetImage;

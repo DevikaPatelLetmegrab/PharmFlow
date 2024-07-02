@@ -7,10 +7,10 @@ import 'package:pharm_flow/core/model/gender_model.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
-class CustomRadio extends StatelessWidget {
+class CustomGenderCard extends StatelessWidget {
   GenderModel _gender;
 
-  CustomRadio(this._gender);
+  CustomGenderCard(this._gender);
 
   @override
   Widget build(BuildContext context) {

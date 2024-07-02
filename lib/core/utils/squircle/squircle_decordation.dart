@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../app_constants.dart';
+import 'package:pharm_flow/core/utils/app_constants.dart';
 
 class SquircleDecoration extends ShapeDecoration {
   final BorderSide side;
