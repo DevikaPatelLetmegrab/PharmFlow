@@ -12,6 +12,8 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
+import 'package:pharm_flow/core/widget/app_icon_button.dart';
+import 'package:pharm_flow/core/widget/common_app_bar.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({super.key});
@@ -24,12 +26,14 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CommonAppBar(
+        title: '',
+      ),
       body: Padding(
         padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Gap(AppDimens.space40),
             const Gap(AppDimens.space40),
             Squircle(
               height: AppDimens.space50,

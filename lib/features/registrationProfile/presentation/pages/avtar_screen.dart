@@ -52,7 +52,7 @@ class _AvtarScreenState extends State<AvtarScreen> {
                   return Container(
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          border: Border.all(color: AppColors.greyDE96Color),
+                          border: Border.all(color: AppColors.greyDEColor),
                           color: (index == state.currentIndex)
                               ? AppColors.primary.withOpacity(0.5)
                               : AppColors.greyECColor),
@@ -103,9 +103,9 @@ class _AvtarScreenState extends State<AvtarScreen> {
             AppElevatedButton(
               onTap: () {
                 AppDialogs.showAlertDialogBox(
-                  onTap: (){
-                    NavigationServices().pushName(AppRoutes.bottomBar);
-                  },
+                    onTap: () {
+                      NavigationServices().pushName(AppRoutes.bottomBar);
+                    },
                     popup: false,
                     title: 'Profile Updated Successfully',
                     content: 'Your Profile has been updated successfully',

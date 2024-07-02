@@ -40,6 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Gap(AppDimens.space20),
               Expanded(
                 child: PageView(
+                  physics: NeverScrollableScrollPhysics(),
                   controller: controller,
                   children: [
                     PrimaryGoalScreen(
