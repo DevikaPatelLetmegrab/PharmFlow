@@ -70,19 +70,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             AppElevatedButton(
               onTap: () {
                 AppDialogs.showAlertDialogBox(
-
-                  title: 'Yeay! Welcome Muzeeb',
-                  content: "Account Created Succesfully",
-                  onTap: (){
-                    NavigationServices().pushName(AppRoutes.registrationprofile);
-                  }, btnName: 'Continue'
-                );
-
+                    title: 'Yeay! Welcome Muzeeb',
+                    content: "Account Created Succesfully",
+                    onTap: () {
+                      NavigationServices()
+                          .pushName(AppRoutes.registrationprofile);
+                    },
+                    btnName: 'Continue');
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,
               borderRadius: BorderRadius.circular(AppDimens.borderRadius30),
-              // height: context.getHeight * 0.070,
               childWidget: Text(
                 'Verify OTP',
                 style: context.md14.withWhite.weigh400,
