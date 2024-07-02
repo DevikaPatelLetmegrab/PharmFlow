@@ -11,7 +11,6 @@ import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/core/widget/app_textform_field.dart';
-import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

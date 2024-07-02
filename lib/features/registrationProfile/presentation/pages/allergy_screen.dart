@@ -89,18 +89,18 @@ class _AllergyScreenState extends State<AllergyScreen> {
                   style: context.md14.weigh400.withPrimary,
                 ),
               ),
-              Gap(AppDimens.space20),
-              AppElevatedButton(
-                onTap: () {
-                  widget.controller.nextPage(
-                      duration: AppConstants.animDuration300, curve: Curves.easeIn);
-                },
-                buttonType: ButtonType.elevated,
-                width: context.getWidth,
-                childWidget: Text(
-                  'Continue',
-                  style: context.md14.weigh400.withWhite,
-                ),
+            Gap(AppDimens.space20),
+            AppElevatedButton(
+              onTap: () {
+                widget.controller.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.linear);
+              },
+              buttonType: ButtonType.elevated,
+              width: context.getWidth,
+              childWidget: Text(
+                'Continue',
+                style: context.md14.weigh400.withWhite,
               ),
             ],
           ),

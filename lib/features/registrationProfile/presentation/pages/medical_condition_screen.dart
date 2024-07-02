@@ -25,6 +25,7 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Padding(
         padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(
@@ -40,7 +41,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
               imagePath: AppAssets.medicalPerson,
               height: context.h(250),
               width: context.w(250),
-            ),
+          ),
+    
             Spacer(),
             AppElevatedButton(
               onTap: () {
@@ -77,7 +79,7 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
                 style: context.md14.weigh400.withPrimary,
               ),
             ),
-            Gap(AppDimens.space20),
+        Gap(AppDimens.space20),
             AppElevatedButton(
               onTap: () {
                 widget.controller.nextPage(
@@ -89,6 +91,9 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
                 'I don’t know   ?',
                 style: context.md14.weigh400.withPrimary,
               ),
+
+          ),
+          
             ),
           ],
         ),

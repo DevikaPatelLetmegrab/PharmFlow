@@ -53,6 +53,7 @@ class _MedicalConditionListScreenState
                     .toList(),
               ),
             ),
+
             AppElevatedButton(
               onTap: () {
                 widget.controller.nextPage(
@@ -64,6 +65,9 @@ class _MedicalConditionListScreenState
                 'Continue',
                 style: context.md14.weigh400.withWhite,
               ),
+
+          ),
+      
             ),
           ],
         ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
 import 'package:pharm_flow/core/config/app_assets.dart';
@@ -92,6 +94,9 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                 'Verify',
                 style: context.md14.withWhite.weigh400,
               ),
+              onTap: () {
+                NavigationServices().pushName(AppRoutes.bottomBar);
+              },
             ),
           ],
         ),

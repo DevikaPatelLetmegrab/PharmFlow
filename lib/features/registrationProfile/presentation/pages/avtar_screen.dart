@@ -6,6 +6,8 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_dialogs.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
@@ -32,6 +34,7 @@ class _AvtarScreenState extends State<AvtarScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return BlocProvider(
       create: (context) => CarouselSlideCubit(),
       child: Scaffold(
@@ -83,6 +86,8 @@ class _AvtarScreenState extends State<AvtarScreen> {
                 dashPattern: [6],
                 color: AppColors.grey96Color,
                 child: Squircle(
+
+    
                   height: context.h(80),
                   width: context.getWidth,
                   borderColor: AppColors.whiteColor,
@@ -99,23 +104,19 @@ class _AvtarScreenState extends State<AvtarScreen> {
                         style: context.x16.withBlack.weigh400,
                       ),
                     ),
-                  ),
-                ),
-              ),
-              Spacer(),
-              AppElevatedButton(
-                onTap: () {
-                  AppDialogs.planDialog(
-                      child: AvtarUploadScreen(controller: widget.controller));
-                },
-                buttonType: ButtonType.elevated,
-                width: context.getWidth,
-                childWidget: Text(
-                  'Continue',
-                  style: context.md14.weigh400.withWhite,
-                ),
-              ),
-            ],
+                  ))),
+          const Spacer(),
+          AppElevatedButton(
+            onTap: () {
+              NavigationServices().pushName(AppRoutes.bottomBar);
+            },
+            buttonType: ButtonType.elevated,
+            width: context.getWidth,
+            childWidget: Text(
+              'Continue',
+              style: context.md14.weigh400.withWhite,
+            ),
+
           ),
         ),
       ),

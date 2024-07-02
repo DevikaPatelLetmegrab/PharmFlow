@@ -58,6 +58,7 @@ class _GenderScreenState extends State<GenderScreen> {
                 ),
               ),
             ),
+
             Spacer(),
             AppElevatedButton(
               onTap: () {
@@ -70,6 +71,9 @@ class _GenderScreenState extends State<GenderScreen> {
                 'Prefer not to say,thanks',
                 style: context.md14.weigh400.withPrimary,
               ),
+
+   
+        
             ),
             Gap(AppDimens.space20),
             AppElevatedButton(
