@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
 import 'package:pharm_flow/core/config/app_assets.dart';
@@ -31,9 +32,7 @@ class _AllergyScreenState extends State<AllergyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Gap(AppDimens.space20),
-              // CommonRow(),
-              // Gap(AppDimens.space20),
+
               CommonTitleContent(
                   title: 'Do you have any ongoing allergy ?',
                   content:
@@ -75,7 +74,8 @@ class _AllergyScreenState extends State<AllergyScreen> {
               Gap(AppDimens.space80),
               AppElevatedButton(
                 onTap: () {
-                  widget.controller.jumpToPage(5);
+                  widget.controller.nextPage(
+                      duration: AppConstants.animDuration300, curve: Curves.easeIn);
                 },
                 buttonType: ButtonType.outLineWithIcon,
                 width: context.getWidth,
@@ -92,7 +92,8 @@ class _AllergyScreenState extends State<AllergyScreen> {
               Gap(AppDimens.space20),
               AppElevatedButton(
                 onTap: () {
-                  widget.controller.jumpToPage(5);
+                  widget.controller.nextPage(
+                      duration: AppConstants.animDuration300, curve: Curves.easeIn);
                 },
                 buttonType: ButtonType.elevated,
                 width: context.getWidth,

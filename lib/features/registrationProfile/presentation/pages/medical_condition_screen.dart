@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
@@ -29,9 +30,7 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
         child: Column(
 
           children: [
-            // Gap(AppDimens.space20),
-            // CommonRow(),
-            // Gap(AppDimens.space20),
+
             CommonTitleContent(
                 title: 'Do you have existing medical conditions?',
                 content:
@@ -45,7 +44,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
             Spacer(),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(3);
+                widget.controller.nextPage(
+                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
               },
               buttonType: ButtonType.elevatedWithIcon,
               width: context.getWidth,
@@ -62,7 +62,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
             Gap(AppDimens.space20),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(3);
+                widget.controller.nextPage(
+                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
               },
               buttonType: ButtonType.outLineWithIcon,
               width: context.getWidth,
@@ -79,7 +80,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
             Gap(AppDimens.space20),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(3);
+                widget.controller.nextPage(
+                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
               },
               buttonType: ButtonType.outline,
               width: context.getWidth,

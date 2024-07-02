@@ -31,9 +31,6 @@ class _MedicalConditionListScreenState
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Gap(AppDimens.space20),
-            // CommonRow(),
-            // Gap(AppDimens.space20),
             CommonTitleContent(
                 title: 'Please specify your medical condition',
                 content:
@@ -58,7 +55,8 @@ class _MedicalConditionListScreenState
             ),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(4);
+                widget.controller.nextPage(
+                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,

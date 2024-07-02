@@ -72,7 +72,7 @@ class AppConstants {
     GenderModel(
         name: 'Female',
         icon: AppAssets.femaleIcon,
-        isSelected: false,
+        isSelected: true,
         desc: 'XX Chromosome'),
   ];
 

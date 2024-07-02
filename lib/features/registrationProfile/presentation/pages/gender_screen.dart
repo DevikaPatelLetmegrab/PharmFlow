@@ -6,7 +6,6 @@ import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_title_content.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/widgets/custom_radio_screen.dart';
 
@@ -27,9 +26,6 @@ class _GenderScreenState extends State<GenderScreen> {
         padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(
           children: [
-            // Gap(AppDimens.space20),
-            // CommonRow(),
-            // Gap(AppDimens.space20),
             CommonTitleContent(
                 title: 'What’s your Gender?',
                 content:
@@ -53,7 +49,7 @@ class _GenderScreenState extends State<GenderScreen> {
                           AppConstants.genderList[index].isSelected = true;
                         });
                       },
-                      child: CustomRadio(AppConstants.genderList[index]),
+                      child: CustomGenderCard(AppConstants.genderList[index]),
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) {
@@ -65,7 +61,8 @@ class _GenderScreenState extends State<GenderScreen> {
             Spacer(),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(2);
+                widget.controller.nextPage(
+                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
               },
               buttonType: ButtonType.outline,
               width: context.getWidth,
@@ -77,7 +74,8 @@ class _GenderScreenState extends State<GenderScreen> {
             Gap(AppDimens.space20),
             AppElevatedButton(
               onTap: () {
-                widget.controller.jumpToPage(2);
+                widget.controller.nextPage(
+                    duration: AppConstants.animDuration300, curve: Curves.easeIn);
               },
               buttonType: ButtonType.elevated,
               width: context.getWidth,
