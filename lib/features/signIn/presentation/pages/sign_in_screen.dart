@@ -68,7 +68,6 @@ class _SignInScreenState extends State<SignInScreen> {
               buttonType: ButtonType.elevated,
               width: context.getWidth,
               borderRadius: BorderRadius.circular(AppDimens.borderRadius30),
-              height: context.getHeight * 0.070,
               childWidget: Text(
                 'Verify OTP',
                 style: context.md14.withWhite.weigh400, 

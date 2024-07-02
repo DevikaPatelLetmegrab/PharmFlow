@@ -76,13 +76,14 @@ class _AvtarUploadScreenState extends State<AvtarUploadScreen> {
               GestureDetector(
                 onTap: () {
                   AppDialogs.showAlertDialogBox(
-                    title: 'Profile Updated Successfully',
-                    content: 'Your profile has been updated successfully ',
-                  );
+                      title: 'Profile Updated Successfully',
+                      content: 'Your profile has been updated successfully ',
+                      popup: true,
+                      btnName: 'Go to Home');
                 },
                 child: SquareIcon(
                   iconPath: AppAssets.cancelIcon,
-                  backgroundColor: AppColors.primary,
+                  backgroundColor: AppColors.pinkColor,
                   iconColor: AppColors.whiteColor,
                 ),
               )

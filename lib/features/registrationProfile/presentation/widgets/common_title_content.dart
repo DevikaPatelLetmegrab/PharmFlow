@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 
-import '../../../../core/config/app_dimension.dart';
+import 'package:pharm_flow/core/config/app_dimension.dart';
 
 class CommonTitleContent extends StatelessWidget {
   final String title;

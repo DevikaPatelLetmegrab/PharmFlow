@@ -38,11 +38,11 @@ class RoutesUtils {
           return VerifyOtpScreen(isLogin: arg);
         },
       ),
-      GoRoute(
-        path: AppRoutes.registrationPage,
-        name: AppRoutes.registrationPage,
-        builder: (context, state) => const RegistrationScreen(),
-      ),
+      // GoRoute(
+      //   path: AppRoutes.registrationPage,
+      //   name: AppRoutes.registrationPage,
+      //   builder: (context, state) =>  RegistrationScreen(),
+      // ),
       GoRoute(
         path: AppRoutes.registrationprofile,
         name: AppRoutes.registrationprofile,

@@ -87,7 +87,6 @@ class VerifyOtpScreen extends StatelessWidget {
               buttonType: ButtonType.elevated,
               width: context.getWidth,
               borderRadius: BorderRadius.circular(AppDimens.borderRadius30),
-              height: context.getHeight * 0.070,
               childWidget: Text(
                 'Verify',
                 style: context.md14.withWhite.weigh400,
@@ -96,6 +95,8 @@ class VerifyOtpScreen extends StatelessWidget {
                 AppDialogs.showAlertDialogBox(
                   title: 'Yeay! Welcome Muzeeb',
                   content: "Account Created Succesfully",
+                  popup: true,
+                  btnName: "go to home",
                   onTap: () {
                     var route = isLogin == true
                         ? AppRoutes.bottomBar

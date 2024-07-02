@@ -9,10 +9,18 @@ import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 
-import '../config/app_colors.dart';
-import '../widget/circle_info_image.dart';
+import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/widget/circle_info_image.dart';
 
 class AppDialogs {
+  static void planDialog({required Widget child}) {
+    showGeneralDialog(
+        context: NavigationServices().getNavigationContext(),
+        pageBuilder: (context, animation, secondaryAnimation) {
+          return child;
+        });
+  }
+
   static void customGeneralDialog(
       {String? rightButtonText,
       void Function()? rightButtonOnTap,
@@ -153,37 +161,44 @@ class AppDialogs {
 
   static showAlertDialogBox({
     required String title,
+    required String btnName,
     String? content,
+    bool? popup,
     Color? titleColor,
     Color? contentColor,
     void Function()? onTap,
   }) {
     showDialog(
-      context: NavigationServices().getNavigationContext(),
-      builder: (ctx) => AlertDialog(
-        actionsAlignment: MainAxisAlignment.center,
-        title: Text(
-          title,
-          style: NavigationServices().getNavigationContext().x16.withBlack,
-        ),
-        icon: AppAssetImage(
-          imagePath: AppAssets.done,
-          size: 70,
-        ),
-        content: Text(
-          content ?? '',
-          textAlign: TextAlign.center,
-          style: NavigationServices().getNavigationContext().md14.withGrey78,
-        ),
-        actions: [
-          AppElevatedButton(
-            onTap: onTap,
-            buttonType: ButtonType.elevated,
-            buttonName: 'Continue',
-            
-          ),
-        ],
-      ),
-    );
+        context: NavigationServices().getNavigationContext(),
+        builder: (ctx) => PopScope(
+              canPop: popup ?? true,
+              child: AlertDialog(
+                actionsAlignment: MainAxisAlignment.center,
+                title: Text(
+                  title,
+                  style:
+                      NavigationServices().getNavigationContext().x16.withBlack,
+                ),
+                icon: AppAssetImage(
+                  imagePath: AppAssets.done,
+                  size: 70,
+                ),
+                content: Text(
+                  content ?? '',
+                  textAlign: TextAlign.center,
+                  style: NavigationServices()
+                      .getNavigationContext()
+                      .md14
+                      .withGrey78,
+                ),
+                actions: [
+                  AppElevatedButton(
+                    onTap: onTap,
+                    buttonType: ButtonType.elevated,
+                    buttonName: btnName,
+                  ),
+                ],
+              ),
+            ));
   }
 }
