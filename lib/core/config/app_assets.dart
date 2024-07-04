@@ -8,10 +8,13 @@ class AppAssets {
   static String avtar3 = 'assets/images/avtar3.png';
 
   static String welcomeDoc = 'assets/images/doctor.png';
+  static String doctorImage = 'assets/images/doctor1.png';
   static String welcomePharm = 'assets/images/pharmacist.png';
   static String welcomePeople = 'assets/images/people.png';
   static String welcomeNotification = 'assets/images/notifications.png';
   static String welcomePharmAmico = 'assets/images/pharmacist_amico.png';
+  static String map = 'assets/images/map.png';
+  static String image = 'assets/images/image.png';
 
   ///icons
 
@@ -29,6 +32,18 @@ class AppAssets {
   static String profileIcon = 'assets/icon/profile.png';
   static String backIcon = 'assets/icon/back.png';
   static String searchIcon = 'assets/icon/search.png';
+  static String verifyIcon = 'assets/icon/verify.png';
+  static String starFill = 'assets/icon/star_fill.png';
+  static String starEmpty = 'assets/icon/star_empty.png';
+  static String locationIcon = 'assets/icon/location.png';
+  static String offerIcon = 'assets/icon/offer.png';
+  static String callIcon = 'assets/icon/call.png';
+  static String rankingIcon = 'assets/icon/ranking.png';
+  static String messageIcon = 'assets/icon/message.png';
+  static String blueStarFill = 'assets/icon/blue_star_fill.png';
+  static String userIcon = 'assets/icon/user.png';
+  static String messageOutlineIcon = 'assets/icon/message_outline.png';
+  static String videoCallIcon = 'assets/icon/video_call.png';
 
   ///logo
 

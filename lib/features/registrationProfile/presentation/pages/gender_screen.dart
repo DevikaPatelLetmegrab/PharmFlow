@@ -7,7 +7,7 @@ import 'package:pharm_flow/core/utils/app_size.dart';
 
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_title_content.dart';
-import 'package:pharm_flow/features/registrationProfile/presentation/widgets/custom_radio_screen.dart';
+import 'package:pharm_flow/features/registrationProfile/presentation/widgets/custom_gender_card.dart';
 
 class GenderScreen extends StatefulWidget {
   final PageController controller;
@@ -58,7 +58,6 @@ class _GenderScreenState extends State<GenderScreen> {
                 ),
               ),
             ),
-
             Spacer(),
             AppElevatedButton(
               onTap: () {

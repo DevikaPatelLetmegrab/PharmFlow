@@ -114,7 +114,10 @@ class AppTextFormField extends StatelessWidget {
           initialValue: initialValue,
           validator: validator,
           decoration: InputDecoration(
-            suffixIcon: suffixIcon,
+            suffixIcon: Padding(
+              padding: const EdgeInsets.all(AppDimens.space12),
+              child: suffixIcon,
+            ),
             constraints: BoxConstraints(
               minHeight: height ?? context.h(AppDimens.inputFieldHeight),
               maxHeight: 10000,

@@ -4,6 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
@@ -53,9 +55,14 @@ class CommonRow extends StatelessWidget {
               ),
             ),
             Gap(AppDimens.space20),
-            Text(
-              'Skip',
-              style: context.x16.withBlack.weigh400,
+            GestureDetector(
+              onTap: () {
+                NavigationServices().pushName(AppRoutes.bottomBar);
+              },
+              child: Text(
+                'Skip',
+                style: context.x16.withBlack.weigh400,
+              ),
             )
           ],
         ),
