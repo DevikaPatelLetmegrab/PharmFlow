@@ -7,14 +7,18 @@ import 'package:pharm_flow/features/SignIn/presentation/pages/sign_in_screen.dar
 import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 
 class RoutesUtils {
   var goRoute = GoRouter(
     navigatorKey: NavigationServices().navigatorKey,
-    initialLocation: AppRoutes.splashPage,
+    initialLocation: AppRoutes.bottomBar,
     routes: [
       GoRoute(
         path: AppRoutes.splashPage,
@@ -39,11 +43,11 @@ class RoutesUtils {
           return VerifyOtpScreen(isLogin: arg);
         },
       ),
-      // GoRoute(
-      //   path: AppRoutes.registrationPage,
-      //   name: AppRoutes.registrationPage,
-      //   builder: (context, state) =>  RegistrationScreen(),
-      // ),
+      GoRoute(
+        path: AppRoutes.registrationPage,
+        name: AppRoutes.registrationPage,
+        builder: (context, state) => RegistrationScreen(),
+      ),
       GoRoute(
         path: AppRoutes.registrationprofile,
         name: AppRoutes.registrationprofile,
@@ -63,6 +67,26 @@ class RoutesUtils {
         path: AppRoutes.bottomBar,
         name: AppRoutes.bottomBar,
         builder: (context, state) => BottomNavigationPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.detailsPage,
+        name: AppRoutes.detailsPage,
+        builder: (context, state) => DetailsPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.bookAppointmentPage,
+        name: AppRoutes.bookAppointmentPage,
+        builder: (context, state) => BookAppointmentPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.patientDetailsForm,
+        name: AppRoutes.patientDetailsForm,
+        builder: (context, state) => PatientDetailsForm(),
+      ),
+      GoRoute(
+        path: AppRoutes.patientDetailsPage,
+        name: AppRoutes.patientDetailsPage,
+        builder: (context, state) => PatientDetailsPage(),
       )
     ],
   );

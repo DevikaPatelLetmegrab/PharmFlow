@@ -1,7 +1,9 @@
 import 'package:pharm_flow/core/config/app_assets.dart';
 
 import 'package:pharm_flow/core/model/chip_model.dart';
+import 'package:pharm_flow/core/model/date_model.dart';
 import 'package:pharm_flow/core/model/gender_model.dart';
+import 'package:pharm_flow/core/model/package_model.dart';
 
 class AppConstants {
   static const Duration gridAnimDuration375 = Duration(milliseconds: 375);
@@ -16,14 +18,6 @@ class AppConstants {
       DateTime.parse(DateTime.parse('12/11/2014').toIso8601String());
   static const double defaultScale = 0.5;
   static const double defaultSquircleRadius = 25;
-
-  static List subscriptionFeatures = [
-    'Access to all basic features',
-    'Basic reporting and analytics',
-    'Up to 10 individual users',
-    '20GB individual data each user',
-    'Basic chat and email support',
-  ];
 
   static List<ChipModel> goalList = [
     ChipModel(title: 'E-Pharmacy ', isSelected: false),
@@ -76,59 +70,64 @@ class AppConstants {
         desc: 'XX Chromosome'),
   ];
 
+  static List<DateModel> dateList = [
+    DateModel(title: 'Mon', content: '12 July', isSelected: true),
+    DateModel(title: 'Tue', content: '13 July', isSelected: false),
+    DateModel(title: 'Wed', content: '14 July', isSelected: false),
+    DateModel(title: 'Thu', content: '15 July', isSelected: false),
+    DateModel(title: 'Fri', content: '16 July', isSelected: false),
+    DateModel(title: 'Sat', content: '17 July', isSelected: false),
+    DateModel(title: 'Sun', content: '18 July', isSelected: false),
+  ];
+
+  static List<DateModel> durationList = [
+    DateModel(title: '10', content: 'Minutes', isSelected: true),
+    DateModel(title: '20', content: 'Minutes', isSelected: false),
+    DateModel(title: '30', content: 'Minutes', isSelected: false),
+    DateModel(title: '40', content: 'Minutes', isSelected: false),
+    DateModel(title: '50', content: 'Minutes', isSelected: false),
+    DateModel(title: '60', content: 'Minutes', isSelected: false),
+  ];
+
+  static List<DateModel> timeList = [
+    DateModel(title: '08:00', content: 'AM', isSelected: true),
+    DateModel(title: '09:00', content: 'AM', isSelected: false),
+    DateModel(title: '10:00', content: 'AM', isSelected: false),
+    DateModel(title: '11:00', content: 'AM', isSelected: false),
+    DateModel(title: '12:00', content: 'PM', isSelected: false),
+    DateModel(title: '01:00', content: 'PM', isSelected: false),
+    DateModel(title: '02:00', content: 'PM', isSelected: false),
+    DateModel(title: '03:00', content: 'PM', isSelected: false),
+    DateModel(title: '04:00', content: 'PM', isSelected: false),
+    DateModel(title: '05:00', content: 'PM', isSelected: false),
+    DateModel(title: '06:00', content: 'PM', isSelected: false),
+    DateModel(title: '07:00', content: 'PM', isSelected: false),
+  ];
+
+  static List<PackageModel> packageList = [
+    PackageModel(
+        title: 'Message',
+        content: 'Chat With Doctor',
+        icon: AppAssets.messageOutlineIcon,
+        price: '20',
+        isSelected: false),
+    PackageModel(
+        title: 'Voice Call',
+        content: 'Voice Call With Doctor',
+        icon: AppAssets.callIcon,
+        price: '20',
+        isSelected: false),
+    PackageModel(
+        title: 'Video Call',
+        content: 'Video Call With Doctor',
+        icon: AppAssets.videoCallIcon,
+        price: '20',
+        isSelected: false),
+  ];
+
   static List<String> avtarList = [
     AppAssets.avtar2,
     AppAssets.avtar3,
     AppAssets.avtar1,
   ];
-}
-
-enum AddressType {
-  /// Unknown address type.
-  unknown(0),
-
-  /// Work address.
-  work(2),
-
-  /// Home address.
-  home(1);
-
-  const AddressType(this.rawValue);
-
-  factory AddressType.fromRawValue(int value) {
-    switch (value) {
-      case 0:
-        return AddressType.unknown;
-      case 1:
-        return AddressType.home;
-      case 2:
-        return AddressType.work;
-      default:
-        throw ArgumentError.value(value, 'value', 'Invalid raw value.');
-    }
-  }
-
-  /// The raw address type value.
-  final int rawValue;
-
-  factory AddressType.fromString(String value) {
-    if (value == 'Home') {
-      return AddressType.home;
-    }
-    if (value == 'Work') {
-      return AddressType.work;
-    }
-    return AddressType.unknown;
-  }
-}
-
-enum ProductStatus {
-  active,
-  inActive,
-  blocked,
-  approval,
-  deleted,
-  total,
-  quantityLow,
-  outOfStock,
 }
