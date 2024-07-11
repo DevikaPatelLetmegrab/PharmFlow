@@ -71,7 +71,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               onTap: () {
                 AppDialogs.showAlertDialogBox(
                     title: 'Yeay! Welcome Muzeeb',
-                    content: "Account Created Succesfully",
+                    content: "Account Created Successfully",
                     onTap: () {
                       NavigationServices()
                           .pushName(AppRoutes.registrationprofile);

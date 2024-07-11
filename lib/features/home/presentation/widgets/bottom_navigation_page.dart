@@ -4,6 +4,7 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
+import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 
 class BottomNavigationPage extends StatefulWidget {
   BottomNavigationPage({super.key});
@@ -64,9 +65,9 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         child: IndexedStack(
           index: _selectedIndex,
           children: [
-             HomePage(),
+            HomePage(),
             const MyBookingPage(),
-            Container(),
+            OrderPage(),
             Container(),
           ],
         ),

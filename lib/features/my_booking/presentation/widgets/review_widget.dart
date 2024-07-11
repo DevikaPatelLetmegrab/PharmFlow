@@ -57,7 +57,7 @@ class SingleReviewWidget extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                         CommonRatingBar(rate: 5),
+                          CommonRatingBar(rate: 5),
                           const Gap(AppDimens.space5),
                           Text(
                             '2 mins ago',
