@@ -27,9 +27,9 @@ class SquareIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      // height: context.h(40),
-      // width: context.w(40),
+    return Container(
+      height: context.h(40),
+      width: context.w(40),
       decoration: BoxDecoration(
           border: Border.all(color: borderColor),
           color: backgroundColor,

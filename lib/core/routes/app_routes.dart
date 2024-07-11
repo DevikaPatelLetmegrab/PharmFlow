@@ -8,4 +8,8 @@ abstract class AppRoutes {
   static const String homePage = '/home_page';
   static const String bookingPage = '/mu_booking_page';
   static const String bottomBar = '/bottom_navigation_page';
+  static const String detailsPage = '/details_page';
+  static const String bookAppointmentPage = '/book_appointment_page';
+  static const String patientDetailsForm = '/patient_details_form_page';
+  static const String patientDetailsPage = '/patient_details_page';
 }

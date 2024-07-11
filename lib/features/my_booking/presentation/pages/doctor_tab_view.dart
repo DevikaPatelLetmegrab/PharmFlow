@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
-import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
+import 'package:pharm_flow/features/my_booking/presentation/widgets/single_doctor_widget.dart';
 
 class DoctorTabView extends StatelessWidget {
   const DoctorTabView({super.key});
@@ -12,25 +13,10 @@ class DoctorTabView extends StatelessWidget {
     return ListView.separated(
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
-        return Squircle(
-          borderColor: AppColors.greyE8Color,
-          height: 250,
-          customRadius: BorderRadius.circular(AppDimens.borderRadius30),
-          child: const Padding(
-            padding: EdgeInsets.all(AppDimens.space16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Jan 20, 2024 - 11:30 AM'),
-                Gap(AppDimens.space10),
-                Divider(color: AppColors.greyE8Color,)
-              ],
-            ),
-          ),
-        );
+        return const SingleDoctorWidget();
       },
       separatorBuilder: (BuildContext context, int index) {
-        return Gap(AppDimens.space15);
+        return const Gap(AppDimens.space15);
       },
     );
   }
