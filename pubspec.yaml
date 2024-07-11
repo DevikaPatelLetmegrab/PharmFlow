@@ -37,7 +37,7 @@ dependencies:
   flutter_otp_text_field:
   advanced_chips_input:
   dotted_border:
-  carousel_slider:
+  carousel_slider: ^4.2.1
 
   bloc: ^8.1.4
   equatable: ^2.0.5

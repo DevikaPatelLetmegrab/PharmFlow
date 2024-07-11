@@ -6,6 +6,7 @@ class AppAssetImage extends StatelessWidget {
   final double? height;
   final double? width;
   final Color? color;
+  final BoxFit? fit;
 
   const AppAssetImage(
       {super.key,
@@ -13,7 +14,8 @@ class AppAssetImage extends StatelessWidget {
       this.size,
       this.height,
       this.width,
-      this.color});
+      this.color,
+      this.fit});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class AppAssetImage extends StatelessWidget {
       width: size ?? width,
       height: size ?? height,
       color: color ?? null,
+      fit: fit,
     );
   }
 }

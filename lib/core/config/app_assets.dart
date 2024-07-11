@@ -12,6 +12,10 @@ class AppAssets {
   static String welcomePeople = 'assets/images/people.png';
   static String welcomeNotification = 'assets/images/notifications.png';
   static String welcomePharmAmico = 'assets/images/pharmacist_amico.png';
+  static String blueCard = 'assets/images/blue_card.png';
+  static String page = 'assets/images/page.png';
+  static String docLab = 'assets/images/doctor_lab.png';
+  static String discountImg = 'assets/images/image_discount.png';
 
   ///icons
 
@@ -33,6 +37,10 @@ class AppAssets {
   static String locationIcon = 'assets/icon/location_icon.png';
   static String notificationIcon = 'assets/icon/notification_icon.png';
   static String filterIcon = 'assets/icon/filter_icon.png';
+  static String peopleIcon = 'assets/icon/people.png';
+  static String millionIcon = 'assets/icon/million.png';
+  static String pillsIcon = 'assets/icon/pills.png';
+  static String quoteIcon = 'assets/icon/double_quote_icon.png';
 
   ///logo
 
@@ -44,4 +52,5 @@ class AppAssets {
   //app images
   static String image = 'assets/image.png';
   static String image1 = 'assets/image1.png';
+  static String image2 = 'assets/image2.png';
 }
