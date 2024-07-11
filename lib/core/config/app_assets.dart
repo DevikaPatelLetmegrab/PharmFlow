@@ -47,7 +47,6 @@ class AppAssets {
   static String verifyIcon = 'assets/icon/verify.png';
   static String starFill = 'assets/icon/star_fill.png';
   static String starEmpty = 'assets/icon/star_empty.png';
-  static String locationIcon = 'assets/icon/location.png';
   static String offerIcon = 'assets/icon/offer.png';
   static String callIcon = 'assets/icon/call.png';
   static String rankingIcon = 'assets/icon/ranking.png';
@@ -56,6 +55,7 @@ class AppAssets {
   static String userIcon = 'assets/icon/user.png';
   static String messageOutlineIcon = 'assets/icon/message_outline.png';
   static String videoCallIcon = 'assets/icon/video_call.png';
+  static String orderFilterIcon = 'assets/icon/video_call.png';
 
   ///logo
 
@@ -65,7 +65,6 @@ class AppAssets {
   static String splashImage = 'assets/logo/splash_image.png';
 
   //app images
-  static String image = 'assets/image.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';
 }

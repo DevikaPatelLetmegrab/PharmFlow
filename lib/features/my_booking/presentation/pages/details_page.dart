@@ -50,9 +50,7 @@ class DetailsPage extends StatelessWidget {
                 imageWidth: 100,
               ),
               const Gap(AppDimens.space10),
-              const Divider(
-                color: AppColors.greyE8Color,
-              ),
+              // const ExpansionTile(title: Text('sZCvsfedrg'),children: [Text('skldnlskdnme')],),
               const Gap(AppDimens.space10),
               const DoctorInfoWidget(),
               const Gap(AppDimens.space20),

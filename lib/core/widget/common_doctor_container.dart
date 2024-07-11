@@ -68,7 +68,7 @@ class CommonDoctorContainer extends StatelessWidget {
             IntrinsicHeight(
               child: Row(
                 children: [
-                   CommonRatingBar(rate: 5),
+                  CommonRatingBar(rate: 5),
                   const Gap(AppDimens.space5),
                   const VerticalDivider(
                     thickness: 2,
@@ -86,7 +86,10 @@ class CommonDoctorContainer extends StatelessWidget {
             if (phoneNumber != null) ...[
               Row(
                 children: [
-                  AppAssetImage(imagePath: AppAssets.callIcon,size: 20,),
+                  AppAssetImage(
+                    imagePath: AppAssets.callIcon,
+                    size: 20,
+                  ),
                   const Gap(AppDimens.space5),
                   SizedBox(
                     width: context.getWidth * 0.57,
@@ -104,7 +107,10 @@ class CommonDoctorContainer extends StatelessWidget {
             if (location != null) ...[
               Row(
                 children: [
-                  AppAssetImage(imagePath: AppAssets.locationIcon),
+                  AppAssetImage(
+                    imagePath: AppAssets.locationIcon,
+                    size: AppDimens.imageSize20,
+                  ),
                   const Gap(AppDimens.space5),
                   SizedBox(
                     width: context.getWidth * 0.57,
