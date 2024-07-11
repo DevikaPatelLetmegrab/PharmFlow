@@ -8,7 +8,6 @@ extension TextStyleExtension on BuildContext {
       .headlineSmall!
       .copyWith(fontSize: _getResponsiveFontSize(this, baseFontSize: 12));
 
-
   TextStyle get x20 => Theme.of(this)
       .textTheme
       .headlineSmall!
@@ -53,6 +52,7 @@ extension StyleExtension on TextStyle {
   TextStyle get withGrey33 => copyWith(color: AppColors.grey33Color);
   TextStyle get withGreyD9 => copyWith(color: AppColors.borderColorGrey);
   TextStyle get withGreyE6 => copyWith(color: AppColors.greyE6Color);
+  TextStyle get withRed => copyWith(color: Colors.red);
 
   TextStyle get withPrimary => copyWith(color: AppColors.primary);
 

@@ -39,26 +39,27 @@ class _AvtarScreenState extends State<AvtarScreen> {
         body: Padding(
           padding: const EdgeInsets.all(AppDimens.space16),
           child: Column(children: [
-            CommonTitleContent(
+            const CommonTitleContent(
                 title: 'Upload your avatar',
                 content:
                     'You can upload your image from gallery or we have some premade avatar for you '),
-            Gap(AppDimens.space40),
+            const Gap(AppDimens.space40),
             BlocBuilder<CarouselSlideCubit, CarouselSlideState>(
                 builder: (context, state) {
               return CarouselSlider.builder(
                 itemCount: AppConstants.avtarList.length,
                 itemBuilder: (BuildContext context, int index, int realIndex) {
                   return Container(
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: AppColors.greyDEColor),
-                          color: (index == state.currentIndex)
-                              ? AppColors.primary.withOpacity(0.5)
-                              : AppColors.greyECColor),
-                      child: AppAssetImage(
-                        imagePath: AppConstants.avtarList[index],
-                      ));
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: AppColors.greyDEColor),
+                        color: (index == state.currentIndex)
+                            ? AppColors.primary.withOpacity(0.5)
+                            : AppColors.greyECColor),
+                    child: AppAssetImage(
+                      imagePath: AppConstants.avtarList[index],
+                    ),
+                  );
                 },
                 options: CarouselOptions(
                     initialPage: state.currentIndex,
@@ -75,9 +76,9 @@ class _AvtarScreenState extends State<AvtarScreen> {
                     viewportFraction: 0.3),
               );
             }),
-            Gap(AppDimens.space20),
+            const Gap(AppDimens.space20),
             DottedBorder(
-                radius: Radius.circular(AppDimens.borderRadius20),
+                radius: const Radius.circular(AppDimens.borderRadius20),
                 borderType: BorderType.RRect,
                 dashPattern: [6],
                 color: AppColors.grey96Color,

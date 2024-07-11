@@ -56,7 +56,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.homePage,
         name: AppRoutes.homePage,
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => HomePage(),
       ),
       GoRoute(
         path: AppRoutes.bookingPage,
