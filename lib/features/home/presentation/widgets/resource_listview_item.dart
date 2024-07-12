@@ -41,6 +41,7 @@ class ResourceListviewItem extends StatelessWidget {
               ],
             )
           : Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   decoration: BoxDecoration(
@@ -57,7 +58,12 @@ class ResourceListviewItem extends StatelessWidget {
                 Row(
                   children: [
                     AssetIcon(assetName: AppAssets.locationIcon),
-                    Text('Ambika Niketan, Athwalines, Surat, Gujarat 395007')
+                    const Gap(AppDimens.space5),
+                    const Expanded(
+                      child: Text(
+                        'Ambika Niketan, Athwalines, Surat, Gujarat 395007',
+                      ),
+                    )
                   ],
                 )
               ],

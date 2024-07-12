@@ -17,6 +17,7 @@ class LaunchListviewItem extends StatelessWidget {
     return SizedBox(
       width: context.getWidth / 2.5,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: context.getWidth / 2.5,
@@ -33,7 +34,7 @@ class LaunchListviewItem extends StatelessWidget {
           Text(
             'Nivea Men Shower Gel for Body, Skin & Hair',
             maxLines: 2,
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.start,
             style: context.md14,
           ),
           const Gap(AppDimens.space10),

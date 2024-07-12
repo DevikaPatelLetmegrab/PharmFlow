@@ -12,6 +12,7 @@ import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.d
 import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
+import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 
@@ -46,7 +47,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.registrationPage,
         name: AppRoutes.registrationPage,
-        builder: (context, state) => RegistrationScreen(),
+        builder: (context, state) => const RegistrationScreen(),
       ),
       GoRoute(
         path: AppRoutes.registrationprofile,
@@ -71,23 +72,28 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.detailsPage,
         name: AppRoutes.detailsPage,
-        builder: (context, state) => DetailsPage(),
+        builder: (context, state) => const DetailsPage(),
       ),
       GoRoute(
         path: AppRoutes.bookAppointmentPage,
         name: AppRoutes.bookAppointmentPage,
-        builder: (context, state) => BookAppointmentPage(),
+        builder: (context, state) => const BookAppointmentPage(),
       ),
       GoRoute(
         path: AppRoutes.patientDetailsForm,
         name: AppRoutes.patientDetailsForm,
-        builder: (context, state) => PatientDetailsForm(),
+        builder: (context, state) => const PatientDetailsForm(),
       ),
       GoRoute(
         path: AppRoutes.patientDetailsPage,
         name: AppRoutes.patientDetailsPage,
-        builder: (context, state) => PatientDetailsPage(),
-      )
+        builder: (context, state) => const PatientDetailsPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.searchPage,
+        name: AppRoutes.searchPage,
+        builder: (context, state) => const SearchPage(),
+      ),
     ],
   );
 }
