@@ -18,7 +18,6 @@ class AppAssets {
   static String docLab = 'assets/images/doctor_lab.png';
   static String discountImg = 'assets/images/image_discount.png';
   static String map = 'assets/images/map.png';
-  static String image = 'assets/images/image.png';
 
   ///icons
 
@@ -55,8 +54,9 @@ class AppAssets {
   static String userIcon = 'assets/icon/user.png';
   static String messageOutlineIcon = 'assets/icon/message_outline.png';
   static String videoCallIcon = 'assets/icon/video_call.png';
-  static String orderFilterIcon = 'assets/icon/video_call.png';
 
+  static String orderFilterIcon = 'assets/icon/video_call.png';
+  static String searchCallIcon = 'assets/icon/search_call.png';
   ///logo
 
   static String logoDark = 'assets/logo/logo_dark.png';
@@ -65,6 +65,8 @@ class AppAssets {
   static String splashImage = 'assets/logo/splash_image.png';
 
   //app images
+  static String image = 'assets/images/image.png';
+  static String imageD = 'assets/imageD.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';
 }
