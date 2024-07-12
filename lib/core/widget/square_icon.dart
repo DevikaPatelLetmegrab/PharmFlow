@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 
@@ -11,7 +12,7 @@ class SquareIcon extends StatelessWidget {
     this.borderColor = AppColors.greyD9Color,
     this.radius = 15,
     this.iconSize = 20,
-    this.iconPadding,
+    this.iconPadding = EdgeInsets.zero,
     this.iconColor,
     this.bgopacity = .2,
   });
@@ -23,22 +24,25 @@ class SquareIcon extends StatelessWidget {
   final double radius;
   final double iconSize;
   final double bgopacity;
-  final EdgeInsets? iconPadding;
+  final EdgeInsetsGeometry iconPadding;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.h(40),
-      width: context.w(40),
+      height: context.h(55),
+      width: context.w(55),
       decoration: BoxDecoration(
           border: Border.all(color: borderColor),
           color: backgroundColor,
           borderRadius: BorderRadius.circular(context.w(radius))),
-      child: Image.asset(
-        iconPath,
-        height: iconSize,
-        width: iconSize,
-        color: iconColor,
+      child: Padding(
+        padding: iconPadding,
+        child: Image.asset(
+          iconPath,
+          height: iconSize,
+          width: iconSize,
+          color: iconColor,
+        ),
       ),
     );
   }

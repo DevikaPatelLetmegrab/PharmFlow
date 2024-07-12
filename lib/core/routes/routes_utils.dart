@@ -13,6 +13,7 @@ import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_pag
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
+import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 
@@ -93,6 +94,11 @@ class RoutesUtils {
         path: AppRoutes.searchPage,
         name: AppRoutes.searchPage,
         builder: (context, state) => const SearchPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.orderDetailPage,
+        name: AppRoutes.orderDetailPage,
+        builder: (context, state) => const OrderDetailsPage(),
       ),
     ],
   );
