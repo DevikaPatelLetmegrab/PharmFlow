@@ -69,4 +69,5 @@ class AppAssets {
   static String imageD = 'assets/imageD.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';
+  static String img = 'assets/img.png';
 }

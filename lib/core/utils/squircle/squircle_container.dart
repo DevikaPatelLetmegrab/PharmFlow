@@ -21,7 +21,7 @@ class Squircle extends Container {
     super.child,
     this.radius = AppConstants.defaultSquircleRadius,
     this.backgroundColor,
-    this.borderColor = AppColors.grey78Color,
+    this.borderColor = AppColors.greyD9Color,
     this.side,
     this.gradient,
 
