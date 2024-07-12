@@ -109,7 +109,10 @@ class _OrderPageState extends State<OrderPage>
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppDimens.space8),
-            child: AppAssetImage(imagePath: AppAssets.orderFilterIcon),
+            child: AppAssetImage(
+              imagePath: AppAssets.orderFilterIcon,
+              size: 20,
+            ),
           )
         ],
       ),

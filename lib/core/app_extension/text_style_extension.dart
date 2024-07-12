@@ -63,5 +63,10 @@ extension StyleExtension on TextStyle {
   TextStyle get weigh300 => copyWith(fontWeight: FontWeight.w300);
 
   TextStyle get weigh500 => copyWith(fontWeight: FontWeight.w500);
+  TextStyle get weigh600 => copyWith(fontWeight: FontWeight.w600);
   TextStyle get weigh800 => copyWith(fontWeight: FontWeight.w800);
+
+  TextStyle get redLineThrough => copyWith(
+      decoration: TextDecoration.lineThrough, decorationColor: AppColors.errorRed);
+
 }
