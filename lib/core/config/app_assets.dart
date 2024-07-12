@@ -54,8 +54,9 @@ class AppAssets {
   static String userIcon = 'assets/icon/user.png';
   static String messageOutlineIcon = 'assets/icon/message_outline.png';
   static String videoCallIcon = 'assets/icon/video_call.png';
+  static String orderFilterIcon = 'assets/icon/video_call.png';
   static String searchCallIcon = 'assets/icon/search_call.png';
-  static String orderFilterIcon = 'assets/icon/order_filter.png';
+ 
 
   ///logo
 
