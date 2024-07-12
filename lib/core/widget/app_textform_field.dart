@@ -79,7 +79,7 @@ class AppTextFormField extends StatelessWidget {
     this.label,
     this.showCounter,
     this.contentPadding =
-    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
     this.textCapitalization = TextCapitalization.none,
     this.isDense = false,
   });
@@ -95,9 +95,11 @@ class AppTextFormField extends StatelessWidget {
             label ?? "",
             style: context.md14.withBlack.weigh400,
           ),
-        SizedBox(height: 10,),
+        SizedBox(
+          height: 10,
+        ),
         TextFormField(
-          style: fontTextStyle ??context.md14,
+          style: fontTextStyle ?? context.md14,
           enabled: enable,
           keyboardType: keyboardType,
           onFieldSubmitted: onSubmit,
@@ -115,7 +117,7 @@ class AppTextFormField extends StatelessWidget {
           validator: validator,
           decoration: InputDecoration(
             suffixIcon: Padding(
-              padding: const EdgeInsets.all(AppDimens.space12),
+              padding: const EdgeInsets.only(right: AppDimens.space10),
               child: suffixIcon,
             ),
             constraints: BoxConstraints(
@@ -131,43 +133,43 @@ class AppTextFormField extends StatelessWidget {
             filled: filled,
             disabledBorder: showBorder
                 ? SquircleInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-              borderSide: BorderSide(
-                  color: borderColor ?? AppColors.borderColorGrey),
-            )
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                        color: borderColor ?? AppColors.borderColorGrey),
+                  )
                 : InputBorder.none,
             focusedErrorBorder: showBorder
                 ? SquircleInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-              borderSide: const BorderSide(color: AppColors.errorRed),
-            )
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: const BorderSide(color: AppColors.errorRed),
+                  )
                 : InputBorder.none,
             enabledBorder: showBorder
                 ? SquircleInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-              borderSide: BorderSide(
-                  color: borderColor ?? AppColors.borderColorGrey),
-            )
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                        color: borderColor ?? AppColors.borderColorGrey),
+                  )
                 : InputBorder.none,
             border: showBorder
                 ? SquircleInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-              borderSide: BorderSide(
-                  color: borderColor ?? AppColors.borderColorGrey),
-            )
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                        color: borderColor ?? AppColors.borderColorGrey),
+                  )
                 : InputBorder.none,
             errorBorder: showBorder
                 ? SquircleInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-              borderSide: const BorderSide(color: AppColors.errorRed),
-            )
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: const BorderSide(color: AppColors.errorRed),
+                  )
                 : InputBorder.none,
             focusedBorder: showBorder
                 ? SquircleInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-              borderSide: BorderSide(
-                  color: borderColor ?? AppColors.borderColorGrey),
-            )
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                        color: borderColor ?? AppColors.borderColorGrey),
+                  )
                 : InputBorder.none,
             fillColor: fillColor,
             // counterText: '',

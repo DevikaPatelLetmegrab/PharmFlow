@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/asset_icon.dart';
@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
                       },
                       itemBuilder: (context, index) {
                         return CategoryListviewItem(
-                          img: AppAssets.image,
+                          img: AppAssets.imageD,
                         );
                       },
                     ),
@@ -334,7 +334,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: context.h(200),
+                    height: context.h(220),
                     child: ListView.separated(
                       itemCount: 2,
                       shrinkWrap: true,
@@ -367,6 +367,30 @@ class HomePage extends StatelessWidget {
                           const Gap(AppDimens.space18),
                       itemBuilder: (context, index) {
                         return const ResourceListviewItem(isBlog: false);
+                      },
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(AppDimens.space15),
+                    child: RowOverview(
+                      title: 'recently viewed ',
+                    ),
+                  ),
+                  const Gap(AppDimens.space5),
+                  SizedBox(
+                    height: context.h(221),
+                    child: ListView.separated(
+                      itemCount: 5,
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: AppDimens.space15),
+                      separatorBuilder: (context, index) {
+                        return const SizedBox(width: 10);
+                      },
+                      itemBuilder: (context, index) {
+                        return LaunchListviewItem(
+                          img: AppAssets.image2,
+                        );
                       },
                     ),
                   ),

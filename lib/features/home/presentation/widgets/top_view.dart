@@ -4,6 +4,8 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/widget/app_icon_button.dart';
 import 'package:pharm_flow/core/widget/app_search_field.dart';
 import 'package:pharm_flow/core/widget/asset_icon.dart';
@@ -63,16 +65,16 @@ class TopView extends StatelessWidget {
           const Gap(AppDimens.space15),
           AppSearchField(
             hint: 'Search',
+            readOnly: true,
             showSuffix: true,
-            suffix: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: AppDimens.space16),
-              child: AssetIcon(
-                assetName: AppAssets.filterIcon,
-                size: AppDimens.imageSize20,
-                color: AppColors.lightPrimary,
-              ),
+            suffix: AssetIcon(
+              assetName: AppAssets.filterIcon,
+              size: AppDimens.imageSize20,
+              color: AppColors.lightPrimary,
             ),
+            onTap: () {
+              NavigationServices().pushName(AppRoutes.searchPage);
+            },
           ),
         ],
       ),
