@@ -7,7 +7,7 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 class InputChipWidget extends StatefulWidget {
   final String title;
   final bool isSelected;
-  final bool? shoeCheckMark;
+  final bool? showCheckMark;
   final Color? backgroundColor;
   final BorderSide? customBorderSide;
 
@@ -17,7 +17,7 @@ class InputChipWidget extends StatefulWidget {
       required this.isSelected,
       this.backgroundColor,
       this.customBorderSide,
-      this.shoeCheckMark});
+      this.showCheckMark = true});
 
   @override
   State<InputChipWidget> createState() => _InputChipWidgetState();
@@ -28,7 +28,7 @@ class _InputChipWidgetState extends State<InputChipWidget> {
   Widget build(BuildContext context) {
     return InputChip(
       backgroundColor: widget.backgroundColor ?? AppColors.whiteColor,
-      showCheckmark: widget.shoeCheckMark ?? true,
+      showCheckmark: widget.showCheckMark,
       side: widget.customBorderSide ??
           BorderSide(
             color: AppColors.greyDAColor,
@@ -37,17 +37,14 @@ class _InputChipWidgetState extends State<InputChipWidget> {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppDimens.borderRadius15)),
       onSelected: (value) {},
+      labelPadding:const EdgeInsets.all(AppDimens.space8) ,
       checkmarkColor: AppColors.whiteColor,
       selected: widget.isSelected,
       labelStyle: widget.isSelected
           ? context.md14.withWhite.weigh400
-          : context.md14.withBlack.weigh400,
+          : context.md14.withDarkGrey.weigh400,
       selectedColor: AppColors.primary,
-      label: Container(
-          child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(widget.title),
-      )),
+      label: Text(widget.title),
     );
   }
 }

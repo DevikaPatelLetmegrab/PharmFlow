@@ -6,8 +6,11 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
+import 'package:pharm_flow/core/widget/app_bottosheet_widget.dart';
+import 'package:pharm_flow/core/widget/app_icon_button.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/features/order/presentation/pages/all_order_page.dart';
+import 'package:pharm_flow/features/order/presentation/widgets/order_filter_sheet.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({super.key});
@@ -32,6 +35,7 @@ class _OrderPageState extends State<OrderPage>
     return Scaffold(
       appBar: CommonAppBar(
         title: 'Your Orders',
+        showLeading: false,
         bottom: PreferredSize(
           preferredSize: Size(context.getWidth, context.h(50)),
           child: TabBar(
@@ -109,9 +113,11 @@ class _OrderPageState extends State<OrderPage>
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppDimens.space8),
-            child: AppAssetImage(
+            child: AppIconButton(
               imagePath: AppAssets.orderFilterIcon,
-              size: 20,
+              onTap: () {
+                AppBottomSheet().show(child: const OrderFilterSheet());
+              },
             ),
           )
         ],

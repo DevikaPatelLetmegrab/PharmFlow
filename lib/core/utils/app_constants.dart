@@ -130,4 +130,22 @@ class AppConstants {
     AppAssets.avtar3,
     AppAssets.avtar1,
   ];
+
+  static List<ChipModel> dateWiseFilter = [
+    ChipModel(title: 'This Week', isSelected: false),
+    ChipModel(title: 'Last Month ', isSelected: true),
+    ChipModel(title: 'Last Week ', isSelected: false),
+    ChipModel(title: 'This Month', isSelected: false),
+    ChipModel(title: 'This Year', isSelected: false),
+    ChipModel(title: 'Last Year', isSelected: true),
+  ];
+
+  static List<ChipModel> orderWiseFilter = [
+    ChipModel(title: 'Delivery', isSelected: false),
+    ChipModel(title: 'Shipped', isSelected: true),
+    ChipModel(title: 'Return', isSelected: false),
+    ChipModel(title: 'Cancelled', isSelected: false),
+    ChipModel(title: 'Replace', isSelected: false),
+    ChipModel(title: 'Placed', isSelected: true),
+  ];
 }
