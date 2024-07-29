@@ -45,7 +45,7 @@ class _MedicalConditionListScreenState
                       (e) => InputChipWidget(
                         title: e.title,
                         isSelected: e.isSelected,
-                        shoeCheckMark: false,
+                        showCheckMark: false,
                         customBorderSide: BorderSide.none,
                         backgroundColor: AppColors.lightBlue,
                       ),

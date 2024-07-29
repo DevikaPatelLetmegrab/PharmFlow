@@ -41,7 +41,7 @@ class _PrimaryGoalScreenState extends State<PrimaryGoalScreen> {
                     (e) => InputChipWidget(
                       title: e.title,
                       isSelected: e.isSelected,
-                      shoeCheckMark: true,
+                      showCheckMark: true,
                     ),
                   )
                   .toList(),
