@@ -56,7 +56,6 @@ class AppAssets {
   static String videoCallIcon = 'assets/icon/video_call.png';
   static String orderFilterIcon = 'assets/icon/video_call.png';
   static String searchCallIcon = 'assets/icon/search_call.png';
- 
 
   ///logo
 
