@@ -109,7 +109,7 @@ class WelcomePage extends StatelessWidget {
                   ? Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        AppElevatedButton(
+                        AppButton(
                           buttonType: ButtonType.elevated,
                           buttonName: state.index == 0 ? 'Skip' : 'Prev',
                           onTap: () {
@@ -125,7 +125,7 @@ class WelcomePage extends StatelessWidget {
                                         curve: Curves.linear);
                           },
                         ),
-                        AppElevatedButton(
+                        AppButton(
                           buttonType: ButtonType.elevated,
                           buttonName: 'Next',
                           onTap: () {
@@ -144,7 +144,7 @@ class WelcomePage extends StatelessWidget {
                       height: 120,
                       child: Column(
                         children: [
-                          AppElevatedButton(
+                          AppButton(
                             buttonType: ButtonType.elevated,
                             buttonName: 'Login Now',
                             width: context.getWidth,
@@ -154,7 +154,7 @@ class WelcomePage extends StatelessWidget {
                             },
                           ),
                           const Gap(AppDimens.space15),
-                          AppElevatedButton(
+                          AppButton(
                             buttonType: ButtonType.elevated,
                             buttonName: 'Create your account',
                             width: context.getWidth,

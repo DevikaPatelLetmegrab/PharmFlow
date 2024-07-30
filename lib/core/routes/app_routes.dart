@@ -15,4 +15,5 @@ abstract class AppRoutes {
   static const String orderPage = '/order_page';
   static const String orderDetailPage = '/order_detail_page';
   static const String searchPage = '/search_page';
+  static const String prescriptionPage = '/prescription_page';
 }

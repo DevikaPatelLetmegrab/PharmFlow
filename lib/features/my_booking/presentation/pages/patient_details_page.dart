@@ -6,7 +6,6 @@ import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/core/widget/common_doctor_container.dart';
-import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/my_booking/presentation/widgets/working_hour_widget.dart';
 
 class PatientDetailsPage extends StatelessWidget {
@@ -38,14 +37,14 @@ class PatientDetailsPage extends StatelessWidget {
               title: 'Date & Hour',
               content: 'Jan 20, 2024 - 11:30 AM',
             ),
-            Gap(AppDimens.space5),
+            const Gap(AppDimens.space5),
             CommonRowTime(title: 'Package', content: 'Messaging'),
-            Gap(AppDimens.space5),
+            const Gap(AppDimens.space5),
             CommonRowTime(title: 'Duration', content: '20 minutes'),
-            Gap(AppDimens.space5),
+            const Gap(AppDimens.space5),
             CommonRowTime(title: 'Booking for', content: 'Self'),
-            Gap(AppDimens.space10),
-            Divider(
+            const Gap(AppDimens.space10),
+            const Divider(
               color: AppColors.greyE8Color,
             ),
             const Gap(AppDimens.space10),
@@ -65,7 +64,7 @@ class PatientDetailsPage extends StatelessWidget {
             ),
             const Gap(AppDimens.space10),
             const Spacer(),
-            AppElevatedButton(
+            AppButton(
               width: context.getWidth,
               buttonType: ButtonType.elevated,
               buttonName: 'Next',

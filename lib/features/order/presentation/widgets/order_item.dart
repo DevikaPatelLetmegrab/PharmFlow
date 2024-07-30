@@ -2,14 +2,12 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
-import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
-import 'package:pharm_flow/core/widget/square_icon.dart';
 import 'package:pharm_flow/features/order/presentation/widgets/common_medicine_summary.dart';
 
 class OrderItem extends StatelessWidget {
@@ -50,7 +48,7 @@ class OrderItem extends StatelessWidget {
             ),
           ),
           const Gap(AppDimens.space10),
-          CommonMedicineSummary(),
+          const CommonMedicineSummary(),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: DottedLine(

@@ -36,6 +36,7 @@ class Squircle extends Container {
     super.alignment,
     super.constraints,
     super.foregroundDecoration,
+        super.padding,
 
   }) : super(
           decoration: SquircleDecoration(

@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:pharm_flow/core/model/package_model.dart';
 
 abstract class PackageEvent extends Equatable {
   const PackageEvent();

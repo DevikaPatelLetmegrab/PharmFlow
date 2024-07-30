@@ -59,7 +59,7 @@ class _GenderScreenState extends State<GenderScreen> {
               ),
             ),
             Spacer(),
-            AppElevatedButton(
+            AppButton(
               onTap: () {
                 widget.controller.nextPage(
                     duration: AppConstants.animDuration300, curve: Curves.easeIn);
@@ -75,7 +75,7 @@ class _GenderScreenState extends State<GenderScreen> {
         
             ),
             Gap(AppDimens.space20),
-            AppElevatedButton(
+            AppButton(
               onTap: () {
                 widget.controller.nextPage(
                     duration: AppConstants.animDuration300, curve: Curves.easeIn);

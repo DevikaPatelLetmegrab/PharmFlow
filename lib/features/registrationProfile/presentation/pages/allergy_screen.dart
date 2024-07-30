@@ -5,12 +5,10 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
-
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_title_content.dart';
 
 class AllergyScreen extends StatefulWidget {
@@ -32,11 +30,11 @@ class _AllergyScreenState extends State<AllergyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CommonTitleContent(
+              const CommonTitleContent(
                   title: 'Do you have any ongoing allergy ?',
                   content:
                       'You can type any allergies from which you are suffering'),
-              Gap(AppDimens.space40),
+              const Gap(AppDimens.space40),
               Align(
                 alignment: Alignment.center,
                 child: AppAssetImage(
@@ -45,7 +43,7 @@ class _AllergyScreenState extends State<AllergyScreen> {
                   width: context.w(250),
                 ),
               ),
-              Gap(AppDimens.space40),
+              const Gap(AppDimens.space40),
               AdvancedChipsInput(
                 separatorCharacter: ' ',
                 placeChipsSectionAbove: true,
@@ -69,9 +67,9 @@ class _AllergyScreenState extends State<AllergyScreen> {
                   print('Deleted chip: $chipText at index $index');
                 },
               ),
-              Gap(AppDimens.space80),
-              Gap(AppDimens.space80),
-              AppElevatedButton(
+              const Gap(AppDimens.space80),
+              const Gap(AppDimens.space80),
+              AppButton(
                 onTap: () {
                   widget.controller.nextPage(
                       duration: AppConstants.animDuration300,
@@ -89,11 +87,11 @@ class _AllergyScreenState extends State<AllergyScreen> {
                   style: context.md14.weigh400.withPrimary,
                 ),
               ),
-              Gap(AppDimens.space20),
-              AppElevatedButton(
+              const Gap(AppDimens.space20),
+              AppButton(
                 onTap: () {
                   widget.controller.nextPage(
-                      duration: Duration(milliseconds: 300),
+                      duration: const Duration(milliseconds: 300),
                       curve: Curves.linear);
                 },
                 buttonType: ButtonType.elevated,

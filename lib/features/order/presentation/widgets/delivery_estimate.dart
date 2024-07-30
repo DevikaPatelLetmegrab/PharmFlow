@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
@@ -36,10 +35,10 @@ class DeliveryEstimate extends StatelessWidget {
                 style: context.md14.withBlack,
               ),
               trailing: Chip(
-                label: Text('In Processing'),
+                label: const Text('In Processing'),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(AppDimens.borderRadius5),
-                  side: BorderSide(style: BorderStyle.none),
+                  side: const BorderSide(style: BorderStyle.none),
                 ),
                 backgroundColor: AppColors.primary,
                 labelStyle: context.md14.withWhite,

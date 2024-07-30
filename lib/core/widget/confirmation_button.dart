@@ -28,7 +28,7 @@ class ConfirmationButton extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: AppElevatedButton(
+          child: AppButton(
             buttonType: ButtonType.outline,
             height: height ?? context.w(50),
             onTap: onNegativeClick,
@@ -38,7 +38,7 @@ class ConfirmationButton extends StatelessWidget {
         ),
         const Gap(AppDimens.space15),
         Expanded(
-          child: AppElevatedButton(
+          child: AppButton(
             buttonType: ButtonType.elevated,
             height: height ?? context.w(50),
             onTap: onPositiveClick,
