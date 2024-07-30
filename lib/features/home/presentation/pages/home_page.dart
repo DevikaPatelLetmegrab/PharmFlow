@@ -247,7 +247,7 @@ class HomePage extends StatelessWidget {
                         ),
                         const Gap(AppDimens.space20),
                         const RowOverview(title: 'Testimonials'),
-                        const Gap(AppDimens.space20),
+                        //  const Gap(AppDimens.space20),
                       ],
                     ),
                   ),

@@ -30,6 +30,7 @@ class Squircle extends Container {
     this.customShape,
     this.clipBehavior = Clip.hardEdge,
     super.key,
+    super.padding,
     super.height,
     super.width,
     super.alignment,
