@@ -32,13 +32,13 @@ class _MyBookingPageState extends State<MyBookingPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(
+      appBar: const CommonAppBar(
         title: 'My Bookings',
         showLeading: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(AppDimens.space16),
+          padding: const EdgeInsets.symmetric(horizontal: AppDimens.space16),
           child: Column(
             children: [
               AppTextFormField(
@@ -53,7 +53,7 @@ class _MyBookingPageState extends State<MyBookingPage>
                 indicatorSize: TabBarIndicatorSize.tab,
                 indicatorWeight: 4,
                 dividerColor: AppColors.greyE6Color,
-                tabs: [
+                tabs: const [
                   Tab(
                     text: 'Doctor',
                   ),
@@ -62,13 +62,17 @@ class _MyBookingPageState extends State<MyBookingPage>
                   ),
                 ],
               ),
-              Gap(AppDimens.space12),
+              const Gap(AppDimens.space12),
               SizedBox(
-                  height: context.getHeight * 0.67,
-                  child: TabBarView(controller: tabController, children: [
+                height: context.getHeight * 0.67,
+                child: TabBarView(
+                  controller: tabController,
+                  children: const [
                     DoctorTabView(),
                     MedicalTabView(),
-                  ]))
+                  ],
+                ),
+              )
             ],
           ),
         ),

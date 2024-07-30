@@ -49,10 +49,16 @@ extension StyleExtension on TextStyle {
   TextStyle get withBlack => copyWith(color: AppColors.blackColor);
 
   TextStyle get withGrey78 => copyWith(color: AppColors.grey78Color);
+
   TextStyle get withGrey33 => copyWith(color: AppColors.grey33Color);
+
   TextStyle get withGreyD9 => copyWith(color: AppColors.borderColorGrey);
+
   TextStyle get withGreyE6 => copyWith(color: AppColors.greyE6Color);
-  TextStyle get withRed => copyWith(color: Colors.red);
+
+  TextStyle get withRed => copyWith(color: AppColors.errorRed);
+
+  TextStyle get withDarkGrey => copyWith(color: AppColors.darkGrey);
 
   TextStyle get withPrimary => copyWith(color: AppColors.primary);
 
@@ -63,10 +69,12 @@ extension StyleExtension on TextStyle {
   TextStyle get weigh300 => copyWith(fontWeight: FontWeight.w300);
 
   TextStyle get weigh500 => copyWith(fontWeight: FontWeight.w500);
+
   TextStyle get weigh600 => copyWith(fontWeight: FontWeight.w600);
+
   TextStyle get weigh800 => copyWith(fontWeight: FontWeight.w800);
 
   TextStyle get redLineThrough => copyWith(
-      decoration: TextDecoration.lineThrough, decorationColor: AppColors.errorRed);
-
+      decoration: TextDecoration.lineThrough,
+      decorationColor: AppColors.errorRed);
 }
