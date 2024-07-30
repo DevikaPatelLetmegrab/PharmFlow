@@ -35,7 +35,6 @@ class SingleMedicalWidget extends StatelessWidget {
               name: 'New Medical Shop',
               location: 'Ambika Niketan, Athwalines, Surat, Gujarat 395007, ',
             ),
-            const Gap(AppDimens.space10),
             const Divider(
               color: AppColors.greyE8Color,
             ),

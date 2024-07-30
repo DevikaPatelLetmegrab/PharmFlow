@@ -11,14 +11,14 @@ import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/doctor_tab_view.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/medical_tab_view.dart';
 
-class MyBookingPage extends StatefulWidget {
-  const MyBookingPage({super.key});
+class BookingPage extends StatefulWidget {
+  const BookingPage({super.key});
 
   @override
-  State<MyBookingPage> createState() => _MyBookingPageState();
+  State<BookingPage> createState() => _BookingPageState();
 }
 
-class _MyBookingPageState extends State<MyBookingPage>
+class _BookingPageState extends State<BookingPage>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -33,7 +33,7 @@ class _MyBookingPageState extends State<MyBookingPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CommonAppBar(
-        title: 'My Bookings',
+        title: 'Bookings',
         showLeading: false,
       ),
       body: SingleChildScrollView(

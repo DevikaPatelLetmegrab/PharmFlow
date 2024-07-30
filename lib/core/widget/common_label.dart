@@ -23,8 +23,11 @@ class CommonLabel extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            AppAssetImage(imagePath: imagePath,),
-            Gap(AppDimens.space10),
+            AppAssetImage(
+              imagePath: imagePath,
+              size: AppDimens.imageSize20,
+            ),
+            const Gap(AppDimens.space10),
             Text(
               content,
               style: context.s12.withPrimary,

@@ -14,36 +14,33 @@ class CommonRatingBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Row(
-          children: [
-            RatingBar(
-              ignoreGestures: true,
-              glow: false,
-              itemSize: 15,
-              initialRating: rate,
-              direction: Axis.horizontal,
-              allowHalfRating: false,
-              itemCount: 5,
-              ratingWidget: RatingWidget(
-                full: AppAssetImage(
-                  imagePath: AppAssets.starFill,
-                ),
-                half: AppAssetImage(
-                  imagePath: AppAssets.starEmpty,
-                ),
-                empty: AppAssetImage(
-                  imagePath: AppAssets.starEmpty,
-                ),
-              ),
-              onRatingUpdate: (rating) {},
+        RatingBar(
+          ignoreGestures: true,
+          glow: false,
+          itemSize: 15,
+          initialRating: rate,
+          direction: Axis.horizontal,
+          allowHalfRating: false,
+          itemCount: 5,
+          ratingWidget: RatingWidget(
+            full: AppAssetImage(
+              imagePath: AppAssets.starFill,
             ),
-            if (showRateText) ...[
-              const Gap(AppDimens.space5),
-              Text(rate.toString())
-            ]
-          ],
+            half: AppAssetImage(
+              imagePath: AppAssets.starEmpty,
+            ),
+            empty: AppAssetImage(
+              imagePath: AppAssets.starEmpty,
+            ),
+          ),
+          onRatingUpdate: (rating) {},
         ),
+        if (showRateText) ...[
+          const Gap(AppDimens.space5),
+          Text(rate.toString())
+        ]
       ],
     );
   }

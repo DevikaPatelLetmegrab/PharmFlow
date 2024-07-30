@@ -121,6 +121,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               hint: 'Date of Birth',
               suffixIcon: AssetIcon(
                 assetName: AppAssets.calendarIcon,
+                color: AppColors.blackColor,
               ),
             ),
             const Gap(AppDimens.space10),
@@ -132,7 +133,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
             AppButton(
                 width: context.getWidth,
                 buttonType: ButtonType.elevated,
-                buttonName: 'Update Profile')
+                buttonName: 'Update Profile'),
+            const Gap(AppDimens.space30),
           ],
         ),
       ),

@@ -70,6 +70,7 @@ class AppAssets {
   static String editIcon = 'assets/icon/edit.png';
   static String verifyOutlineIcon = 'assets/icon/verify_outline.png';
   static String arrowDownIcon = 'assets/icon/arrow-down.png';
+  static String orderIcon = 'assets/icon/order.png';
 
   ///logo
 

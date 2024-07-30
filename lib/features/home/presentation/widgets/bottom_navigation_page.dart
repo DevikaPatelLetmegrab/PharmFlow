@@ -3,7 +3,7 @@ import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
-import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/booking_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/profile/presentation/pages/profile_page.dart';
 
@@ -48,7 +48,8 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           ),
           BottomNavigationBarItem(
             icon: AppAssetImage(
-              imagePath: AppAssets.shoppingCartIcon,
+              imagePath: AppAssets.orderIcon,
+              color: AppColors.grey78Color,
               size: 24,
             ),
             label: 'Orders',
@@ -67,7 +68,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           index: _selectedIndex,
           children: [
             HomePage(),
-            const MyBookingPage(),
+            const BookingPage(),
             const OrderPage(),
             const ProfilePage(),
           ],
