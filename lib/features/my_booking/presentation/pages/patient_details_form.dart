@@ -17,11 +17,11 @@ class PatientDetailsForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(
+      appBar: const CommonAppBar(
         title: 'Patient Details',
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(AppDimens.space16),
+        padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(
           children: [
             AppDropdown(
@@ -30,12 +30,12 @@ class PatientDetailsForm extends StatelessWidget {
               hintText: 'Select Booking For',
               onChanged: (value) {},
             ),
-            Gap(AppDimens.space10),
-            AppTextFormField(
+            const Gap(AppDimens.space10),
+            const AppTextFormField(
               hint: 'Enter Full Name',
               label: 'Full Name',
             ),
-            Gap(AppDimens.space10),
+            const Gap(AppDimens.space10),
             AppTextFormField(
               hint: 'Enter Date of Birth',
               label: 'Date of Birth',
@@ -45,35 +45,35 @@ class PatientDetailsForm extends StatelessWidget {
                 color: AppColors.blackColor,
               ),
             ),
-            Gap(AppDimens.space10),
+            const Gap(AppDimens.space10),
             AppDropdown(
               items: [],
               label: 'Gender',
               hintText: 'Select Gender',
               onChanged: (value) {},
             ),
-            Gap(AppDimens.space10),
-            AppTextFormField(
+            const Gap(AppDimens.space10),
+            const AppTextFormField(
               hint: 'Enter Your Age',
               label: 'Age',
             ),
-            Gap(AppDimens.space10),
-            AppTextFormField(
+            const Gap(AppDimens.space10),
+            const AppTextFormField(
               hint: 'Enter Mobile Number',
               label: 'Mobile Number',
             ),
-            Gap(AppDimens.space10),
-            AppTextFormField(
+            const Gap(AppDimens.space10),
+            const AppTextFormField(
               hint: 'Enter Mobile Number',
               label: 'Emergency contact number',
             ),
-            Gap(AppDimens.space10),
-            AppTextFormField(
+            const Gap(AppDimens.space10),
+            const AppTextFormField(
               hint: 'Write Here...',
               label: 'Write Your Problem',
               maxLines: 5,
             ),
-            Gap(AppDimens.space30),
+            const Gap(AppDimens.space30),
             ConfirmationButton(
               positiveText: 'Next',
               negativeText: 'Cancel',
