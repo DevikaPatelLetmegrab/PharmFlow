@@ -37,5 +37,6 @@ class AppColors {
   static const Color lightBlue = Color(0xffF1F5F9);
   static const Color blueLight = Color(0xffE4F5FF);
   static const Color pinkLight = Color(0xffF6EBE5);
+  static const Color skyBlue = Color(0xffE9F6FF);
   static const Color green = Color(0xff018F36);
 }

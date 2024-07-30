@@ -6,7 +6,6 @@ class AppAssets {
   static String avtar1 = 'assets/images/avtar1.png';
   static String avtar2 = 'assets/images/avtar2.png';
   static String avtar3 = 'assets/images/avtar3.png';
-
   static String welcomeDoc = 'assets/images/doctor.png';
   static String doctorImage = 'assets/images/doctor1.png';
   static String welcomePharm = 'assets/images/pharmacist.png';
@@ -56,6 +55,7 @@ class AppAssets {
   static String videoCallIcon = 'assets/icon/video_call.png';
   static String searchCallIcon = 'assets/icon/search_call.png';
   static String orderFilterIcon = 'assets/icon/order_filter.png';
+  static String viewAllIcon = 'assets/icon/view_more.png';
   static String supportIcon = 'assets/icon/24-support.png';
   static String bankIcon = 'assets/icon/bank_outline.png';
   static String calenderOutlineIcon = 'assets/icon/calender_outline.png';

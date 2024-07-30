@@ -5,6 +5,7 @@ import 'package:pharm_flow/features/Registration/presentation/pages/registration
 import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/profile_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/sign_in_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
+import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
@@ -109,6 +110,9 @@ class RoutesUtils {
         builder: (context, state) => const PrescriptionPage(),
       ),
       GoRoute(
+        path: AppRoutes.categoriesPage,
+        name: AppRoutes.categoriesPage,
+        builder: (context, state) => const CategoriesPage(),
         path: AppRoutes.myProfilePage,
         name: AppRoutes.myProfilePage,
         builder: (context, state) => const MyProfilePage(),

@@ -19,8 +19,10 @@ class CommonColumnView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         RoundIcon(
+          bgopacity: 0.1,
           radius: 22,
           iconPath: imagePath,
           bgopacity: .2,
@@ -34,6 +36,7 @@ class CommonColumnView extends StatelessWidget {
         Text(
           content,
           style: context.x16.withGrey78,
+          textAlign: TextAlign.center,
         ),
       ],
     );
