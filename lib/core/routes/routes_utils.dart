@@ -13,6 +13,8 @@ import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.d
 import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
+import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
+import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/prescription/presentation/pages/prescription_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
@@ -111,6 +113,16 @@ class RoutesUtils {
         path: AppRoutes.categoriesPage,
         name: AppRoutes.categoriesPage,
         builder: (context, state) => const CategoriesPage(),
+        path: AppRoutes.myProfilePage,
+        name: AppRoutes.myProfilePage,
+        builder: (context, state) => const MyProfilePage(),
+      ),
+      GoRoute(
+        path: AppRoutes.orderPage,
+        name: AppRoutes.orderPage,
+        builder: (context, state) => const OrderPage(
+          showLeading: true,
+        ),
       ),
     ],
   );

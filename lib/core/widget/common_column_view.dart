@@ -25,6 +25,7 @@ class CommonColumnView extends StatelessWidget {
           bgopacity: 0.1,
           radius: 22,
           iconPath: imagePath,
+          bgopacity: .2,
         ),
         const Gap(AppDimens.space5),
         Text(

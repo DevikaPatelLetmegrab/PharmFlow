@@ -26,6 +26,7 @@ class AppDimens {
 
   static const imageSize10 = 10.0;
   static const double imageSize15 = 15.0;
+  static const double imageSize18 = 18.0;
   static const double imageSize20 = 20.0;
   static const double imageSize24 = 24.0;
   static const double imageSize25 = 25.0;

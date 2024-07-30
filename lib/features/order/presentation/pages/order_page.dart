@@ -13,7 +13,9 @@ import 'package:pharm_flow/features/order/presentation/pages/all_order_page.dart
 import 'package:pharm_flow/features/order/presentation/widgets/order_filter_sheet.dart';
 
 class OrderPage extends StatefulWidget {
-  const OrderPage({super.key});
+  final bool showLeading;
+
+  const OrderPage({super.key, this.showLeading = false});
 
   @override
   State<OrderPage> createState() => _OrderPageState();
@@ -35,7 +37,7 @@ class _OrderPageState extends State<OrderPage>
     return Scaffold(
       appBar: CommonAppBar(
         title: 'Your Orders',
-        showLeading: false,
+        showLeading: widget.showLeading,
         bottom: PreferredSize(
           preferredSize: Size(context.getWidth, context.h(50)),
           child: TabBar(

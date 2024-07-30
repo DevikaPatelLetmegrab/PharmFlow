@@ -5,6 +5,7 @@ import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
+import 'package:pharm_flow/features/profile/presentation/pages/profile_page.dart';
 
 class BottomNavigationPage extends StatefulWidget {
   BottomNavigationPage({super.key});
@@ -67,8 +68,8 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           children: [
             HomePage(),
             const MyBookingPage(),
-            OrderPage(),
-            Container(),
+            const OrderPage(),
+            const ProfilePage(),
           ],
         ),
       ),
