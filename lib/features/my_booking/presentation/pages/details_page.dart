@@ -7,7 +7,6 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
-import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/core/widget/common_doctor_container.dart';
@@ -27,8 +26,8 @@ class DetailsPage extends StatelessWidget {
         title: 'Doctor Detail',
       ),
       bottomNavigationBar:  Padding(
-        padding: EdgeInsets.all(AppDimens.space16),
-        child: AppElevatedButton(
+        padding: const EdgeInsets.all(AppDimens.space16),
+        child: AppButton(
           onTap: () {
             NavigationServices().pushName(AppRoutes.bookAppointmentPage);
           },
@@ -61,7 +60,7 @@ class DetailsPage extends StatelessWidget {
               const Gap(AppDimens.space10),
               ReadMoreText(
                 'dr. Lincoln Westervelt  is the top most immunologists specialist in Crist Hospital in London, UK. She achived several awards for her wonderful contribution',
-                style: TextStyle(
+                style: const TextStyle(
                     color: AppColors.grey78Color, fontWeight: FontWeight.w300),
                 trimMode: TrimMode.Line,
                 trimLines: 3,
@@ -116,7 +115,7 @@ class DetailsPage extends StatelessWidget {
                 color: AppColors.greyE8Color,
               ),
               const Gap(AppDimens.space10),
-              ReviewWidget()
+              const ReviewWidget()
             ],
           ),
         ),

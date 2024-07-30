@@ -12,7 +12,7 @@ enum ButtonType {
   outLineWithIcon,
 }
 
-class AppElevatedButton extends StatelessWidget {
+class AppButton extends StatelessWidget {
   final ButtonType buttonType;
   final String? buttonName;
   final Color? buttonColor;
@@ -30,7 +30,7 @@ class AppElevatedButton extends StatelessWidget {
 
   final EdgeInsetsGeometry? padding;
 
-  const AppElevatedButton(
+  const AppButton(
       {super.key,
       required this.buttonType,
       this.buttonName,

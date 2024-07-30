@@ -124,12 +124,12 @@ class SquircleInputBorder extends OutlineInputBorder {
         max(0.0, _clampToShortest(scaledRRect, scaledRRect.brRadiusX));
     final double brRadiusY =
         max(0.0, _clampToShortest(scaledRRect, scaledRRect.brRadiusY));
-    final Rect tlCorner = Rect.fromLTWH(
-      left,
-      top,
-      tlRadiusX,
-      tlRadiusY,
-    );
+    // final Rect tlCorner = Rect.fromLTWH(
+    //   left,
+    //   top,
+    //   tlRadiusX,
+    //   tlRadiusY,
+    // );
     return Path()
       ..moveTo(left, top + tlRadiusX)
       ..cubicTo(left, top, left, top, left + tlRadiusY, top)
@@ -167,14 +167,14 @@ class SquircleInputBorder extends OutlineInputBorder {
         max(0.0, _clampToShortest(scaledRRect, scaledRRect.blRadiusX));
     final double blRadiusY =
         max(0.0, _clampToShortest(scaledRRect, scaledRRect.blRadiusY));
-    final double brRadiusX =
-        max(0.0, _clampToShortest(scaledRRect, scaledRRect.brRadiusX));
+    // final double brRadiusX =
+    //     max(0.0, _clampToShortest(scaledRRect, scaledRRect.brRadiusX));
     final double brRadiusY =
         max(0.0, _clampToShortest(scaledRRect, scaledRRect.brRadiusY));
 
     // This assumes that the radius is circular (x and y radius are equal).
     // Currently, BorderRadius only supports circular radii.
-    const double cornerArcSweep = pi / 2.0;
+    //const double cornerArcSweep = pi / 2.0;
     final Path path = Path();
 
     // Top left corner
@@ -200,8 +200,8 @@ class SquircleInputBorder extends OutlineInputBorder {
     }
 
     // Draw top border from gap end to top right corner and draw top right corner.
-    const double trCornerArcStart = (3 * pi) / 2.0;
-    const double trCornerArcSweep = cornerArcSweep;
+    //const double trCornerArcStart = (3 * pi) / 2.0;
+   // const double trCornerArcSweep = cornerArcSweep;
     if (start + extent < scaledRRect.width) {
       path.moveTo(left + start + extent, top);
       path.lineTo(right - trRadiusX, top);
@@ -209,8 +209,8 @@ class SquircleInputBorder extends OutlineInputBorder {
         path.cubicTo(right, top, right, top, right, top + trRadiusY);
       }
     } else if (start + extent < scaledRRect.width) {
-      final double dx = scaledRRect.width - (start + extent);
-      final double sweep = asin(clampDouble(1 - dx / trRadiusX, 0.0, 1.0));
+     // final double dx = scaledRRect.width - (start + extent);
+     // final double sweep = asin(clampDouble(1 - dx / trRadiusX, 0.0, 1.0));
       path.cubicTo(right, top, right, top, right, top + trRadiusY);
     }
 

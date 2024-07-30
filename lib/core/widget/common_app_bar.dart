@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
-import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
-import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/widget/app_icon_button.dart';
-import 'package:pharm_flow/core/widget/square_icon.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;

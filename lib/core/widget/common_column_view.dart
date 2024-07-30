@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
-import 'package:pharm_flow/core/config/app_assets.dart';
-import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/round_icon.dart';
@@ -23,11 +21,8 @@ class CommonColumnView extends StatelessWidget {
     return Column(
       children: [
         RoundIcon(
-          child: AppAssetImage(
-            imagePath: imagePath,
-            size: 20,
-          ),
-          borderRadius: 22,
+          radius: 22,
+          iconPath: imagePath,
         ),
         const Gap(AppDimens.space5),
         Text(

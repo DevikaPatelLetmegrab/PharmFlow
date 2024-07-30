@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
@@ -25,16 +27,19 @@ class UploadPrescription extends StatelessWidget {
             size: 130,
           ),
         ),
-        const Positioned(
+        Positioned(
           bottom: 15,
           left: 10,
-          child: AppElevatedButton(
+          child: AppButton(
             buttonType: ButtonType.elevated,
             buttonName: 'Upload Prescription',
             buttonColor: AppColors.whiteColor,
             fontColor: AppColors.primary,
             borderColor: AppColors.whiteColor,
             height: 40,
+            onTap: () {
+              NavigationServices().pushName(AppRoutes.prescriptionPage);
+            },
           ),
         ),
         Positioned(

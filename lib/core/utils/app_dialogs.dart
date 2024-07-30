@@ -102,7 +102,7 @@ class AppDialogs {
                         const Gap(20),
                       ],
                       leftButtonText == null
-                          ? AppElevatedButton(
+                          ? AppButton(
                               buttonType: ButtonType.elevated,
                               onTap: rightButtonOnTap,
                               buttonName: rightButtonText,
@@ -113,7 +113,7 @@ class AppDialogs {
                           : Row(
                               children: [
                                 Expanded(
-                                  child: AppElevatedButton(
+                                  child: AppButton(
                                     buttonType: ButtonType.outline,
                                     onTap: leftButtonOnTap,
                                     buttonName: leftButtonText,
@@ -124,7 +124,7 @@ class AppDialogs {
                                 ),
                                 const Gap(12),
                                 Expanded(
-                                  child: AppElevatedButton(
+                                  child: AppButton(
                                     buttonType: ButtonType.elevated,
                                     onTap: rightButtonOnTap,
                                     buttonName: rightButtonText,
@@ -192,7 +192,7 @@ class AppDialogs {
                       .withGrey78,
                 ),
                 actions: [
-                  AppElevatedButton(
+                  AppButton(
                     onTap: onTap,
                     buttonType: ButtonType.elevated,
                     buttonName: btnName,

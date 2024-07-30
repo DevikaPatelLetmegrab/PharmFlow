@@ -60,7 +60,7 @@ class _SignInScreenState extends State<SignInScreen> {
               label: 'Phone Number',
             ),
             const Gap(AppDimens.space30),
-            AppElevatedButton(
+            AppButton(
               onTap: () {
                 NavigationServices()
                     .pushName(AppRoutes.verifyPage, extra: true);

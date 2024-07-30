@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:pharm_flow/core/model/package_model.dart';
-import 'package:pharm_flow/core/utils/app_constants.dart';
 
 class PackageState extends Equatable {
   final List<PackageModel>? packageList;

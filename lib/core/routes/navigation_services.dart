@@ -13,8 +13,8 @@ class NavigationServices {
     return navigatorKey.currentContext!.pushNamed(route, extra: extra);
   }
 
-  pop() {
-    return navigatorKey.currentContext!.pop();
+  pop<T>([T? value]) {
+    return navigatorKey.currentContext!.pop(value);
   }
 
   // pushRepleshmentName(name) {

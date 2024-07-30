@@ -67,7 +67,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               label: 'Phone Number',
             ),
             const Gap(AppDimens.space30),
-            AppElevatedButton(
+            AppButton(
               onTap: () {
                 AppDialogs.showAlertDialogBox(
                     title: 'Yeay! Welcome Muzeeb',

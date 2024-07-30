@@ -13,12 +13,10 @@ import 'package:pharm_flow/core/utils/app_dialogs.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
-
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/bloc/carousel_slider_cubit.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/bloc/carousel_slider_state.dart';
-import 'package:pharm_flow/features/registrationProfile/presentation/pages/avtar_upload_screen.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_title_content.dart';
 
 class AvtarScreen extends StatefulWidget {
@@ -87,7 +85,7 @@ class _AvtarScreenState extends State<AvtarScreen> {
                     width: context.getWidth,
                     borderColor: AppColors.whiteColor,
                     child: Center(
-                      child: AppElevatedButton(
+                      child: AppButton(
                         icon: AppAssetImage(
                           imagePath: AppAssets.downloadIcon,
                         ),
@@ -101,7 +99,7 @@ class _AvtarScreenState extends State<AvtarScreen> {
                       ),
                     ))),
             const Spacer(),
-            AppElevatedButton(
+            AppButton(
               onTap: () {
                 AppDialogs.showAlertDialogBox(
                     onTap: () {

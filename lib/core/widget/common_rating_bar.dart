@@ -38,11 +38,10 @@ class CommonRatingBar extends StatelessWidget {
               ),
               onRatingUpdate: (rating) {},
             ),
-            if(showRateText)...[
-              Gap(AppDimens.space5),
+            if (showRateText) ...[
+              const Gap(AppDimens.space5),
               Text(rate.toString())
             ]
-
           ],
         ),
       ],

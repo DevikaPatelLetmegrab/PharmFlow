@@ -6,7 +6,6 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_inputborder.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:pharm_flow/core/widget/app_icon_button.dart';
 import 'package:pharm_flow/core/widget/app_search_field.dart';
 import 'package:pharm_flow/core/widget/asset_icon.dart';
 

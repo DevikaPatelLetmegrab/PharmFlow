@@ -12,7 +12,6 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/core/widget/app_icon_button.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 
 class VerifyOtpScreen extends StatelessWidget {
@@ -22,7 +21,7 @@ class VerifyOtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(
+      appBar: const CommonAppBar(
         title: '',
       ),
       body: Padding(
@@ -87,7 +86,7 @@ class VerifyOtpScreen extends StatelessWidget {
               }, // end onSubmit
             ),
             const Gap(AppDimens.space30),
-            AppElevatedButton(
+            AppButton(
               buttonType: ButtonType.elevated,
               width: context.getWidth,
               borderRadius: BorderRadius.circular(AppDimens.borderRadius30),
