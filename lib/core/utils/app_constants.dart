@@ -151,24 +151,6 @@ class AppConstants {
     ChipModel(title: 'Replace', isSelected: false),
     ChipModel(title: 'Placed', isSelected: true),
   ];
-
-  static List<ChooseModel> chooseList = [
-    ChooseModel(
-        image: AppAssets.peopleIcon,
-        title: '10 million +',
-        content: 'registered user as of may 10,2024'),
-    ChooseModel(
-        image: AppAssets.millionIcon,
-        title: '24 million +',
-        content: 'orders on pharmflow till date'),
-    ChooseModel(
-        image: AppAssets.pillsIcon,
-        title: '890000 +',
-        content: 'unique items sold last 3 months'),
-    ChooseModel(
-        image: AppAssets.locationIcon,
-        title: '18000 +',
-        content: 'pin codes services last 3 months'),
   static List<DrawerModel> drawerItems = [
     DrawerModel(
         assetImage: AppAssets.userOutlineIcon,
@@ -241,5 +223,24 @@ class AppConstants {
       route: '',
       title: 'Log Out',
     ),
+  ];
+
+  static List<ChooseModel> chooseList = [
+    ChooseModel(
+        image: AppAssets.peopleIcon,
+        title: '10 million +',
+        content: 'registered user as of may 10,2024'),
+    ChooseModel(
+        image: AppAssets.millionIcon,
+        title: '24 million +',
+        content: 'orders on pharmflow till date'),
+    ChooseModel(
+        image: AppAssets.pillsIcon,
+        title: '890000 +',
+        content: 'unique items sold last 3 months'),
+    ChooseModel(
+        image: AppAssets.locationIcon,
+        title: '18000 +',
+        content: 'pin codes services last 3 months'),
   ];
 }
