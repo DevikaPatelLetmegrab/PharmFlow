@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Pharm Flow',
       themeMode: ThemeMode.light,
-      theme: AppTheme.theme,
+      theme: AppThemeData.theme,
     );
   }
 }

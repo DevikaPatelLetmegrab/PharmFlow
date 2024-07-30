@@ -14,11 +14,13 @@ import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_pag
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
 import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
+import 'package:pharm_flow/features/new_launch/presentation/pages/new_launch_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/prescription/presentation/pages/prescription_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
+import 'package:pharm_flow/features/top_selling/presentation/pages/top_selling_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 
 class RoutesUtils {
@@ -125,6 +127,16 @@ class RoutesUtils {
         builder: (context, state) => const OrderPage(
           showLeading: true,
         ),
+      ),
+      GoRoute(
+        path: AppRoutes.newLaunchPage,
+        name: AppRoutes.newLaunchPage,
+        builder: (context, state) => const NewLaunchPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.topSellingPage,
+        name: AppRoutes.topSellingPage,
+        builder: (context, state) => const TopSellingPage(),
       ),
     ],
   );

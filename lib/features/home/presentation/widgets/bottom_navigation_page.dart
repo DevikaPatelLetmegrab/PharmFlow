@@ -21,6 +21,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: IconThemeData(color: AppColors.primary),
         selectedItemColor: AppColors.primary,
         unselectedItemColor: AppColors.grey78Color,
         showSelectedLabels: true,
@@ -34,10 +35,11 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         items: [
           BottomNavigationBarItem(
             icon: AppAssetImage(
+              // imagePath: _selectedIndex == 0 ?AppAssets.homeIcon : ,
               imagePath: AppAssets.homeIcon,
               size: 24,
             ),
-            label: 'Homne',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: AppAssetImage(
