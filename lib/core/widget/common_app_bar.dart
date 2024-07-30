@@ -5,7 +5,7 @@ import 'package:pharm_flow/core/widget/app_icon_button.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;
-  final String title;
+  final String? title;
   final Widget? leading;
   final bool showLeading;
   final PreferredSizeWidget? bottom;
@@ -15,7 +15,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CommonAppBar(
       {super.key,
       this.actions = const [],
-      required this.title,
+      this.title,
       this.leading,
       this.showLeading = true,
       this.bottom,
@@ -27,7 +27,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: showLeading,
       title: Text(
-        title,
+        title ?? '',
         style: context.x16.withBlack,
       ),
       centerTitle: centerTitle,
