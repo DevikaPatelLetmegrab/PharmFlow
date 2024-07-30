@@ -158,10 +158,10 @@ class AppConstants {
         title: 'My Profile',
         route: AppRoutes.myProfilePage),
     DrawerModel(
-      assetImage: AppAssets.bagIcon,
+      assetImage: AppAssets.shoppingCartIcon,
       index: 2,
-      title: 'My Orders',
-      route: AppRoutes.orderPage,
+      title: 'My Cart',
+      route: '',
     ),
     DrawerModel(
       assetImage: AppAssets.noteIcon,
@@ -184,7 +184,7 @@ class AppConstants {
     DrawerModel(
       assetImage: AppAssets.heartIcon,
       index: 6,
-      route: '',
+      route: AppRoutes.wishListPage,
       title: 'My Wishlist',
     ),
     DrawerModel(

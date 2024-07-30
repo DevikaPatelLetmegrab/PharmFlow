@@ -10,7 +10,7 @@ import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.dart';
-import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/booking_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
 import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
@@ -20,6 +20,7 @@ import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
+import 'package:pharm_flow/features/wishlist/presentation/pages/wishlist_page.dart';
 
 class RoutesUtils {
   var goRoute = GoRouter(
@@ -67,7 +68,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.bookingPage,
         name: AppRoutes.bookingPage,
-        builder: (context, state) => const MyBookingPage(),
+        builder: (context, state) => const BookingPage(),
       ),
       GoRoute(
         path: AppRoutes.bottomBar,
@@ -125,6 +126,11 @@ class RoutesUtils {
         builder: (context, state) => const OrderPage(
           showLeading: true,
         ),
+      ),
+      GoRoute(
+        path: AppRoutes.wishListPage,
+        name: AppRoutes.wishListPage,
+        builder: (context, state) => const WishlistPage(),
       ),
     ],
   );

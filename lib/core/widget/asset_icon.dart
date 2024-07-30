@@ -20,7 +20,7 @@ class AssetIcon extends StatelessWidget {
         assetName,
       ),
       size: size,
-      color: color ?? AppColors.blackColor,
+      color: color ?? AppColors.primary,
     );
   }
 }

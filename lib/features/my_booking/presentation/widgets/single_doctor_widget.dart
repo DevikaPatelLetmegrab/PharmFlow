@@ -29,10 +29,9 @@ class SingleDoctorWidget extends StatelessWidget {
             ),
             const Gap(AppDimens.space10),
             const CommonDoctorContainer(
-              label: 'Proffesional Doctor',
+              label: 'Professional Doctor',
               name: 'Dr.Lincoln Westervelt',
             ),
-            const Gap(AppDimens.space10),
             const Divider(
               color: AppColors.greyE8Color,
             ),
