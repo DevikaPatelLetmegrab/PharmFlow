@@ -9,6 +9,7 @@ import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
+import 'package:pharm_flow/core/widget/asset_icon.dart';
 import 'package:pharm_flow/core/widget/square_icon.dart';
 import 'package:pharm_flow/features/order/presentation/widgets/common_medicine_summary.dart';
 
@@ -37,8 +38,7 @@ class OrderItem extends StatelessWidget {
             ),
             child: ListTile(
               dense: true,
-              visualDensity:
-              const VisualDensity(horizontal: 0, vertical: 0),
+              visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
               leading: Text(
                 'ID: 082526201',
                 style: context.md14.withBlack,
@@ -50,7 +50,7 @@ class OrderItem extends StatelessWidget {
             ),
           ),
           const Gap(AppDimens.space10),
-          CommonMedicineSummary(),
+          const CommonMedicineSummary(),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: DottedLine(
@@ -58,11 +58,16 @@ class OrderItem extends StatelessWidget {
               dashColor: AppColors.greyDEColor,
             ),
           ),
-          TextButton(
-            style: TextButton.styleFrom(
-                overlayColor: AppColors.transparent),
-            child: Text(
-              'View Details >',
+          TextButton.icon(
+            iconAlignment: IconAlignment.end,
+            icon: AssetIcon(
+              assetName: AppAssets.arrowRightIcon,
+              color: AppColors.primary,
+              size: AppDimens.imageSize18,
+            ),
+            style: TextButton.styleFrom(overlayColor: AppColors.transparent),
+            label: Text(
+              'View Details',
               style: context.md14.withPrimary,
             ),
             onPressed: () {

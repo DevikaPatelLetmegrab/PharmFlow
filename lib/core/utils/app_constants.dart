@@ -4,6 +4,8 @@ import 'package:pharm_flow/core/model/chip_model.dart';
 import 'package:pharm_flow/core/model/date_model.dart';
 import 'package:pharm_flow/core/model/gender_model.dart';
 import 'package:pharm_flow/core/model/package_model.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/features/profile/data/models/drawer_model.dart';
 
 class AppConstants {
   static const Duration gridAnimDuration375 = Duration(milliseconds: 375);
@@ -147,5 +149,79 @@ class AppConstants {
     ChipModel(title: 'Cancelled', isSelected: false),
     ChipModel(title: 'Replace', isSelected: false),
     ChipModel(title: 'Placed', isSelected: true),
+  ];
+
+  static List<DrawerModel> drawerItems = [
+    DrawerModel(
+        assetImage: AppAssets.userOutlineIcon,
+        index: 1,
+        title: 'My Profile',
+        route: AppRoutes.myProfilePage),
+    DrawerModel(
+      assetImage: AppAssets.bagIcon,
+      index: 2,
+      title: 'My Orders',
+      route: '',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.noteIcon,
+      index: 3,
+      route: '',
+      title: 'My Prescription',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.starOutlineIcon,
+      index: 4,
+      title: 'My Favourite',
+      route: '',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.calenderOutlineIcon,
+      index: 5,
+      title: 'My Appointment',
+      route: '',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.heartIcon,
+      index: 6,
+      route: '',
+      title: 'My Wishlist',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.starOutlineIcon,
+      index: 7,
+      title: 'My Reviews',
+      route: '',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.locationIcon,
+      index: 8,
+      route: '',
+      title: 'Manage Address',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.bankIcon,
+      index: 9,
+      route: '',
+      title: 'Manage Bank',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.supportIcon,
+      index: 10,
+      title: 'Help & Support',
+      route: '',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.securityIcon,
+      index: 11,
+      route: '',
+      title: 'Privacy Policy',
+    ),
+    DrawerModel(
+      assetImage: AppAssets.logoutIcon,
+      index: 12,
+      route: '',
+      title: 'Log Out',
+    ),
   ];
 }

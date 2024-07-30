@@ -56,6 +56,17 @@ class AppAssets {
   static String videoCallIcon = 'assets/icon/video_call.png';
   static String searchCallIcon = 'assets/icon/search_call.png';
   static String orderFilterIcon = 'assets/icon/order_filter.png';
+  static String supportIcon = 'assets/icon/24-support.png';
+  static String bankIcon = 'assets/icon/bank_outline.png';
+  static String calenderOutlineIcon = 'assets/icon/calender_outline.png';
+  static String heartIcon = 'assets/icon/heart_outline.png';
+  static String logoutIcon = 'assets/icon/logout.png';
+  static String noteIcon = 'assets/icon/note_outline.png';
+  static String securityIcon = 'assets/icon/security-safe.png';
+  static String userOutlineIcon = 'assets/icon/user_outline.png';
+  static String starOutlineIcon = 'assets/icon/star_outline.png';
+  static String bagOutlineIcon = 'assets/icon/bag_outline.png';
+  static String arrowRightIcon = 'assets/icon/arrow-right.png';
 
   ///logo
 
@@ -65,7 +76,7 @@ class AppAssets {
   static String splashImage = 'assets/logo/splash_image.png';
 
   //app images
-  static String image = 'assets/images/image.png';
+  static String image = 'assets/person.png';
   static String imageD = 'assets/imageD.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';
