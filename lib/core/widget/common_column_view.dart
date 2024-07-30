@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
-import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/round_icon.dart';
 
 class CommonColumnView extends StatelessWidget {
@@ -25,7 +24,6 @@ class CommonColumnView extends StatelessWidget {
           bgopacity: 0.1,
           radius: 22,
           iconPath: imagePath,
-          bgopacity: .2,
         ),
         const Gap(AppDimens.space5),
         Text(

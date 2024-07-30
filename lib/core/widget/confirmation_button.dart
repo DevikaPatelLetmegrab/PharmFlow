@@ -9,7 +9,7 @@ class ConfirmationButton extends StatelessWidget {
   final String negativeText;
   final VoidCallback? onPositiveClick;
   final VoidCallback? onNegativeClick;
-  double fontSize;
+  double? fontSize;
   double elevatedFontSize;
   double? height;
 

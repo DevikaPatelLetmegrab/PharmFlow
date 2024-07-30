@@ -113,6 +113,8 @@ class RoutesUtils {
         path: AppRoutes.categoriesPage,
         name: AppRoutes.categoriesPage,
         builder: (context, state) => const CategoriesPage(),
+      ),
+      GoRoute(
         path: AppRoutes.myProfilePage,
         name: AppRoutes.myProfilePage,
         builder: (context, state) => const MyProfilePage(),
