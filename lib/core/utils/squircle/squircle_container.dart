@@ -4,6 +4,7 @@ import 'package:pharm_flow/core/utils/squircle/squircle_decordation.dart';
 
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
+
 @immutable
 class Squircle extends Container {
   // final Widget schild;
@@ -24,7 +25,6 @@ class Squircle extends Container {
     this.borderColor = AppColors.greyD9Color,
     this.side,
     this.gradient,
-
     this.customRadius,
     this.image,
     this.customShape,
@@ -36,17 +36,14 @@ class Squircle extends Container {
     super.alignment,
     super.constraints,
     super.foregroundDecoration,
-        super.padding,
-
   }) : super(
-          decoration: SquircleDecoration(
-              gradient: backgroundColor != null ? null : gradient,
-              color: gradient != null ? null : backgroundColor,
-              side: side ?? BorderSide(color: borderColor),
-              image: image,
-              radius: radius,
-              customShape: customShape,
-              customBorderRadius: customRadius),
-          clipBehavior: clipBehavior
-        );
+            decoration: SquircleDecoration(
+                gradient: backgroundColor != null ? null : gradient,
+                color: gradient != null ? null : backgroundColor,
+                side: side ?? BorderSide(color: borderColor),
+                image: image,
+                radius: radius,
+                customShape: customShape,
+                customBorderRadius: customRadius),
+            clipBehavior: clipBehavior);
 }
