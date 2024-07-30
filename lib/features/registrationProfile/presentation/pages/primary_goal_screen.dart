@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
@@ -21,17 +20,16 @@ class PrimaryGoalScreen extends StatefulWidget {
 class _PrimaryGoalScreenState extends State<PrimaryGoalScreen> {
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.all(AppDimens.space16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CommonTitleContent(
+          const CommonTitleContent(
               title: 'What’s your primary goal for this app?',
               content:
                   'Select any of 4 in given list you would like to choose'),
-          Gap(AppDimens.space20),
+          const Gap(AppDimens.space20),
           Expanded(
             child: Wrap(
               spacing: 15,
@@ -47,10 +45,10 @@ class _PrimaryGoalScreenState extends State<PrimaryGoalScreen> {
                   .toList(),
             ),
           ),
-          AppElevatedButton(
+          AppButton(
             onTap: () {
               widget.controller.nextPage(
-                  duration:AppConstants.animDuration300, curve: Curves.easeIn);
+                  duration: AppConstants.animDuration300, curve: Curves.easeIn);
             },
             buttonType: ButtonType.elevated,
             width: context.getWidth,
@@ -61,8 +59,6 @@ class _PrimaryGoalScreenState extends State<PrimaryGoalScreen> {
           )
         ],
       ),
-
-   
     );
   }
 }

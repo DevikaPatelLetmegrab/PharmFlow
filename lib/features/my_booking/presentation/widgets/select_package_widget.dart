@@ -4,8 +4,6 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
-import 'package:pharm_flow/core/model/package_model.dart';
-import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
@@ -26,7 +24,6 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
 
   @override
   void initState() {
-    // TODO: implement initState
     context.read<PackageBloc>().add(FetchListEvent());
     super.initState();
   }
@@ -46,7 +43,7 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
               },
               child: Squircle(
                 height: context.h(65),
-                borderColor: state.selectedModel==state.packageList![index]
+                borderColor: state.selectedModel == state.packageList![index]
                     ? AppColors.primary
                     : AppColors.greyE8Color,
                 child: Padding(
@@ -54,12 +51,9 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
                   child: Row(
                     children: [
                       RoundIcon(
-                        child: AppAssetImage(
-                          imagePath: state.packageList![index].icon,
-                          size: 20,
-                        ),
+                        iconPath: state.packageList![index].icon,
                       ),
-                      Gap(AppDimens.space15),
+                      const Gap(AppDimens.space15),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -68,14 +62,14 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
                             state.packageList![index].title,
                             style: context.md14.withBlack,
                           ),
-                          Gap(AppDimens.space3),
+                          const Gap(AppDimens.space3),
                           Text(
                             state.packageList![index].content,
                             style: context.s12.withGrey78,
                           )
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -84,14 +78,14 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
                             "₹ ${state.packageList![index].price}",
                             style: context.md14.withBlack,
                           ),
-                          Gap(AppDimens.space3),
+                          const Gap(AppDimens.space3),
                           Text(
                             '/10 Mins',
                             style: context.md14.withBlack.weigh300,
                           )
                         ],
                       ),
-                      Gap(AppDimens.space12),
+                      const Gap(AppDimens.space12),
 
                       // Radio<PackageModel>(
                       //     value: AppConstants.packageList[index],

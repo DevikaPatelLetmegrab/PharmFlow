@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
@@ -18,7 +17,7 @@ class ReviewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: 10,
       itemBuilder: (context, index) {
         return const SingleReviewWidget();
@@ -47,7 +46,7 @@ class SingleReviewWidget extends StatelessWidget {
               Row(
                 children: [
                   AppAssetImage(imagePath: AppAssets.image),
-                  Gap(AppDimens.space10),
+                  const Gap(AppDimens.space10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -80,7 +79,7 @@ class SingleReviewWidget extends StatelessWidget {
               const Gap(AppDimens.space10),
             ],
           ),
-          Align(alignment: Alignment.topRight, child: AppPopupMenu(items: []))
+          const Align(alignment: Alignment.topRight, child: AppPopupMenu(items: []))
         ],
       ),
     );

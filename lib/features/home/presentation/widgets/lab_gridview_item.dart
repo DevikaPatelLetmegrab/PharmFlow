@@ -68,7 +68,7 @@ class LabGridviewItem extends StatelessWidget {
                       style: context.md14,
                     ),
                     const Gap(AppDimens.space10),
-                    AppElevatedButton(
+                    AppButton(
                       buttonType: ButtonType.elevated,
                       buttonName: 'Book',
                       height: 35,

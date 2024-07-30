@@ -6,10 +6,8 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
-
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
-import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/widgets/common_title_content.dart';
 
 class MedicalConditionScreen extends StatefulWidget {
@@ -28,18 +26,18 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
       body: Padding(
         padding: const EdgeInsets.all(AppDimens.space16),
         child: Column(children: [
-          CommonTitleContent(
+          const CommonTitleContent(
               title: 'Do you have existing medical conditions?',
               content:
                   'Please select right option so our system gives you better result & outcomes'),
-          Gap(AppDimens.space40),
+          const Gap(AppDimens.space40),
           AppAssetImage(
             imagePath: AppAssets.medicalPerson,
             height: context.h(250),
             width: context.w(250),
           ),
-          Spacer(),
-          AppElevatedButton(
+          const Spacer(),
+          AppButton(
             onTap: () {
               widget.controller.nextPage(
                   duration: AppConstants.animDuration300, curve: Curves.easeIn);
@@ -56,8 +54,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
               style: context.md14.weigh400.withWhite,
             ),
           ),
-          Gap(AppDimens.space20),
-          AppElevatedButton(
+          const Gap(AppDimens.space20),
+          AppButton(
             onTap: () {
               widget.controller.nextPage(
                   duration: AppConstants.animDuration300, curve: Curves.easeIn);
@@ -74,8 +72,8 @@ class _MedicalConditionScreenState extends State<MedicalConditionScreen> {
               style: context.md14.weigh400.withPrimary,
             ),
           ),
-          Gap(AppDimens.space20),
-          AppElevatedButton(
+          const Gap(AppDimens.space20),
+          AppButton(
             onTap: () {
               widget.controller.nextPage(
                   duration: AppConstants.animDuration300, curve: Curves.easeIn);

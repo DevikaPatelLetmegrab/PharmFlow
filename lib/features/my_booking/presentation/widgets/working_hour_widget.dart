@@ -16,32 +16,32 @@ class WorkingHourWidget extends StatelessWidget {
           title: 'Monday',
           content: '10:00 AM - 10:00 PM',
         ),
-        Gap(AppDimens.space5),
+        const Gap(AppDimens.space5),
         CommonRowTime(
           title: 'Tuesday',
           content: '10:00 AM - 10:00 PM',
         ),
-        Gap(AppDimens.space5),
+        const Gap(AppDimens.space5),
         CommonRowTime(
           title: 'Wednesday',
           content: '10:00 AM - 10:00 PM',
         ),
-        Gap(AppDimens.space5),
+        const Gap(AppDimens.space5),
         CommonRowTime(
           title: 'Thursday',
           content: '10:00 AM - 10:00 PM',
         ),
-        Gap(AppDimens.space5),
+        const Gap(AppDimens.space5),
         CommonRowTime(
           title: 'Friday',
           content: '10:00 AM - 10:00 PM',
         ),
-        Gap(AppDimens.space5),
+        const Gap(AppDimens.space5),
         CommonRowTime(
           title: 'Saturday',
           content: '10:00 AM - 10:00 PM',
         ),
-        Gap(AppDimens.space5),
+        const Gap(AppDimens.space5),
         CommonRowTime(
           title: 'Sunday',
           content: '10:00 AM - 10:00 PM',

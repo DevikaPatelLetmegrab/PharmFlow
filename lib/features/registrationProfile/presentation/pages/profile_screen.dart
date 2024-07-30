@@ -11,8 +11,6 @@ import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/prima
 import 'package:pharm_flow/features/RegistrationProfile/presentation/widgets/common_row.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/bloc/linear_process_cubit.dart';
 import 'package:pharm_flow/features/registrationProfile/presentation/bloc/linear_process_state.dart';
-import 'package:pharm_flow/features/registrationProfile/presentation/pages/avtar_upload_screen.dart';
-import 'package:pharm_flow/features/welcome/presentation/bloc/counter_cubit.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -33,14 +31,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return Scaffold(
           body: Column(
             children: [
-              Gap(AppDimens.space20),
+              const Gap(AppDimens.space20),
               CommonRow(
                 controller: controller,
               ),
-              Gap(AppDimens.space20),
+              const Gap(AppDimens.space20),
               Expanded(
                 child: PageView(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   controller: controller,
                   children: [
                     PrimaryGoalScreen(
