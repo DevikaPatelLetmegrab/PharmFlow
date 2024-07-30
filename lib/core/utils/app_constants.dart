@@ -4,6 +4,7 @@ import 'package:pharm_flow/core/model/chip_model.dart';
 import 'package:pharm_flow/core/model/date_model.dart';
 import 'package:pharm_flow/core/model/gender_model.dart';
 import 'package:pharm_flow/core/model/package_model.dart';
+import 'package:pharm_flow/features/home/data/models/choose_model.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/features/profile/data/models/drawer_model.dart';
 
@@ -150,7 +151,6 @@ class AppConstants {
     ChipModel(title: 'Replace', isSelected: false),
     ChipModel(title: 'Placed', isSelected: true),
   ];
-
   static List<DrawerModel> drawerItems = [
     DrawerModel(
         assetImage: AppAssets.userOutlineIcon,
@@ -223,5 +223,24 @@ class AppConstants {
       route: '',
       title: 'Log Out',
     ),
+  ];
+
+  static List<ChooseModel> chooseList = [
+    ChooseModel(
+        image: AppAssets.peopleIcon,
+        title: '10 million +',
+        content: 'registered user as of may 10,2024'),
+    ChooseModel(
+        image: AppAssets.millionIcon,
+        title: '24 million +',
+        content: 'orders on pharmflow till date'),
+    ChooseModel(
+        image: AppAssets.pillsIcon,
+        title: '890000 +',
+        content: 'unique items sold last 3 months'),
+    ChooseModel(
+        image: AppAssets.locationIcon,
+        title: '18000 +',
+        content: 'pin codes services last 3 months'),
   ];
 }

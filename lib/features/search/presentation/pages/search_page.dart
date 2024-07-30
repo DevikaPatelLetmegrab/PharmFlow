@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
-import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
@@ -27,7 +26,7 @@ class SearchPage extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: AppDimens.space15),
               child: Column(
                 children: [
-                  AppSearchField(
+                  const AppSearchField(
                     hint: 'Search',
                     readOnly: true,
                     showSuffix: true,

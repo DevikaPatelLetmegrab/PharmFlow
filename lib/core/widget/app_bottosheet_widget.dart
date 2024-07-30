@@ -1,10 +1,8 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
-import 'package:pharm_flow/core/utils/squircle/squircle_border.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 
 

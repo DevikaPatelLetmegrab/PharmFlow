@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
-class CategoryListviewItem extends StatelessWidget {
+class CategoriesListviewItem extends StatelessWidget {
   final double? height;
   final double? width;
   final String? img;
   final String? text;
-  const CategoryListviewItem(
+  const CategoriesListviewItem(
       {super.key,
       this.height = 100,
       this.width = 100,

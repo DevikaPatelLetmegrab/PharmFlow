@@ -18,4 +18,5 @@ abstract class AppRoutes {
   static const String myProfilePage = '/my_profile_page';
   static const String prescriptionPage = '/prescription_page';
   static const String wishListPage = '/wishList_page';
+  static const String categoriesPage = '/categories_page';
 }

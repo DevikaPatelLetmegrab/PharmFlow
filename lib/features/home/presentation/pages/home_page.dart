@@ -4,9 +4,14 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
+import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
+import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/asset_icon.dart';
+import 'package:pharm_flow/core/widget/common_column_view.dart';
 import 'package:pharm_flow/features/home/presentation/bloc/counter_cubit_home.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/category_listview_item.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/consult_pageview.dart';
@@ -54,7 +59,7 @@ class HomePage extends StatelessWidget {
                         return const SizedBox(width: 10);
                       },
                       itemBuilder: (context, index) {
-                        return CategoryListviewItem(
+                        return CategoriesListviewItem(
                           img: AppAssets.imageD,
                         );
                       },
@@ -68,7 +73,13 @@ class HomePage extends StatelessWidget {
                         const Gap(AppDimens.space20),
                         const UploadPrescription(),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'popular categories'),
+                        RowOverview(
+                          title: 'popular categories',
+                          ontap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.categoriesPage);
+                          },
+                        ),
                         const Gap(AppDimens.space10),
                         GridView.builder(
                           itemCount: 12,
@@ -82,7 +93,7 @@ class HomePage extends StatelessWidget {
                             crossAxisSpacing: 10,
                           ),
                           itemBuilder: (context, index) {
-                            return CategoryListviewItem(
+                            return CategoriesListviewItem(
                               img: AppAssets.image2,
                             );
                           },
@@ -128,7 +139,7 @@ class HomePage extends StatelessWidget {
                             crossAxisSpacing: 10,
                           ),
                           itemBuilder: (context, index) {
-                            return CategoryListviewItem(
+                            return CategoriesListviewItem(
                               img: AppAssets.image2,
                               text: 'Johnson & Johnson',
                             );
@@ -209,7 +220,7 @@ class HomePage extends StatelessWidget {
                         const RowOverview(title: 'Why Choose Us'),
                         const Gap(AppDimens.space20),
                         GridView.builder(
-                          itemCount: 4,
+                          itemCount: AppConstants.chooseList.length,
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
@@ -220,27 +231,13 @@ class HomePage extends StatelessWidget {
                             crossAxisSpacing: 12,
                           ),
                           itemBuilder: (context, index) {
-                            return Container(
-                              padding: const EdgeInsets.all(AppDimens.space15),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                    AppDimens.circleRadius20),
-                                border:
-                                    Border.all(color: AppColors.greyD9Color),
-                              ),
-                              child: Column(
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(7),
-                                    decoration: BoxDecoration(
-                                      color: AppColors.greyD9Color,
-                                      borderRadius: BorderRadius.circular(
-                                          AppDimens.circleRadius20),
-                                    ),
-                                    child: AssetIcon(
-                                        assetName: AppAssets.peopleIcon),
-                                  ),
-                                ],
+                            return Squircle(
+                              radius: 20,
+                              padding: const EdgeInsets.all(AppDimens.space8),
+                              child: CommonColumnView(
+                                imagePath: AppConstants.chooseList[index].image,
+                                title: AppConstants.chooseList[index].title,
+                                content: AppConstants.chooseList[index].content,
                               ),
                             );
                           },
