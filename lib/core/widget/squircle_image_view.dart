@@ -15,6 +15,7 @@ class SquircleImageView extends StatelessWidget {
   final String errorImagePath;
   final double? height;
   final double? width;
+  final BorderSide? borderSide;
   final BoxFit? fit;
   final BoxFit? errorFit;
   final double? scale;
@@ -27,9 +28,10 @@ class SquircleImageView extends StatelessWidget {
     required this.imagePath,
     this.errorImagePath = AppAssets.image,
     this.height,
+    this.borderSide,
     this.width = double.maxFinite,
     this.fit,
-    this.errorFit,
+    this.errorFit = BoxFit.cover,
     this.scale,
     this.color,
     this.alignment = Alignment.center,
@@ -78,9 +80,10 @@ class SquircleImageView extends StatelessWidget {
     };
     return Squircle(
       radius: AppDimens.borderRadius30,
-      side: const BorderSide(
-        color: AppColors.borderColorGrey,
-      ),
+      side: borderSide ??
+          const BorderSide(
+            color: AppColors.borderColorGrey,
+          ),
       clipBehavior: Clip.hardEdge,
       child: image,
     );

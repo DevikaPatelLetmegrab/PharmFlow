@@ -136,6 +136,7 @@ class AppBottomSheet {
                             iconPadding: const EdgeInsets.all(8),
                             radius: 34,
                             iconSize: 35,
+                            bgopacity: .2,
                           ),
                           const Gap(8),
                           Text(
@@ -160,6 +161,7 @@ class AppBottomSheet {
                             iconPath: AppAssets.image,
                             radius: 34,
                             iconSize: 35,
+                             bgopacity: .2,
                           ),
                           const Gap(8),
                           Text(
@@ -249,6 +251,7 @@ class AppBottomSheet {
                             iconPadding: const EdgeInsets.all(8),
                             radius: 34,
                             iconSize: 35,
+                             bgopacity: .2,
                           ),
                           const Gap(8),
                           Text(
@@ -273,11 +276,12 @@ class AppBottomSheet {
                             iconPath: AppAssets.image,
                             radius: 34,
                             iconSize: 35,
+                             bgopacity: .2,
                           ),
                           const Gap(8),
                           Text(
-                            'upload photo',
-                            style: context.x16.weigh400.withBlack,
+                            'Upload Photo',
+                            style: context.md14.weigh400.withBlack,
                           ),
                         ],
                       ),
