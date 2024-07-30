@@ -23,6 +23,7 @@ class CommonColumnView extends StatelessWidget {
         RoundIcon(
           radius: 22,
           iconPath: imagePath,
+          bgopacity: .2,
         ),
         const Gap(AppDimens.space5),
         Text(

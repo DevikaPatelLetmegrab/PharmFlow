@@ -52,6 +52,7 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
                     children: [
                       RoundIcon(
                         iconPath: state.packageList![index].icon,
+                        bgopacity: .2,
                       ),
                       const Gap(AppDimens.space15),
                       Column(

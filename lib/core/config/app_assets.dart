@@ -67,6 +67,9 @@ class AppAssets {
   static String starOutlineIcon = 'assets/icon/star_outline.png';
   static String bagOutlineIcon = 'assets/icon/bag_outline.png';
   static String arrowRightIcon = 'assets/icon/arrow-right.png';
+  static String editIcon = 'assets/icon/edit.png';
+  static String verifyOutlineIcon = 'assets/icon/verify_outline.png';
+  static String arrowDownIcon = 'assets/icon/arrow-down.png';
 
   ///logo
 
@@ -76,7 +79,7 @@ class AppAssets {
   static String splashImage = 'assets/logo/splash_image.png';
 
   //app images
-  static String image = 'assets/person.png';
+  static const String image = 'assets/person.png';
   static String imageD = 'assets/imageD.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';

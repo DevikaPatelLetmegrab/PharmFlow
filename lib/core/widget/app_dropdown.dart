@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
+import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
@@ -73,7 +74,7 @@ class AppDropdown<T> extends StatelessWidget {
             children: [
               Text(
                 label ?? '',
-                style: context.md14.withGrey78.weigh500,
+                style: context.md14.withBlack.weigh400,
               ),
               const Gap(AppDimens.space5)
             ],
@@ -84,22 +85,13 @@ class AppDropdown<T> extends StatelessWidget {
           value: value,
           style: fontTextStyle ?? context.md14,
           isDense: true,
-          hint: Row(
-            children: [
-              AssetIcon(
-                assetName: iconPath,
-                size: 24,
-              ),
-              const Gap(AppDimens.space4),
-              Text(
-                hintText ?? '',
-                textAlign: TextAlign.start,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: context.md14.withGrey78
-                    .copyWith(fontWeight: hintTextWeight),
-              ),
-            ],
+          hint: Text(
+            hintText ?? '',
+            textAlign: TextAlign.start,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: context.md14.withGrey78
+                .copyWith(fontWeight: hintTextWeight),
           ),
           decoration: InputDecoration(
             isDense: true,
@@ -132,7 +124,7 @@ class AppDropdown<T> extends StatelessWidget {
           ),
           buttonStyleData: ButtonStyleData(
             height: height ?? context.w(AppDimens.inputFieldHeight),
-            padding: contentPadding ?? const EdgeInsets.only(right: 16),
+            // padding: contentPadding ?? const EdgeInsets.only(right: 16),
             decoration: BoxDecoration(
               color: bgColor,
               borderRadius: BorderRadius.circular(30),
@@ -140,17 +132,18 @@ class AppDropdown<T> extends StatelessWidget {
           ),
           iconStyleData: IconStyleData(
             openMenuIcon: RotatedBox(
-              quarterTurns: 1,
-              child: Icon(
-                Icons.chevron_left,
-                color: iconColor,
+              quarterTurns: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(AppDimens.space8),
+                child: AssetIcon(
+                  assetName: AppAssets.arrowRightIcon,
+                ),
               ),
             ),
-            icon: RotatedBox(
-              quarterTurns: 3,
-              child: Icon(
-                Icons.chevron_left,
-                color: iconColor,
+            icon: Padding(
+              padding: const EdgeInsets.all(AppDimens.space8),
+              child: AssetIcon(
+                assetName: AppAssets.arrowDownIcon,
               ),
             ),
           ),
@@ -165,7 +158,7 @@ class AppDropdown<T> extends StatelessWidget {
                   searchInnerWidgetHeight: 50)
               : null,
           dropdownStyleData: DropdownStyleData(
-            padding: const EdgeInsets.only(right: 16),
+            // padding: const EdgeInsets.only(right: 16),
             elevation: !searchEnable ? 0 : 1,
             width: !searchEnable ? dropdownWidth : null,
             maxHeight: !searchEnable ? dropdownHeight : null,

@@ -161,7 +161,7 @@ class AppConstants {
       assetImage: AppAssets.bagIcon,
       index: 2,
       title: 'My Orders',
-      route: '',
+      route: AppRoutes.orderPage,
     ),
     DrawerModel(
       assetImage: AppAssets.noteIcon,
