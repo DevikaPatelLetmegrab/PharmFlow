@@ -173,7 +173,7 @@ class AppConstants {
       assetImage: AppAssets.starOutlineIcon,
       index: 4,
       title: 'My Favourite',
-      route: '',
+      route: AppRoutes.myFavouritePage,
     ),
     DrawerModel(
       assetImage: AppAssets.calenderOutlineIcon,
