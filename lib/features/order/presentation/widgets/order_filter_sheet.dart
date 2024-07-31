@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/widget/confirmation_button.dart';
 import 'package:pharm_flow/core/widget/input_chip_widget.dart';
@@ -49,7 +50,16 @@ class OrderFilterSheet extends StatelessWidget {
                 .toList(),
           ),
           Gap(AppDimens.space20),
-          ConfirmationButton(positiveText: 'Apply', negativeText: 'Celar All')
+          ConfirmationButton(
+            positiveText: 'Apply',
+            negativeText: 'Clear All',
+            onPositiveClick: () {
+              NavigationServices().pop();
+            },
+            onNegativeClick: () {
+              NavigationServices().pop();
+            },
+          )
         ],
       ),
     );

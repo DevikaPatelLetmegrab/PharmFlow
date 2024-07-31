@@ -7,12 +7,15 @@ import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
+import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 import 'package:pharm_flow/core/widget/common_doctor_container.dart';
 import 'package:pharm_flow/core/widget/common_label.dart';
 
 class SingleMedicalWidget extends StatelessWidget {
-  const SingleMedicalWidget({super.key});
+  final bool isFav;
+
+  const SingleMedicalWidget({super.key, this.isFav = false});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +23,27 @@ class SingleMedicalWidget extends StatelessWidget {
       borderColor: AppColors.greyE8Color,
       customRadius: BorderRadius.circular(AppDimens.borderRadius30),
       child: Padding(
-        padding: const EdgeInsets.all(AppDimens.space16),
+        padding: const EdgeInsets.symmetric(
+            vertical: AppDimens.space10, horizontal: AppDimens.space16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CommonLabel(
-                imagePath: AppAssets.offerIcon, content: '20%off all medicine'),
-            const Gap(AppDimens.space10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CommonLabel(
+                    imagePath: AppAssets.offerIcon,
+                    content: '20%off all medicine'),
+                if (isFav)
+                  AppAssetImage(
+                    imagePath: AppAssets.starFill,
+                    color: AppColors.primary,
+                    size: AppDimens.imageSize20,
+                    fit: BoxFit.cover,
+                  )
+              ],
+            ),
+            const Gap(AppDimens.space5),
             const Divider(
               color: AppColors.greyE8Color,
             ),
