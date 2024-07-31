@@ -74,7 +74,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     content: "Account Created Successfully",
                     onTap: () {
                       NavigationServices()
-                          .pushName(AppRoutes.registrationprofile);
+                          .pushName(AppRoutes.registrationProfile);
                     },
                     btnName: 'Continue');
               },

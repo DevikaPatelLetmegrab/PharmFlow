@@ -14,9 +14,10 @@ import 'package:pharm_flow/features/my_booking/presentation/pages/booking_page.d
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
 import 'package:pharm_flow/features/my_favourite/presentation/pages/my_favourite_page.dart';
+import 'package:pharm_flow/features/my_prescription/presentation/pages/my_prescription_page.dart';
 import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
-import 'package:pharm_flow/features/prescription/presentation/pages/prescription_page.dart';
+import 'package:pharm_flow/features/my_prescription/presentation/pages/upload_prescription_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
@@ -57,8 +58,8 @@ class RoutesUtils {
         builder: (context, state) => const RegistrationScreen(),
       ),
       GoRoute(
-        path: AppRoutes.registrationprofile,
-        name: AppRoutes.registrationprofile,
+        path: AppRoutes.registrationProfile,
+        name: AppRoutes.registrationProfile,
         builder: (context, state) => const ProfileScreen(),
       ),
       GoRoute(
@@ -107,9 +108,9 @@ class RoutesUtils {
         builder: (context, state) => const OrderDetailsPage(),
       ),
       GoRoute(
-        path: AppRoutes.prescriptionPage,
-        name: AppRoutes.prescriptionPage,
-        builder: (context, state) => const PrescriptionPage(),
+        path: AppRoutes.uploadPrescriptionPage,
+        name: AppRoutes.uploadPrescriptionPage,
+        builder: (context, state) => const UploadPrescriptionPage(),
       ),
       GoRoute(
         path: AppRoutes.categoriesPage,
@@ -137,6 +138,11 @@ class RoutesUtils {
         path: AppRoutes.myFavouritePage,
         name: AppRoutes.myFavouritePage,
         builder: (context, state) => const MyFavouritePage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myPrescriptionPage,
+        name: AppRoutes.myPrescriptionPage,
+        builder: (context, state) => const MyPrescriptionPage(),
       ),
     ],
   );

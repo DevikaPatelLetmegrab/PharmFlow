@@ -247,7 +247,7 @@ class AppBottomSheet {
                       child: Column(
                         children: [
                            RoundIcon(
-                            iconPath: AppAssets.image,
+                            iconPath: AppAssets.cameraIcon,
                             iconPadding: const EdgeInsets.all(8),
                             radius: 34,
                             iconSize: 35,
@@ -273,10 +273,10 @@ class AppBottomSheet {
                       child: Column(
                         children: [
                            RoundIcon(
-                            iconPath: AppAssets.image,
+                            iconPath: AppAssets.galleryIcon,
                             radius: 34,
                             iconSize: 35,
-                             bgopacity: .2,
+                             bgopacity: .1,
                           ),
                           const Gap(8),
                           Text(

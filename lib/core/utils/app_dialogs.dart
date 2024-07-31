@@ -6,11 +6,13 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
+import 'package:pharm_flow/core/utils/squircle/squircle_decoration.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
 
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/widget/circle_info_image.dart';
+import 'package:pharm_flow/core/widget/confirmation_button.dart';
 
 class AppDialogs {
   static void planDialog({required Widget child}) {
@@ -141,6 +143,63 @@ class AppDialogs {
               ),
             ),
           ),
+        );
+      },
+      transitionBuilder: (_, anim, __, child) {
+        Tween<Offset> tween;
+        if (anim.status == AnimationStatus.reverse) {
+          tween = Tween(begin: const Offset(0, 0), end: Offset.zero);
+        } else {
+          tween = Tween(begin: const Offset(0, 0), end: Offset.zero);
+        }
+
+        return FadeTransition(
+          opacity: anim,
+          child: child,
+        );
+      },
+    );
+  }
+
+  static Future<dynamic> confirmationDialog({
+    required String confirmationTitle,
+    String positiveText = 'Yes',
+    String negativeText = 'No',
+    VoidCallback? onPositiveClick,
+    VoidCallback? onNegativeClick,
+  }) {
+    return showGeneralDialog(
+      context: NavigationServices().getNavigationContext(),
+      barrierDismissible: true,
+      barrierLabel:
+      MaterialLocalizations.of(NavigationServices().getNavigationContext())
+          .modalBarrierDismissLabel,
+      barrierColor: AppColors.blackColor.withOpacity(0.1),
+      pageBuilder: (context, animation, secondaryAnimation) {
+        return AlertDialog(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.white,
+          insetPadding: EdgeInsets.symmetric(horizontal: context.w(20)),
+          shape: SquircleDecoration().shape,
+          content: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Text(
+              confirmationTitle,
+              textAlign: TextAlign.center,
+              style: context.x16.weigh500,
+            ),
+          ),
+          actions: [
+            ConfirmationButton(
+              negativeText: negativeText,
+              positiveText: positiveText,
+              onNegativeClick: onNegativeClick ??
+                      () {
+                    NavigationServices().pop();
+                  },
+              onPositiveClick: onPositiveClick,
+            ),
+          ],
         );
       },
       transitionBuilder: (_, anim, __, child) {

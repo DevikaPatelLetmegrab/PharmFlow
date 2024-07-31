@@ -103,7 +103,7 @@ class VerifyOtpScreen extends StatelessWidget {
                   onTap: () {
                     var route = isLogin == true
                         ? AppRoutes.bottomBar
-                        : AppRoutes.registrationprofile;
+                        : AppRoutes.registrationProfile;
                     NavigationServices().pushName(route);
                   },
                 );
