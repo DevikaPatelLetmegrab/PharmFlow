@@ -20,4 +20,8 @@ abstract class AppRoutes {
   static const String categoriesPage = '/categories_page';
   static const String newLaunchPage = '/new_launch_page';
   static const String topSellingPage = '/top_selling_page';
+  static const String categoriesSellAllPage = '/categories_see_all_page';
+  static const String brandPage = '/brand_page';
+  static const String seasonalPagePage = '/seasonal_page';
+  static const String labPage = '/lab_page';
 }

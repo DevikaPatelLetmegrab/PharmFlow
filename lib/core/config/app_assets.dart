@@ -17,6 +17,9 @@ class AppAssets {
   static String docLab = 'assets/images/doctor_lab.png';
   static String discountImg = 'assets/images/image_discount.png';
   static String map = 'assets/images/map.png';
+  static String docCategories = 'assets/images/doctor_categories.png';
+  static String labTest = 'assets/images/lab_test.png';
+  static String medicin = 'assets/images/medicin.png';
 
   ///icons
 

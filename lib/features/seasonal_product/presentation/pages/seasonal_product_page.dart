@@ -3,13 +3,13 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/features/new_launch/presentation/widgets/product_grid_item.dart';
 
-class NewLaunchPage extends StatelessWidget {
-  const NewLaunchPage({super.key});
+class SeasonalProductPage extends StatelessWidget {
+  const SeasonalProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CommonAppBar(title: "New launched"),
+      appBar: const CommonAppBar(title: "Seasonal Products"),
       body: Padding(
         padding: const EdgeInsets.all(AppDimens.space15),
         child: GridView.builder(

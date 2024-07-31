@@ -3,6 +3,7 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/common_rating_bar.dart';
 
@@ -13,13 +14,18 @@ class ProductGridItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AppAssetImage(
-          imagePath: AppAssets.image2,
-          fit: BoxFit.cover,
-          // size: 150,
+        Squircle(
+          radius: 20,
+          backgroundColor: AppColors.greyF4Color,
+          borderColor: AppColors.greyF4Color,
+          child: AppAssetImage(
+            imagePath: AppAssets.image2,
+            fit: BoxFit.cover,
+            size: 150,
+          ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppDimens.space5),
+          padding: const EdgeInsets.symmetric(horizontal: AppDimens.space10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -15,8 +15,8 @@ class TopSellingPage extends StatelessWidget {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 4.8 / 7,
-            crossAxisSpacing: 20,
+            childAspectRatio: 5.3 / 7,
+            crossAxisSpacing: 10,
             mainAxisSpacing: 20,
           ),
           shrinkWrap: true,

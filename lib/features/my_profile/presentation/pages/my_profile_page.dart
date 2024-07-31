@@ -94,6 +94,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
             AppTextFormField(
               label: 'Mobile Number',
               hint: 'Mobile Number',
+              suffixIconSize: BoxConstraints(maxHeight: 20),
               suffixIcon: AssetIcon(
                 assetName: AppAssets.verifyOutlineIcon,
                 color: AppColors.green,
@@ -103,6 +104,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
             AppTextFormField(
               label: 'Email Address',
               hint: 'Email Address',
+              suffixIconSize: BoxConstraints(maxHeight: 20),
               suffixIcon: AssetIcon(
                 assetName: AppAssets.verifyOutlineIcon,
                 color: AppColors.green,
@@ -119,6 +121,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
             AppTextFormField(
               label: 'Date of Birth',
               hint: 'Date of Birth',
+              suffixIconSize: BoxConstraints(maxHeight: 20),
               suffixIcon: AssetIcon(
                 assetName: AppAssets.calendarIcon,
               ),
