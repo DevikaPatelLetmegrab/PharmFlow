@@ -5,6 +5,8 @@ import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_bottomsheet_widget.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
@@ -13,14 +15,14 @@ import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/core/widget/confirmation_button.dart';
 import 'package:pharm_flow/core/widget/squircle_image_view.dart';
 
-class PrescriptionPage extends StatefulWidget {
-  const PrescriptionPage({super.key});
+class UploadPrescriptionPage extends StatefulWidget {
+  const UploadPrescriptionPage({super.key});
 
   @override
-  State<PrescriptionPage> createState() => _PrescriptionPageState();
+  State<UploadPrescriptionPage> createState() => _UploadPrescriptionPageState();
 }
 
-class _PrescriptionPageState extends State<PrescriptionPage> {
+class _UploadPrescriptionPageState extends State<UploadPrescriptionPage> {
   File? file;
   ValueNotifier<String> pickedImagePath = ValueNotifier('');
 
@@ -46,9 +48,12 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
               ),
               const Gap(AppDimens.space10),
               ConfirmationButton(
-                positiveText: 'Upload new',
-                negativeText: 'Saved Prescription',
-                onPositiveClick: () async {
+                positiveText: 'Saved Prescription',
+                negativeText: 'Upload New',
+                onPositiveClick: () {
+                  NavigationServices().pushName(AppRoutes.myPrescriptionPage);
+                },
+                onNegativeClick: () async {
                   file = await AppBottomSheet().showImagePicker();
                   if (file != null) {
                     pickedImagePath.value = file!.path;

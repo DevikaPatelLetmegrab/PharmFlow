@@ -38,7 +38,7 @@ class UploadPrescription extends StatelessWidget {
             borderColor: AppColors.whiteColor,
             height: 40,
             onTap: () {
-              NavigationServices().pushName(AppRoutes.prescriptionPage);
+              NavigationServices().pushName(AppRoutes.uploadPrescriptionPage);
             },
           ),
         ),

@@ -166,7 +166,7 @@ class AppConstants {
     DrawerModel(
       assetImage: AppAssets.noteIcon,
       index: 3,
-      route: '',
+      route: AppRoutes.myPrescriptionPage,
       title: 'My Prescription',
     ),
     DrawerModel(

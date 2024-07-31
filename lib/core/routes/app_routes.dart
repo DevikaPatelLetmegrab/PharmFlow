@@ -1,10 +1,10 @@
 abstract class AppRoutes {
   static const String splashPage = '/splash_page';
   static const String welcomePage = '/welcome_page';
-  static const String loginPage = '/sign_in_screen';
-  static const String registrationPage = '/ragistration_screen';
-  static const String registrationprofile = '/profile_screen';
-  static const String verifyPage = '/verify_otp_screen';
+  static const String loginPage = '/sign_in_page';
+  static const String registrationPage = '/registration_page';
+  static const String registrationProfile = '/reg_profile_page';
+  static const String verifyPage = '/verify_otp_page';
   static const String homePage = '/home_page';
   static const String bookingPage = '/mu_booking_page';
   static const String bottomBar = '/bottom_navigation_page';
@@ -16,8 +16,9 @@ abstract class AppRoutes {
   static const String orderDetailPage = '/order_detail_page';
   static const String searchPage = '/search_page';
   static const String myProfilePage = '/my_profile_page';
-  static const String prescriptionPage = '/prescription_page';
+  static const String uploadPrescriptionPage = '/upload_prescription_page';
   static const String wishListPage = '/wishList_page';
   static const String categoriesPage = '/categories_page';
   static const String myFavouritePage = '/favourite_page';
+  static const String myPrescriptionPage = '/my_prescription_page';
 }
