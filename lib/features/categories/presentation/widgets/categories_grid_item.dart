@@ -4,6 +4,8 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
@@ -14,19 +16,24 @@ class CategoriesGridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return index == 5
-        ? Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AppAssetImage(
-                imagePath: AppAssets.viewAllIcon,
-                size: 35,
-              ),
-              const Gap(AppDimens.space8),
-              Text(
-                'View all',
-                style: context.s12.weigh500.withGrey78,
-              )
-            ],
+        ? InkWell(
+            onTap: () {
+              NavigationServices().pushName(AppRoutes.categoriesSellAllPage);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AppAssetImage(
+                  imagePath: AppAssets.viewAllIcon,
+                  size: 35,
+                ),
+                const Gap(AppDimens.space8),
+                Text(
+                  'View all',
+                  style: context.s12.weigh500.withGrey78,
+                )
+              ],
+            ),
           )
         : Column(
             children: [

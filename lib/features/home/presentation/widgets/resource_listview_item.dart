@@ -26,6 +26,7 @@ class ResourceListviewItem extends StatelessWidget {
                   child: AppAssetImage(
                     imagePath: AppAssets.discountImg,
                     fit: BoxFit.fill,
+                    height: 140,
                   ),
                 ),
                 const Gap(AppDimens.space5),

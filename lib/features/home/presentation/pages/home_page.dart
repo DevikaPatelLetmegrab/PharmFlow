@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
@@ -10,10 +11,10 @@ import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
-import 'package:pharm_flow/core/widget/asset_icon.dart';
 import 'package:pharm_flow/core/widget/common_column_view.dart';
 import 'package:pharm_flow/features/home/presentation/bloc/counter_cubit_home.dart';
-import 'package:pharm_flow/features/home/presentation/widgets/category_listview_item.dart';
+import 'package:pharm_flow/features/home/presentation/widgets/categories_listview_item.dart';
+import 'package:pharm_flow/features/home/presentation/widgets/sub_category_listview_item.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/consult_pageview.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/lab_gridview_item.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/launch_listview_item.dart';
@@ -32,11 +33,6 @@ class HomePage extends StatelessWidget {
     AppAssets.image1
   ];
 
-  List<Color> colorList = [
-    AppColors.blueLight,
-    AppColors.pinkLight,
-  ];
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -46,12 +42,13 @@ class HomePage extends StatelessWidget {
           return Scaffold(
             body: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const TopView(),
                   SizedBox(
-                    height: context.h(120),
+                    height: context.h(104),
                     child: ListView.separated(
-                      itemCount: 10,
+                      itemCount: 4,
                       scrollDirection: Axis.horizontal,
                       padding: const EdgeInsets.symmetric(
                           horizontal: AppDimens.space15),
@@ -59,8 +56,14 @@ class HomePage extends StatelessWidget {
                         return const SizedBox(width: 10);
                       },
                       itemBuilder: (context, index) {
-                        return CategoriesListviewItem(
-                          img: AppAssets.imageD,
+                        return InkWell(
+                          onTap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.categoriesSellAllPage);
+                          },
+                          child: SubCategoriesListviewItem(
+                            obj: AppConstants.subCategoriesList[index],
+                          ),
                         );
                       },
                     ),
@@ -93,13 +96,17 @@ class HomePage extends StatelessWidget {
                             crossAxisSpacing: 10,
                           ),
                           itemBuilder: (context, index) {
-                            return CategoriesListviewItem(
-                              img: AppAssets.image2,
-                            );
+                            return CategoriesListviewItem();
                           },
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'New Launch'),
+                        RowOverview(
+                          title: 'New Launch',
+                          ontap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.newLaunchPage);
+                          },
+                        ),
                       ],
                     ),
                   ),
@@ -125,7 +132,12 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(AppDimens.space15),
                     child: Column(
                       children: [
-                        const RowOverview(title: 'Featured brands'),
+                        RowOverview(
+                          title: 'Featured brands',
+                          ontap: () {
+                            NavigationServices().pushName(AppRoutes.brandPage);
+                          },
+                        ),
                         const Gap(AppDimens.space15),
                         GridView.builder(
                           itemCount: 12,
@@ -139,14 +151,17 @@ class HomePage extends StatelessWidget {
                             crossAxisSpacing: 10,
                           ),
                           itemBuilder: (context, index) {
-                            return CategoriesListviewItem(
-                              img: AppAssets.image2,
-                              text: 'Johnson & Johnson',
-                            );
+                            return CategoriesListviewItem();
                           },
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'top selling products'),
+                        RowOverview(
+                          title: 'top selling products',
+                          ontap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.topSellingPage);
+                          },
+                        ),
                       ],
                     ),
                   ),
@@ -167,9 +182,15 @@ class HomePage extends StatelessWidget {
                       },
                     ),
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(AppDimens.space15),
-                    child: RowOverview(title: 'seasonal products'),
+                    child: RowOverview(
+                      title: 'seasonal products',
+                      ontap: () {
+                        NavigationServices()
+                            .pushName(AppRoutes.seasonalPagePage);
+                      },
+                    ),
                   ),
                   SizedBox(
                     height: context.h(221),
@@ -192,8 +213,14 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(AppDimens.space15),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const RowOverview(title: 'Book lab test'),
+                        RowOverview(
+                          title: 'Book lab test',
+                          ontap: () {
+                            NavigationServices().pushName(AppRoutes.labPage);
+                          },
+                        ),
                         const Gap(AppDimens.space20),
                         GridView.builder(
                           itemCount: 4,
@@ -208,8 +235,8 @@ class HomePage extends StatelessWidget {
                           ),
                           itemBuilder: (context, index) {
                             var color = (index % 4 == 0 || (index % 4 == 3))
-                                ? colorList.first
-                                : colorList.last;
+                                ? AppConstants.colorList.first
+                                : AppConstants.colorList.last;
                             return LabGridviewItem(
                               bgColor: color,
                               isLab: true,
@@ -217,7 +244,10 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'Why Choose Us'),
+                        Text(
+                          'Why Choose Us',
+                          style: context.x16,
+                        ),
                         const Gap(AppDimens.space20),
                         GridView.builder(
                           itemCount: AppConstants.chooseList.length,
@@ -243,7 +273,11 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'Testimonials'),
+                        Text(
+                          'Testimonials',
+                          style: context.x16,
+                        )
+                        // const RowOverview(title: 'Testimonials'),
                         //  const Gap(AppDimens.space20),
                       ],
                     ),
@@ -273,7 +307,12 @@ class HomePage extends StatelessWidget {
                           height: 180,
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'Deal of the Day')
+                        RowOverview(
+                          title: 'Deal of the Day',
+                          ontap: () {
+                            NavigationServices().pushName(AppRoutes.dealPage);
+                          },
+                        )
                       ],
                     ),
                   ),
@@ -299,7 +338,13 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       children: [
                         const Gap(AppDimens.space5),
-                        const RowOverview(title: 'Book Appointment'),
+                        RowOverview(
+                          title: 'Book Appointment',
+                          ontap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.homeBookAppointmentPage);
+                          },
+                        ),
                         const Gap(AppDimens.space20),
                         GridView.builder(
                           itemCount: 2,
@@ -314,8 +359,8 @@ class HomePage extends StatelessWidget {
                           ),
                           itemBuilder: (context, index) {
                             var color = (index % 4 == 0 || (index % 4 == 3))
-                                ? colorList.first
-                                : colorList.last;
+                                ? AppConstants.colorList.first
+                                : AppConstants.colorList.last;
                             return LabGridviewItem(
                               bgColor: color,
                               isLab: false,
@@ -365,12 +410,16 @@ class HomePage extends StatelessWidget {
                       },
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(AppDimens.space15),
-                    child: RowOverview(
-                      title: 'recently viewed ',
-                    ),
-                  ),
+                  Padding(
+                      padding: const EdgeInsets.all(AppDimens.space15),
+                      child: Text(
+                        'recently viewed',
+                        style: context.x16,
+                      )
+                      // RowOverview(
+                      //   title: 'recently viewed ',
+                      // ),
+                      ),
                   const Gap(AppDimens.space5),
                   SizedBox(
                     height: context.h(221),

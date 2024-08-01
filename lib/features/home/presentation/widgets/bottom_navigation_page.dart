@@ -21,6 +21,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        // selectedIconTheme: const IconThemeData(color: AppColors.primary),
         selectedItemColor: AppColors.primary,
         unselectedItemColor: AppColors.grey78Color,
         showSelectedLabels: true,
@@ -34,29 +35,37 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         items: [
           BottomNavigationBarItem(
             icon: AppAssetImage(
-              imagePath: AppAssets.homeIcon,
+              imagePath: _selectedIndex == 0
+                  ? AppAssets.homeDarkIcon
+                  : AppAssets.homeLightIcon,
               size: 24,
             ),
-            label: 'Homne',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: AppAssetImage(
-              imagePath: AppAssets.calendarIcon,
+              imagePath: _selectedIndex == 1
+                  ? AppAssets.calendarDarkIcon
+                  : AppAssets.calendarLightIcon,
               size: 24,
             ),
             label: 'Booking',
           ),
           BottomNavigationBarItem(
             icon: AppAssetImage(
-              imagePath: AppAssets.orderIcon,
-              color: AppColors.grey78Color,
+              imagePath: _selectedIndex == 2
+                  ? AppAssets.orderDarkIcon
+                  : AppAssets.orderLightIcon,
+              color: _selectedIndex != 2 ? AppColors.grey78Color : null,
               size: 24,
             ),
             label: 'Orders',
           ),
           BottomNavigationBarItem(
             icon: AppAssetImage(
-              imagePath: AppAssets.profileIcon,
+              imagePath: _selectedIndex == 3
+                  ? AppAssets.profileDarkIcon
+                  : AppAssets.profileLightIcon,
               size: 24,
             ),
             label: 'Profile',

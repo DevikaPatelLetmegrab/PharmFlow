@@ -70,12 +70,13 @@ class WishlistItemWidget extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: AppDimens.space20),
                 child: AppButton(
-                    height: context.h(40),
-                    borderRadius:
-                        BorderRadius.circular(AppDimens.borderRadius15),
-                    width: context.getWidth,
-                    buttonName: 'Move to Cart',
-                    buttonType: ButtonType.elevated),
+                  height: context.h(40),
+                  borderRadius: BorderRadius.circular(AppDimens.borderRadius15),
+                  width: context.getWidth,
+                  buttonName: 'Move to Cart',
+                  buttonType: ButtonType.elevated,
+                  fontSize: 12,
+                ),
               )
             ],
           ),

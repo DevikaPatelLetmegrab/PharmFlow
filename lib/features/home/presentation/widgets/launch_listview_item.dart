@@ -5,6 +5,7 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
+import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 
 class LaunchListviewItem extends StatelessWidget {
@@ -19,13 +20,12 @@ class LaunchListviewItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          Squircle(
+            radius: AppDimens.circleRadius20,
             width: context.getWidth / 2.5,
             height: context.h(154),
-            decoration: BoxDecoration(
-              color: AppColors.greyE8Color,
-              borderRadius: BorderRadius.circular(AppDimens.circleRadius20),
-            ),
+            borderColor: AppColors.greyF4Color,
+            backgroundColor: AppColors.greyF4Color,
             child: AppAssetImage(
               imagePath: img!,
               size: 100,

@@ -23,4 +23,12 @@ abstract class AppRoutes {
   static const String myPrescriptionPage = '/my_prescription_page';
   static const String myAppointmentPage = '/my_appointment_page';
   static const String myAppointmentDetailsPage = '/my_appointment_details_page';
+  static const String newLaunchPage = '/new_launch_page';
+  static const String topSellingPage = '/top_selling_page';
+  static const String categoriesSellAllPage = '/categories_see_all_page';
+  static const String brandPage = '/brand_page';
+  static const String seasonalPagePage = '/seasonal_page';
+  static const String labPage = '/lab_page';
+  static const String dealPage = '/deal_page';
+  static const String homeBookAppointmentPage = '/home_book_appointment_page';
 }
