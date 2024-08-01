@@ -18,13 +18,17 @@ class CommonLabel extends StatelessWidget {
     return Container(
       width: context.w(175),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40), color: AppColors.lightBlue),
+          borderRadius: BorderRadius.circular(AppDimens.borderRadius40),
+          color: AppColors.lightBlue),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(AppDimens.space5),
         child: Row(
           children: [
-            AppAssetImage(imagePath: imagePath,),
-            Gap(AppDimens.space10),
+            AppAssetImage(
+              imagePath: imagePath,
+              size: AppDimens.imageSize20,
+            ),
+            const Gap(AppDimens.space10),
             Text(
               content,
               style: context.s12.withPrimary,

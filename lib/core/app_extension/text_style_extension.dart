@@ -63,6 +63,7 @@ extension StyleExtension on TextStyle {
   TextStyle get withPrimary => copyWith(color: AppColors.primary);
 
   TextStyle get withWhite => copyWith(color: AppColors.whiteColor);
+  TextStyle get withGreen => copyWith(color: AppColors.green);
 
   TextStyle get weigh400 => copyWith(fontWeight: FontWeight.w400);
 

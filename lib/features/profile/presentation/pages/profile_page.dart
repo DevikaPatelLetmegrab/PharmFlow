@@ -87,7 +87,6 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                       ),
                       leading: AssetIcon(
-                        color: AppColors.primary,
                         assetName: item.assetImage,
                       ),
                       title: Text(item.title, style: context.md14.withBlack),

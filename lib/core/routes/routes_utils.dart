@@ -11,22 +11,27 @@ import 'package:pharm_flow/features/categories/presentation/pages/categories_see
 import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
+import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_detail_page.dart';
+import 'package:pharm_flow/features/my_appointment/presentation/pages/my_appointment_page.dart';
 import 'package:pharm_flow/features/lab/presentation/pages/lab_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.dart';
-import 'package:pharm_flow/features/my_booking/presentation/pages/my_booking_page.dart';
+import 'package:pharm_flow/features/my_booking/presentation/pages/booking_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_form.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/patient_details_page.dart';
+import 'package:pharm_flow/features/my_favourite/presentation/pages/my_favourite_page.dart';
+import 'package:pharm_flow/features/my_prescription/presentation/pages/my_prescription_page.dart';
 import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
 import 'package:pharm_flow/features/new_launch/presentation/pages/new_launch_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
-import 'package:pharm_flow/features/prescription/presentation/pages/prescription_page.dart';
+import 'package:pharm_flow/features/my_prescription/presentation/pages/upload_prescription_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
 import 'package:pharm_flow/features/seasonal_product/presentation/pages/seasonal_product_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
 import 'package:pharm_flow/features/top_selling/presentation/pages/top_selling_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
+import 'package:pharm_flow/features/wishlist/presentation/pages/wishlist_page.dart';
 
 class RoutesUtils {
   var goRoute = GoRouter(
@@ -62,8 +67,8 @@ class RoutesUtils {
         builder: (context, state) => const RegistrationScreen(),
       ),
       GoRoute(
-        path: AppRoutes.registrationprofile,
-        name: AppRoutes.registrationprofile,
+        path: AppRoutes.registrationProfile,
+        name: AppRoutes.registrationProfile,
         builder: (context, state) => const ProfileScreen(),
       ),
       GoRoute(
@@ -74,7 +79,7 @@ class RoutesUtils {
       GoRoute(
         path: AppRoutes.bookingPage,
         name: AppRoutes.bookingPage,
-        builder: (context, state) => const MyBookingPage(),
+        builder: (context, state) => const BookingPage(),
       ),
       GoRoute(
         path: AppRoutes.bottomBar,
@@ -112,9 +117,9 @@ class RoutesUtils {
         builder: (context, state) => const OrderDetailsPage(),
       ),
       GoRoute(
-        path: AppRoutes.prescriptionPage,
-        name: AppRoutes.prescriptionPage,
-        builder: (context, state) => const PrescriptionPage(),
+        path: AppRoutes.uploadPrescriptionPage,
+        name: AppRoutes.uploadPrescriptionPage,
+        builder: (context, state) => const UploadPrescriptionPage(),
       ),
       GoRoute(
         path: AppRoutes.categoriesPage,
@@ -132,6 +137,31 @@ class RoutesUtils {
         builder: (context, state) => const OrderPage(
           showLeading: true,
         ),
+      ),
+      GoRoute(
+        path: AppRoutes.wishListPage,
+        name: AppRoutes.wishListPage,
+        builder: (context, state) => const WishlistPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myFavouritePage,
+        name: AppRoutes.myFavouritePage,
+        builder: (context, state) => const MyFavouritePage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myPrescriptionPage,
+        name: AppRoutes.myPrescriptionPage,
+        builder: (context, state) => const MyPrescriptionPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myAppointmentPage,
+        name: AppRoutes.myAppointmentPage,
+        builder: (context, state) => const MyAppointmentPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myAppointmentDetailsPage,
+        name: AppRoutes.myAppointmentDetailsPage,
+        builder: (context, state) => const AppointmentDetailPage(),
       ),
       GoRoute(
         path: AppRoutes.newLaunchPage,

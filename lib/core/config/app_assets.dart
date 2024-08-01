@@ -73,6 +73,10 @@ class AppAssets {
   static String editIcon = 'assets/icon/edit.png';
   static String verifyOutlineIcon = 'assets/icon/verify_outline.png';
   static String arrowDownIcon = 'assets/icon/arrow-down.png';
+  static String orderIcon = 'assets/icon/order.png';
+  static String cameraIcon = 'assets/icon/camera.png';
+  static String galleryIcon = 'assets/icon/gallery.png';
+  static String closeCircleIcon = 'assets/icon/close-circle.png';
 
   ///logo
 

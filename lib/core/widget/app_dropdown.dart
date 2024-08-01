@@ -137,6 +137,7 @@ class AppDropdown<T> extends StatelessWidget {
                 padding: const EdgeInsets.all(AppDimens.space8),
                 child: AssetIcon(
                   assetName: AppAssets.arrowRightIcon,
+                  color: AppColors.blackColor,
                 ),
               ),
             ),
@@ -144,6 +145,7 @@ class AppDropdown<T> extends StatelessWidget {
               padding: const EdgeInsets.all(AppDimens.space8),
               child: AssetIcon(
                 assetName: AppAssets.arrowDownIcon,
+                color: AppColors.blackColor,
               ),
             ),
           ),

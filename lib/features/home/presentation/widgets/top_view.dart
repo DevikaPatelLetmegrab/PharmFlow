@@ -56,7 +56,8 @@ class TopView extends StatelessWidget {
                     imagePath: AppAssets.notificationIcon,
                   ),
                   AppIconButton(
-                    imagePath: AppAssets.bagIcon,
+                    imagePath: AppAssets.shoppingCartIcon,
+                    iconColor: AppColors.blackColor,
                   ),
                 ],
               ),

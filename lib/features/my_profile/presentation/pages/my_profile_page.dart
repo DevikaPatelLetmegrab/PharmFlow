@@ -124,6 +124,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               suffixIconSize: BoxConstraints(maxHeight: 20),
               suffixIcon: AssetIcon(
                 assetName: AppAssets.calendarIcon,
+                color: AppColors.blackColor,
               ),
             ),
             const Gap(AppDimens.space10),
@@ -135,7 +136,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
             AppButton(
                 width: context.getWidth,
                 buttonType: ButtonType.elevated,
-                buttonName: 'Update Profile')
+                buttonName: 'Update Profile'),
+            const Gap(AppDimens.space30),
           ],
         ),
       ),
