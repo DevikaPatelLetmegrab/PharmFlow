@@ -179,7 +179,7 @@ class AppConstants {
       assetImage: AppAssets.calenderOutlineIcon,
       index: 5,
       title: 'My Appointment',
-      route: '',
+      route: AppRoutes.myAppointmentPage,
     ),
     DrawerModel(
       assetImage: AppAssets.heartIcon,
