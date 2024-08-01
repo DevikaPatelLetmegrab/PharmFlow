@@ -368,7 +368,13 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'Health Resources & Blog'),
+                        RowOverview(
+                          title: 'Health Resources & Blog',
+                          ontap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.communityResourcePage);
+                          },
+                        ),
                         const Gap(AppDimens.space5),
                       ],
                     ),

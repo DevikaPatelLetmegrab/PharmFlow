@@ -20,6 +20,7 @@ class AppAssets {
   static String docCategories = 'assets/images/doctor_categories.png';
   static String labTest = 'assets/images/lab_test.png';
   static String medicin = 'assets/images/medicin.png';
+  static String community = 'assets/images/community.png';
 
   ///icons
 
