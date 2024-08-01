@@ -1,9 +1,13 @@
+import 'dart:ui';
+
 import 'package:pharm_flow/core/config/app_assets.dart';
+import 'package:pharm_flow/core/config/app_colors.dart';
 
 import 'package:pharm_flow/core/model/chip_model.dart';
 import 'package:pharm_flow/core/model/date_model.dart';
 import 'package:pharm_flow/core/model/gender_model.dart';
 import 'package:pharm_flow/core/model/package_model.dart';
+import 'package:pharm_flow/features/categories/data/models/sub_categories_model.dart';
 import 'package:pharm_flow/features/home/data/models/choose_model.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/features/profile/data/models/drawer_model.dart';
@@ -242,5 +246,17 @@ class AppConstants {
         image: AppAssets.locationIcon,
         title: '18000 +',
         content: 'pin codes services last 3 months'),
+  ];
+
+  static List<SubCategoriesModel> subCategoriesList = [
+    SubCategoriesModel(title: 'medicines', img: AppAssets.imageD),
+    SubCategoriesModel(title: 'doctor', img: AppAssets.docCategories),
+    SubCategoriesModel(title: 'Lab Test', img: AppAssets.labTest),
+    SubCategoriesModel(title: 'compare medicine', img: AppAssets.medicin)
+  ];
+
+  static List<Color> colorList = [
+    AppColors.blueLight,
+    AppColors.pinkLight,
   ];
 }

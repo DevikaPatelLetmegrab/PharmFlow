@@ -117,7 +117,7 @@ class AppTextFormField extends StatelessWidget {
           validator: validator,
           decoration: InputDecoration(
             suffixIcon: Padding(
-              padding: const EdgeInsets.all(AppDimens.space12),
+              padding: const EdgeInsets.only(right: AppDimens.space12),
               child: suffixIcon,
             ),
             constraints: BoxConstraints(

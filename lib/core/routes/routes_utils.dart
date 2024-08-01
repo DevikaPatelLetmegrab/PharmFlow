@@ -5,11 +5,15 @@ import 'package:pharm_flow/features/Registration/presentation/pages/registration
 import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/profile_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/sign_in_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
+import 'package:pharm_flow/features/brand/presentation/pages/brand_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
+import 'package:pharm_flow/features/categories/presentation/pages/categories_see_all_page.dart';
+import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_detail_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/my_appointment_page.dart';
+import 'package:pharm_flow/features/lab/presentation/pages/lab_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/booking_page.dart';
@@ -18,11 +22,14 @@ import 'package:pharm_flow/features/my_booking/presentation/pages/patient_detail
 import 'package:pharm_flow/features/my_favourite/presentation/pages/my_favourite_page.dart';
 import 'package:pharm_flow/features/my_prescription/presentation/pages/my_prescription_page.dart';
 import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
+import 'package:pharm_flow/features/new_launch/presentation/pages/new_launch_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/my_prescription/presentation/pages/upload_prescription_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
+import 'package:pharm_flow/features/seasonal_product/presentation/pages/seasonal_product_page.dart';
 import 'package:pharm_flow/features/splash/presentation/pages/splash_page.dart';
+import 'package:pharm_flow/features/top_selling/presentation/pages/top_selling_page.dart';
 import 'package:pharm_flow/features/welcome/presentation/pages/welcome_page.dart';
 import 'package:pharm_flow/features/wishlist/presentation/pages/wishlist_page.dart';
 
@@ -155,6 +162,41 @@ class RoutesUtils {
         path: AppRoutes.myAppointmentDetailsPage,
         name: AppRoutes.myAppointmentDetailsPage,
         builder: (context, state) => const AppointmentDetailPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.newLaunchPage,
+        name: AppRoutes.newLaunchPage,
+        builder: (context, state) => const NewLaunchPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.topSellingPage,
+        name: AppRoutes.topSellingPage,
+        builder: (context, state) => const TopSellingPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.categoriesSellAllPage,
+        name: AppRoutes.categoriesSellAllPage,
+        builder: (context, state) => const CategoriesSeeAllPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.brandPage,
+        name: AppRoutes.brandPage,
+        builder: (context, state) => const BrandPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.seasonalPagePage,
+        name: AppRoutes.seasonalPagePage,
+        builder: (context, state) => const SeasonalProductPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.labPage,
+        name: AppRoutes.labPage,
+        builder: (context, state) => const LabPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.dealPage,
+        name: AppRoutes.dealPage,
+        builder: (context, state) => const DealPage(),
       ),
     ],
   );
