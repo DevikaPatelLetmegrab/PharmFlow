@@ -123,7 +123,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               hint: 'Date of Birth',
               suffixIconSize: BoxConstraints(maxHeight: 20),
               suffixIcon: AssetIcon(
-                assetName: AppAssets.calendarIcon,
+                assetName: AppAssets.calendarLightIcon,
                 color: AppColors.blackColor,
               ),
             ),

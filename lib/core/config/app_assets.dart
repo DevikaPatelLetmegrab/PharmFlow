@@ -31,10 +31,15 @@ class AppAssets {
   static String femaleIcon = 'assets/icon/female.png';
   static String cancelIcon = 'assets/icon/cancel.png';
   static String downloadIcon = 'assets/icon/download.png';
-  static String homeIcon = 'assets/icon/home.png';
-  static String calendarIcon = 'assets/icon/calendar.png';
+  static String homeDarkIcon = 'assets/icon/home_dark.png';
+  static String homeLightIcon = 'assets/icon/home_light.png';
+
+  static String calendarDarkIcon = 'assets/icon/calendar_dark.png';
+  static String calendarLightIcon = 'assets/icon/calendar_light.png';
   static String shoppingCartIcon = 'assets/icon/shopping_cart.png';
-  static String profileIcon = 'assets/icon/profile.png';
+  static String profileLightIcon = 'assets/icon/profile_light.png';
+  static String profileDarkIcon = 'assets/icon/profile_dark.png';
+
   static String backIcon = 'assets/icon/back.png';
   static String searchIcon = 'assets/icon/search.png';
   static String bagIcon = 'assets/icon/bag_icon.png';
@@ -73,7 +78,8 @@ class AppAssets {
   static String editIcon = 'assets/icon/edit.png';
   static String verifyOutlineIcon = 'assets/icon/verify_outline.png';
   static String arrowDownIcon = 'assets/icon/arrow-down.png';
-  static String orderIcon = 'assets/icon/order.png';
+  static String orderLightIcon = 'assets/icon/order_light.png';
+  static String orderDarkIcon = 'assets/icon/order_dark.png';
   static String cameraIcon = 'assets/icon/camera.png';
   static String galleryIcon = 'assets/icon/gallery.png';
   static String closeCircleIcon = 'assets/icon/close-circle.png';

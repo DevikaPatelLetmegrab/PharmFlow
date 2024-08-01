@@ -11,6 +11,7 @@ import 'package:pharm_flow/features/categories/presentation/pages/categories_see
 import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
+import 'package:pharm_flow/features/home_book_appointment/presentation/pages/home_book_appointment_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_detail_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/my_appointment_page.dart';
 import 'package:pharm_flow/features/lab/presentation/pages/lab_page.dart';
@@ -197,6 +198,11 @@ class RoutesUtils {
         path: AppRoutes.dealPage,
         name: AppRoutes.dealPage,
         builder: (context, state) => const DealPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.homeBookAppointmentPage,
+        name: AppRoutes.homeBookAppointmentPage,
+        builder: (context, state) => const HomeBookAppointmentPage(),
       ),
     ],
   );

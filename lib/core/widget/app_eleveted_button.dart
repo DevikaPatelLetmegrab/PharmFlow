@@ -17,7 +17,7 @@ class AppButton extends StatelessWidget {
   final String? buttonName;
   final Color? buttonColor;
   final VoidCallback? onTap;
-  final double fontSize;
+  final double? fontSize;
   final Color? fontColor;
   final Color? outlineColor;
   final Color borderColor;
@@ -36,7 +36,7 @@ class AppButton extends StatelessWidget {
       this.buttonName,
       this.buttonColor = AppColors.primary,
       this.onTap,
-      this.fontSize = 14,
+      this.fontSize,
       this.fontColor,
       this.outlineColor = AppColors.primary,
       this.borderColor = AppColors.primary,
@@ -51,12 +51,20 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget child = childWidget ??
-        Text(buttonName ?? '',
-            textAlign: TextAlign.center,
-            maxLines: 1,
-            style: context.md14.weigh400.copyWith(
-                color: fontColor ?? defaultTextColor,
-                overflow: TextOverflow.ellipsis));
+        Text(
+          buttonName ?? '',
+          textAlign: TextAlign.center,
+          maxLines: 1,
+          style: fontSize != null
+              ? TextStyle(
+                  fontSize: fontSize,
+                  color: defaultTextColor,
+                )
+              : context.md14.weigh400.copyWith(
+                  color: fontColor ?? defaultTextColor,
+                  overflow: TextOverflow.ellipsis,
+                ),
+        );
 
     Widget widget = switch (buttonType) {
       ButtonType.elevated => ElevatedButton(
