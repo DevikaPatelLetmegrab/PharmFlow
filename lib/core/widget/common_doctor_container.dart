@@ -41,89 +41,90 @@ class CommonDoctorContainer extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         const Gap(AppDimens.space10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            if (label != null) ...[
-              CommonLabel(
-                imagePath: AppAssets.verifyIcon,
-                content: label!,
-              ),
-              const Gap(AppDimens.space5),
-            ],
-            if (title != null) ...[
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              if (label != null) ...[
+                CommonLabel(
+                  imagePath: AppAssets.verifyIcon,
+                  content: label!,
+                ),
+                const Gap(AppDimens.space5),
+              ],
+              if (title != null) ...[
+                Text(
+                  title!,
+                  style: context.md14.withPrimary,
+                ),
+                const Gap(AppDimens.space5),
+              ],
               Text(
-                title!,
-                style: context.md14.withPrimary,
+                name,
+                style: context.x16.withBlack,
               ),
               const Gap(AppDimens.space5),
-            ],
-            Text(
-              name,
-              style: context.x16.withBlack,
-            ),
-            const Gap(AppDimens.space5),
-            IntrinsicHeight(
-              child: Row(
-                children: [
-                  CommonRatingBar(rate: 5),
-                  const Gap(AppDimens.space5),
-                  const VerticalDivider(
-                    thickness: 2,
-                    color: AppColors.greyD9Color,
-                  ),
-                  const Gap(AppDimens.space5),
-                  Text(
-                    '20,100 Reviews',
-                    style: context.md14.withGrey78,
-                  ),
-                ],
+              IntrinsicHeight(
+                child: Row(
+                  children: [
+                    CommonRatingBar(rate: 5),
+                    const Gap(AppDimens.space5),
+                    const VerticalDivider(
+                      thickness: 2,
+                      color: AppColors.greyD9Color,
+                    ),
+                    const Gap(AppDimens.space5),
+                    Text(
+                      '20,100 Reviews',
+                      style: context.md14.withGrey78,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            const Gap(AppDimens.space5),
-            if (phoneNumber != null) ...[
-              Row(
-                children: [
-                  AppAssetImage(
-                    imagePath: AppAssets.callIcon,
-                    size: 20,
-                  ),
-                  const Gap(AppDimens.space5),
-                  SizedBox(
-                    width: context.getWidth * 0.57,
-                    child: Text(
-                      phoneNumber!,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: context.s12.withGrey78,
+              const Gap(AppDimens.space5),
+              if (phoneNumber != null) ...[
+                Row(
+                  children: [
+                    AppAssetImage(
+                      imagePath: AppAssets.callIcon,
+                      size: 20,
                     ),
-                  ),
-                ],
-              )
+                    const Gap(AppDimens.space5),
+                    SizedBox(
+                      width: context.getWidth * 0.57,
+                      child: Text(
+                        phoneNumber!,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: context.s12.withGrey78,
+                      ),
+                    ),
+                  ],
+                )
+              ],
+              const Gap(AppDimens.space5),
+              if (location != null) ...[
+                Row(
+                  children: [
+                    AppAssetImage(
+                      imagePath: AppAssets.locationIcon,
+                      size: AppDimens.imageSize20,
+                    ),
+                    const Gap(AppDimens.space5),
+                    Expanded(
+                      child: Text(
+                        location!,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: context.s12.withGrey78,
+                      ),
+                    ),
+                  ],
+                )
+              ]
             ],
-            const Gap(AppDimens.space5),
-            if (location != null) ...[
-              Row(
-                children: [
-                  AppAssetImage(
-                    imagePath: AppAssets.locationIcon,
-                    size: AppDimens.imageSize20,
-                  ),
-                  const Gap(AppDimens.space5),
-                  SizedBox(
-                    width: context.getWidth * 0.57,
-                    child: Text(
-                      location!,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: context.s12.withGrey78,
-                    ),
-                  ),
-                ],
-              )
-            ]
-          ],
+          ),
         ),
       ],
     );

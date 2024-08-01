@@ -42,6 +42,7 @@ class HomePage extends StatelessWidget {
           return Scaffold(
             body: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const TopView(),
                   SizedBox(
@@ -337,7 +338,13 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       children: [
                         const Gap(AppDimens.space5),
-                        const RowOverview(title: 'Book Appointment'),
+                        RowOverview(
+                          title: 'Book Appointment',
+                          ontap: () {
+                            NavigationServices()
+                                .pushName(AppRoutes.homeBookAppointmentPage);
+                          },
+                        ),
                         const Gap(AppDimens.space20),
                         GridView.builder(
                           itemCount: 2,
@@ -403,12 +410,16 @@ class HomePage extends StatelessWidget {
                       },
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(AppDimens.space15),
-                    child: RowOverview(
-                      title: 'recently viewed ',
-                    ),
-                  ),
+                  Padding(
+                      padding: const EdgeInsets.all(AppDimens.space15),
+                      child: Text(
+                        'recently viewed',
+                        style: context.x16,
+                      )
+                      // RowOverview(
+                      //   title: 'recently viewed ',
+                      // ),
+                      ),
                   const Gap(AppDimens.space5),
                   SizedBox(
                     height: context.h(221),

@@ -40,8 +40,8 @@ class PatientDetailsForm extends StatelessWidget {
               hint: 'Enter Date of Birth',
               label: 'Date of Birth',
               suffixIcon: AppAssetImage(
-                imagePath: AppAssets.calendarIcon,
-                size: 20,
+                imagePath: AppAssets.calendarLightIcon,
+                size: 16,
                 color: AppColors.blackColor,
               ),
             ),

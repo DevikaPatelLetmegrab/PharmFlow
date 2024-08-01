@@ -30,4 +30,5 @@ abstract class AppRoutes {
   static const String seasonalPagePage = '/seasonal_page';
   static const String labPage = '/lab_page';
   static const String dealPage = '/deal_page';
+  static const String homeBookAppointmentPage = '/home_book_appointment_page';
 }
