@@ -8,6 +8,8 @@ import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.
 import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
+import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_detail_page.dart';
+import 'package:pharm_flow/features/my_appointment/presentation/pages/my_appointment_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/details_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/booking_page.dart';
@@ -143,6 +145,16 @@ class RoutesUtils {
         path: AppRoutes.myPrescriptionPage,
         name: AppRoutes.myPrescriptionPage,
         builder: (context, state) => const MyPrescriptionPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myAppointmentPage,
+        name: AppRoutes.myAppointmentPage,
+        builder: (context, state) => const MyAppointmentPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.myAppointmentDetailsPage,
+        name: AppRoutes.myAppointmentDetailsPage,
+        builder: (context, state) => const AppointmentDetailPage(),
       ),
     ],
   );

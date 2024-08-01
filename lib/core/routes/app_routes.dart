@@ -21,4 +21,6 @@ abstract class AppRoutes {
   static const String categoriesPage = '/categories_page';
   static const String myFavouritePage = '/favourite_page';
   static const String myPrescriptionPage = '/my_prescription_page';
+  static const String myAppointmentPage = '/my_appointment_page';
+  static const String myAppointmentDetailsPage = '/my_appointment_details_page';
 }

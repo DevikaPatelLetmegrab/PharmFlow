@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
@@ -25,14 +26,28 @@ class SingleDoctorWidget extends StatelessWidget {
       borderColor: AppColors.greyE8Color,
       customRadius: BorderRadius.circular(AppDimens.borderRadius30),
       child: Padding(
-        padding: const EdgeInsets.all(AppDimens.space16),
+        padding: const EdgeInsets.all(AppDimens.space8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Jan 20, 2024 - 11:30 AM'),
+                Chip(
+                    avatar: Container(
+                      height: context.h(8),
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: AppColors.green),
+                    ),
+                    shape: RoundedRectangleBorder(
+                        side: const BorderSide(color: AppColors.whiteColor),
+                        borderRadius:
+                            BorderRadius.circular(AppDimens.borderRadius20)),
+                    backgroundColor: AppColors.green.withOpacity(0.2),
+                    label: Text(
+                      'Available',
+                      style: context.md14.withGreen,
+                    )),
                 if (isFav)
                   GestureDetector(
                     onTap: () {
@@ -47,7 +62,7 @@ class SingleDoctorWidget extends StatelessWidget {
                   )
               ],
             ),
-            const Gap(AppDimens.space10),
+            // const Gap(AppDimens.space10),
             const Divider(
               color: AppColors.greyE8Color,
             ),
