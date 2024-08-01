@@ -8,6 +8,7 @@ import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.
 import 'package:pharm_flow/features/brand/presentation/pages/brand_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_see_all_page.dart';
+import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/lab/presentation/pages/lab_page.dart';
@@ -161,6 +162,11 @@ class RoutesUtils {
         path: AppRoutes.labPage,
         name: AppRoutes.labPage,
         builder: (context, state) => const LabPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.dealPage,
+        name: AppRoutes.dealPage,
+        builder: (context, state) => const DealPage(),
       ),
     ],
   );

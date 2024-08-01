@@ -272,7 +272,11 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'Testimonials'),
+                        Text(
+                          'Testimonials',
+                          style: context.x16,
+                        )
+                        // const RowOverview(title: 'Testimonials'),
                         //  const Gap(AppDimens.space20),
                       ],
                     ),
@@ -302,7 +306,12 @@ class HomePage extends StatelessWidget {
                           height: 180,
                         ),
                         const Gap(AppDimens.space20),
-                        const RowOverview(title: 'Deal of the Day')
+                        RowOverview(
+                          title: 'Deal of the Day',
+                          ontap: () {
+                            NavigationServices().pushName(AppRoutes.dealPage);
+                          },
+                        )
                       ],
                     ),
                   ),

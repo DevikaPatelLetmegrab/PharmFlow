@@ -24,4 +24,5 @@ abstract class AppRoutes {
   static const String brandPage = '/brand_page';
   static const String seasonalPagePage = '/seasonal_page';
   static const String labPage = '/lab_page';
+  static const String dealPage = '/deal_page';
 }
