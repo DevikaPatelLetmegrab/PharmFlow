@@ -22,22 +22,6 @@ class AppDimens {
   static const double space60 = 60;
   static const double space80 = 80;
 
-  static const double space90 = 90;
-  static const double space100 = 100;
-  static const double space110 = 110;
-  static const double space120 = 120;
-  static const double space130 = 130;
-  static const double space140 = 140;
-  static const double space150 = 150;
-  static const double space180 = 180;
-  static const double space200 = 200;
-  static const double space240 = 240;
-  static const double space280 = 280;
-  static const double space300 = 300;
-  static const double space320 = 320;
-  static const double space340 = 340;
-  static const double space360 = 360;
-
   static const imageSize8 = 10.0;
 
   static const imageSize10 = 10.0;
