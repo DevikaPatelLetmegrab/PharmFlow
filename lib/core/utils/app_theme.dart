@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:pharm_flow/core/config/app_colors.dart';
 
-class AppTheme{
-
+class AppTheme {
   static final ThemeData theme = ThemeData(
     scaffoldBackgroundColor: AppColors.whiteColor,
     unselectedWidgetColor: AppColors.grey78Color,
@@ -28,8 +26,4 @@ class AppTheme{
       ),
     ),
   );
-
 }
-
-
-

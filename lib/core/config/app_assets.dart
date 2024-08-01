@@ -74,6 +74,13 @@ class AppAssets {
   static String cameraIcon = 'assets/icon/camera.png';
   static String galleryIcon = 'assets/icon/gallery.png';
   static String closeCircleIcon = 'assets/icon/close-circle.png';
+  static String noteTextIcon = 'assets/icon/note-text.png';
+  static String clockIcon = 'assets/icon/clock.png';
+  static String badFeedbackIcon = 'assets/icon/bad_feedback.png';
+  static String excellentFeedbackIcon = 'assets/icon/excellent_feedback.png';
+  static String goodFeedbackIcon = 'assets/icon/good_feedback.png';
+  static String mediumFeedbackIcon = 'assets/icon/medium_feedback.png';
+  static String poorFeedbackIcon = 'assets/icon/poor_feedback.png';
 
   ///logo
 
@@ -87,6 +94,6 @@ class AppAssets {
   static String imageD = 'assets/imageD.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';
-  static String img = 'assets/img.png';
+  static String img = 'assets/medicine.png';
   static String prescription = 'assets/prescription.png';
 }

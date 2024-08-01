@@ -25,7 +25,7 @@ class DetailsPage extends StatelessWidget {
       appBar: const CommonAppBar(
         title: 'Doctor Detail',
       ),
-      bottomNavigationBar:  Padding(
+      bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(AppDimens.space16),
         child: AppButton(
           onTap: () {
@@ -44,7 +44,8 @@ class DetailsPage extends StatelessWidget {
               const CommonDoctorContainer(
                 name: 'Dr.Lincoln Westervelt',
                 title: 'Dentist',
-                location: 'A-96, Part 2, Mayapuri Delhi, 110064',
+                location:
+                    'A-96, Part 2, Mayapuri Delhi, 110064A-96, Part 2, Mayapuri Delhi, 110064A-96, Part 2, Mayapuri Delhi, 110064A-96, Part 2, Mayapuri Delhi, 110064A-96, Part 2, Mayapuri Delhi, 110064',
                 imageHeight: 100,
                 imageWidth: 100,
               ),
