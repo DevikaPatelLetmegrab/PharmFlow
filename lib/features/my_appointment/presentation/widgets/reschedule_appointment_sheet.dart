@@ -28,9 +28,9 @@ class RescheduleAppointmentSheet extends StatelessWidget {
           AppTextFormField(
             label: 'Date',
             hint: 'Select Date',
+            suffixIconSize: const BoxConstraints(maxHeight: AppDimens.imageSize20),
             suffixIcon: AppAssetImage(
-              imagePath: AppAssets.calendarIcon,
-              size: AppDimens.imageSize20,
+              imagePath: AppAssets.calendarLightIcon,
               color: AppColors.blackColor,
             ),
           ),
@@ -38,9 +38,9 @@ class RescheduleAppointmentSheet extends StatelessWidget {
           AppTextFormField(
             label: 'Time',
             hint: 'Select Time',
+            suffixIconSize: const BoxConstraints(maxHeight: AppDimens.imageSize20),
             suffixIcon: AppAssetImage(
               imagePath: AppAssets.clockIcon,
-              size: AppDimens.imageSize20,
               color: AppColors.blackColor,
             ),
           ),

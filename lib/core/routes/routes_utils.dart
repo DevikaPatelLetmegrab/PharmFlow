@@ -12,6 +12,7 @@ import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/home_book_appointment/presentation/pages/home_book_appointment_page.dart';
+import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_details_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/my_appointment_page.dart';
 import 'package:pharm_flow/features/lab/presentation/pages/lab_page.dart';
 import 'package:pharm_flow/features/my_booking/presentation/pages/book_appointment_page.dart';
@@ -159,11 +160,6 @@ class RoutesUtils {
         builder: (context, state) => const MyAppointmentPage(),
       ),
       GoRoute(
-        path: AppRoutes.myAppointmentDetailsPage,
-        name: AppRoutes.myAppointmentDetailsPage,
-        builder: (context, state) => const AppointmentDetailPage(),
-      ),
-      GoRoute(
         path: AppRoutes.newLaunchPage,
         name: AppRoutes.newLaunchPage,
         builder: (context, state) => const NewLaunchPage(),
@@ -203,6 +199,15 @@ class RoutesUtils {
         name: AppRoutes.homeBookAppointmentPage,
         builder: (context, state) => const HomeBookAppointmentPage(),
       ),
+      GoRoute(
+          path: AppRoutes.myAppointmentDetailsPage,
+          name: AppRoutes.myAppointmentDetailsPage,
+          builder: (context, state) {
+            var index = state.extra! as int;
+            return AppointmentDetailsPage(
+              index: index,
+            );
+          }),
     ],
   );
 }

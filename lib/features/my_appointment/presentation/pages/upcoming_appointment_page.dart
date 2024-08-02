@@ -13,7 +13,7 @@ class UpcomingAppointmentPage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
           horizontal: AppDimens.space16, vertical: AppDimens.space16),
       itemBuilder: (context, index) {
-        return AppointmentItem(
+        return const AppointmentItem(
           index: 0,
         );
       },

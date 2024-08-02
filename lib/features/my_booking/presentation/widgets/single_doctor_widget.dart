@@ -36,7 +36,7 @@ class SingleDoctorWidget extends StatelessWidget {
                 Chip(
                     avatar: Container(
                       height: context.h(8),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle, color: AppColors.green),
                     ),
                     shape: RoundedRectangleBorder(

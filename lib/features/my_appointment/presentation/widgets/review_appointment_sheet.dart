@@ -1,10 +1,14 @@
+import 'package:emoji_rating_bar/emoji_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
+import 'package:pharm_flow/core/widget/app_textform_field.dart';
+import 'package:pharm_flow/core/widget/confirmation_button.dart';
 
 class ReviewAppointmentSheet extends StatelessWidget {
   const ReviewAppointmentSheet({super.key});
@@ -19,42 +23,50 @@ class ReviewAppointmentSheet extends StatelessWidget {
           style: context.x18,
         ),
         const Gap(AppDimens.space20),
-        RatingBar.builder(
-          itemBuilder: (context, index) {
-            switch (index) {
-              case 0:
-                return AppAssetImage(imagePath: AppAssets.badFeedbackIcon);
-              case 1:
-                return const Icon(
-                  Icons.sentiment_dissatisfied,
-                  color: Colors.redAccent,
-                );
-              case 2:
-                return const Icon(
-                  Icons.sentiment_neutral,
-                  color: Colors.amber,
-                );
-              case 3:
-                return Icon(
-                  Icons.sentiment_satisfied,
-                  color: Colors.lightGreen,
-                );
-              case 4:
-                return Icon(
-                  Icons.sentiment_very_satisfied,
-                  color: Colors.green,
-                );
-              default:
-                return Icon(
-                  Icons.sentiment_very_satisfied,
-                  color: Colors.green,
-                );
-            }
-          },
-          onRatingUpdate: (rating) {
-            print(rating);
-          },
-        )
+        EmojiRatingBar(
+            list: [
+              EmojiData(
+                  AppAssets.badFeedbackIcon, // project asset images
+                  "Bad"),
+              EmojiData(
+                  AppAssets.poorFeedbackIcon, // project asset images
+                  "Poor"),
+              EmojiData(
+                  AppAssets.mediumFeedbackIcon, // project asset images
+                  "Medium"),
+              EmojiData(
+                  AppAssets.goodFeedbackIcon, // project asset images
+                  "Good"),
+              EmojiData(
+                  AppAssets.excellentFeedbackIcon, // project asset images
+                  "Excellent")
+            ],
+            rating: 2,
+            onRateChange: (rating) {
+              print(rating);
+            },
+            isReadOnly: false,
+            spacing: 30,
+            size: 45,
+            selectedSize: 45,
+            isShowTitle: true,
+            isShowDivider: false,
+            titleStyle: context.s10,
+            selectedTitleStyle: context.s10,
+            ratingBarType: RatingBarType.feedback,
+            applyColorFilter: true),
+        const Gap(AppDimens.space20),
+        AppTextFormField(
+          hint: 'Write Here..',
+          maxLines: 5,
+        ),
+        const Gap(AppDimens.space30),
+        ConfirmationButton(
+            positiveText: 'Submit',
+            negativeText: 'Cancel',
+            onNegativeClick: () {
+              NavigationServices().pop();
+            })
       ],
     );
   }
