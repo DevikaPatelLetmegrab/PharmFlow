@@ -33,21 +33,26 @@ class SingleDoctorWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Chip(
-                    avatar: Container(
-                      height: context.h(8),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: AppColors.green),
-                    ),
-                    shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: AppColors.whiteColor),
-                        borderRadius:
-                            BorderRadius.circular(AppDimens.borderRadius20)),
-                    backgroundColor: AppColors.green.withOpacity(0.2),
-                    label: Text(
-                      'Available',
-                      style: context.md14.withGreen,
-                    )),
+                Squircle(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: AppDimens.space10,
+                      vertical: AppDimens.space3),
+                  backgroundColor: AppColors.green.withOpacity(0.2),
+                  radius: 45,
+                  borderColor: AppColors.transparent,
+                  child: Row(
+                    children: [
+                      Squircle(
+                        height: 8,
+                        width: 8,
+                        backgroundColor: AppColors.green,
+                        borderColor: AppColors.transparent,
+                      ),
+                      Gap(AppDimens.space5),
+                      Text('Available')
+                    ],
+                  ),
+                ),
                 if (isFav)
                   GestureDetector(
                     onTap: () {

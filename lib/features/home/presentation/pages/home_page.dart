@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
                           physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
                               SliverGridDelegateWithFixedCrossAxisCount(
-                            childAspectRatio: context.w(77) / context.h(112),
+                            childAspectRatio: context.w(77) / context.h(95),
                             crossAxisCount: 4,
                             mainAxisSpacing: 0,
                             crossAxisSpacing: 10,
@@ -145,7 +145,7 @@ class HomePage extends StatelessWidget {
                           physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
                               SliverGridDelegateWithFixedCrossAxisCount(
-                            childAspectRatio: context.w(77) / context.h(123),
+                            childAspectRatio: context.w(77) / context.h(95),
                             crossAxisCount: 4,
                             mainAxisSpacing: 0,
                             crossAxisSpacing: 10,
