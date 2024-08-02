@@ -20,11 +20,9 @@ class NotificationItem extends StatelessWidget {
       borderColor: borderColor,
       child: Column(
         children: [
-          const Gap(AppDimens.space1),
           ListTile(
-            dense: true,
             leading: RoundIcon(
-              radius: AppDimens.borderRadius20,
+              radius: AppDimens.circleRadius25,
               iconPadding: const EdgeInsets.all(AppDimens.space5),
               iconPath: index == 0
                   ? AppAssets.calendarIconBlue
@@ -35,7 +33,7 @@ class NotificationItem extends StatelessWidget {
             ),
             title: Text(
               'Appointment success',
-              style: context.md14.weigh400.withBlack,
+              style: context.md14.withBlack,
             ),
             subtitle: Text(
               'Your appointment has been successfully scheduled. Please mark your calendar for july 12 at 11:30 AM. ',

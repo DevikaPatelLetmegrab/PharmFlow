@@ -66,6 +66,9 @@ class BookAppointmentPage extends StatelessWidget {
                 ConfirmationButton(
                   positiveText: 'Next',
                   negativeText: 'Cancel',
+                  onNegativeClick: (){
+                    NavigationServices().pop();
+                  },
                   onPositiveClick: () {
                     NavigationServices().pushName(AppRoutes.patientDetailsForm);
                   },

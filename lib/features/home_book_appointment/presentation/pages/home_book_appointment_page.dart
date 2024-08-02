@@ -37,7 +37,7 @@ class HomeBookAppointmentPage extends StatelessWidget {
               child: ListView.separated(
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
-                  return const AppointmentItem();
+                  return const SingleDoctorWidget();
                 },
                 separatorBuilder: (BuildContext context, int index) {
                   return const Gap(AppDimens.space15);
