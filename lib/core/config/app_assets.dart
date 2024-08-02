@@ -36,6 +36,8 @@ class AppAssets {
 
   static String calendarDarkIcon = 'assets/icon/calendar_dark.png';
   static String calendarLightIcon = 'assets/icon/calendar_light.png';
+  static String calendarIconBlue = 'assets/icon/calendar_tick_blue.png';
+  static String calendarIconGrey = 'assets/icon/calendar_tick_grey.png';
   static String shoppingCartIcon = 'assets/icon/shopping_cart.png';
   static String profileLightIcon = 'assets/icon/profile_light.png';
   static String profileDarkIcon = 'assets/icon/profile_dark.png';
