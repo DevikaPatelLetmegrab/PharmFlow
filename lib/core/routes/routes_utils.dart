@@ -208,6 +208,11 @@ class RoutesUtils {
               index: index,
             );
           }),
+      GoRoute(
+        path: AppRoutes.notificationPage,
+        name: AppRoutes.notificationPage,
+        builder: (context, state) => const NotificationPage(),
+      )
     ],
   );
 }

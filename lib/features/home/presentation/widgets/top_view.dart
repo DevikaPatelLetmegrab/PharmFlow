@@ -54,6 +54,9 @@ class TopView extends StatelessWidget {
                 children: [
                   AppIconButton(
                     imagePath: AppAssets.notificationIcon,
+                    onTap: () {
+                      NavigationServices().pushName(AppRoutes.notificationPage);
+                    },
                   ),
                   AppIconButton(
                     imagePath: AppAssets.shoppingCartIcon,
@@ -82,3 +85,4 @@ class TopView extends StatelessWidget {
     );
   }
 }
+ 
