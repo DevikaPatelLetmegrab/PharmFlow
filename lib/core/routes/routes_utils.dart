@@ -24,6 +24,7 @@ import 'package:pharm_flow/features/my_favourite/presentation/pages/my_favourite
 import 'package:pharm_flow/features/my_prescription/presentation/pages/my_prescription_page.dart';
 import 'package:pharm_flow/features/my_profile/presentation/pages/my_profile_page.dart';
 import 'package:pharm_flow/features/new_launch/presentation/pages/new_launch_page.dart';
+import 'package:pharm_flow/features/notification/presentation/pages/notification_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/my_prescription/presentation/pages/upload_prescription_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
