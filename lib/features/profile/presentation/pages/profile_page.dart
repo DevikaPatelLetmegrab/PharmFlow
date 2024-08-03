@@ -6,6 +6,7 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
+import 'package:pharm_flow/core/utils/app_dialogs.dart';
 import 'package:pharm_flow/core/widget/asset_icon.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/core/widget/common_imageview.dart';
@@ -78,7 +79,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   return Material(
                     child: ListTile(
                       onTap: () {
-                        NavigationServices().pushName(item.route);
+                        list[index].index == 12
+                            ? AppDialogs.confirmationDialog(
+                                confirmationTitle: 'Do you want to logout?',)
+                            : NavigationServices().pushName(item.route);
                       },
                       dense: true,
                       shape: ContinuousRectangleBorder(

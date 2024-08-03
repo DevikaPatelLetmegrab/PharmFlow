@@ -27,6 +27,7 @@ import 'package:pharm_flow/features/new_launch/presentation/pages/new_launch_pag
 import 'package:pharm_flow/features/notification/presentation/pages/notification_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/my_prescription/presentation/pages/upload_prescription_page.dart';
+import 'package:pharm_flow/features/review/presentation/pages/rating_review_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
 import 'package:pharm_flow/features/seasonal_product/presentation/pages/seasonal_product_page.dart';
@@ -213,6 +214,11 @@ class RoutesUtils {
         path: AppRoutes.notificationPage,
         name: AppRoutes.notificationPage,
         builder: (context, state) => const NotificationPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.reviewPage,
+        name: AppRoutes.reviewPage,
+        builder: (context, state) => const RatingReviewPage(),
       )
     ],
   );

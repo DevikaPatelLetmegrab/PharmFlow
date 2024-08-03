@@ -195,7 +195,7 @@ class AppConstants {
       assetImage: AppAssets.starOutlineIcon,
       index: 7,
       title: 'My Reviews',
-      route: '',
+      route: AppRoutes.reviewPage,
     ),
     DrawerModel(
       assetImage: AppAssets.locationIcon,

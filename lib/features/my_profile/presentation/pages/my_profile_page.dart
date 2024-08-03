@@ -78,7 +78,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                       pickedImagePath.value = file!.path;
                     },
                     child: RoundIcon(
-                      iconPath: AppAssets.editIcon,
+                      iconPath: AppAssets.edit,
                       backgroundColor: AppColors.greyF4Color,
                     ),
                   ),
