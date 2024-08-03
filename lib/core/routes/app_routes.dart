@@ -32,4 +32,5 @@ abstract class AppRoutes {
   static const String dealPage = '/deal_page';
   static const String homeBookAppointmentPage = '/home_book_appointment_page';
   static const String notificationPage = '/notification_page';
+  static const String reviewPage = '/review_page';
 }

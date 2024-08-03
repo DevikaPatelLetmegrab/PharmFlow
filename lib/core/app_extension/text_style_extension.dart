@@ -85,4 +85,8 @@ extension StyleExtension on TextStyle {
   TextStyle get redLineThrough => copyWith(
       decoration: TextDecoration.lineThrough,
       decorationColor: AppColors.errorRed);
+
+  TextStyle get primaryUnderLine => copyWith(
+      decoration: TextDecoration.underline,
+      decorationColor: AppColors.primary);
 }
