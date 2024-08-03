@@ -206,7 +206,7 @@ class AppConstants {
     DrawerModel(
       assetImage: AppAssets.bankIcon,
       index: 9,
-      route: '',
+      route: AppRoutes.manageBankPage,
       title: 'Manage Bank',
     ),
     DrawerModel(

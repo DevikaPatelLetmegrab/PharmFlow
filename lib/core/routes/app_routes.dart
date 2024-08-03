@@ -35,4 +35,5 @@ abstract class AppRoutes {
   static const String reviewPage = '/review_page';
   static const String manageAddressPage = '/manage_address_page';
   static const String addNewAddressPage = '/add_new_address_page';
+  static const String manageBankPage = '/manage_bank_page';
 }
