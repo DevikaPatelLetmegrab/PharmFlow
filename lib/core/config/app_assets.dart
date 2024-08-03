@@ -96,6 +96,7 @@ class AppAssets {
   static String poorFeedbackIcon = 'assets/icon/poor_feedback.png';
   static String deleteIcon = 'assets/icon/delete_icon.png';
   static String editIcon = 'assets/icon/edit_icon.png';
+  static String houseIcon = 'assets/icon/house.png';
 
   ///logo
 
