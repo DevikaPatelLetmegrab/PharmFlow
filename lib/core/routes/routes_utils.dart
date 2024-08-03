@@ -12,6 +12,8 @@ import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/home_book_appointment/presentation/pages/home_book_appointment_page.dart';
+import 'package:pharm_flow/features/manage_address/presentation/pages/add_new_address_page.dart';
+import 'package:pharm_flow/features/manage_address/presentation/pages/manage_address_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_details_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/my_appointment_page.dart';
 import 'package:pharm_flow/features/lab/presentation/pages/lab_page.dart';
@@ -219,6 +221,16 @@ class RoutesUtils {
         path: AppRoutes.reviewPage,
         name: AppRoutes.reviewPage,
         builder: (context, state) => const RatingReviewPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.manageAddressPage,
+        name: AppRoutes.manageAddressPage,
+        builder: (context, state) => const ManageAddressPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.addNewAddressPage,
+        name: AppRoutes.addNewAddressPage,
+        builder: (context, state) => const AddNewAddressPage(),
       )
     ],
   );

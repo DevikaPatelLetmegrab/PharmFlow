@@ -4,6 +4,7 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_constants.dart';
 import 'package:pharm_flow/core/utils/app_dialogs.dart';
@@ -81,7 +82,11 @@ class _ProfilePageState extends State<ProfilePage> {
                       onTap: () {
                         list[index].index == 12
                             ? AppDialogs.confirmationDialog(
-                                confirmationTitle: 'Do you want to logout?',)
+                                confirmationTitle: 'Do you want to logout?',
+                                onPositiveClick: () {
+                                  NavigationServices()
+                                      .pushRemoveUntil(AppRoutes.loginPage);
+                                })
                             : NavigationServices().pushName(item.route);
                       },
                       dense: true,

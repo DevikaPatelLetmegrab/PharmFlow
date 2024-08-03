@@ -200,7 +200,7 @@ class AppConstants {
     DrawerModel(
       assetImage: AppAssets.locationIcon,
       index: 8,
-      route: '',
+      route: AppRoutes.manageAddressPage,
       title: 'Manage Address',
     ),
     DrawerModel(

@@ -4,6 +4,7 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/utils/app_dialogs.dart';
 import 'package:pharm_flow/core/widget/app_popup_menu.dart';
 import 'package:pharm_flow/core/widget/asset_icon.dart';
 import 'package:pharm_flow/core/widget/common_rating_bar.dart';
@@ -59,10 +60,15 @@ class ReviewItem extends StatelessWidget {
               ),
               PopupMenuItem(
                 height: AppDimens.space30,
+                onTap: () {
+                  AppDialogs.confirmationDialog(
+                      confirmationTitle:
+                      'Do You Want to Remove this Review?');
+                },
                 child: Row(
                   children: [
                     AssetIcon(
-                      assetName: AppAssets.deleteIcon,
+                      assetName: AppAssets.closeCircleIcon,
                       size: AppDimens.imageSize20,
                       color: AppColors.blackColor,
                     ),
