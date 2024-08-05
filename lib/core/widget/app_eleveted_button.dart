@@ -8,6 +8,7 @@ import 'package:pharm_flow/core/config/app_dimension.dart';
 enum ButtonType {
   elevated,
   outline,
+  gradient,
   elevatedWithIcon,
   outLineWithIcon,
 }
@@ -96,6 +97,26 @@ class AppButton extends StatelessWidget {
           onPressed: onTap,
           child: child,
         ),
+      ButtonType.gradient => ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              disabledBackgroundColor: buttonColor,
+              elevation: 0,
+              visualDensity: VisualDensity.compact,
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              // backgroundColor: buttonColor,
+              padding: padding,
+              shape: ContinuousRectangleBorder(
+                borderRadius: borderRadius ?? BorderRadius.circular(20),
+              ),
+              backgroundBuilder: (context, states, child) => DecoratedBox(
+                    decoration: const BoxDecoration(
+                        gradient: AppColors.primaryGradient),
+                    child: child,
+                  ),
+              foregroundColor: fontColor),
+          onPressed: onTap,
+          child: child,
+        ),
       ButtonType.elevatedWithIcon => ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
               disabledBackgroundColor: buttonColor,
@@ -148,6 +169,7 @@ class AppButton extends StatelessWidget {
       ButtonType.elevatedWithIcon ||
       ButtonType.elevated =>
         AppColors.whiteColor,
+      ButtonType.gradient => AppColors.white,
       ButtonType.outLineWithIcon || ButtonType.outline => AppColors.primary,
     };
   }

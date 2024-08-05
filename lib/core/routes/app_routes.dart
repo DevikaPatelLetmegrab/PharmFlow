@@ -36,6 +36,7 @@ abstract class AppRoutes {
   static const String manageAddressPage = '/manage_address_page';
   static const String addNewAddressPage = '/add_new_address_page';
   static const String manageBankPage = '/manage_bank_page';
+  static const String cartPage = '/cart_page';
   static const String helpAndSupportPage = '/help_and_support_page';
   static const String communityResourcePage = '/community_resource';
   static const String blogDetailPage = '/blog_detail_page';

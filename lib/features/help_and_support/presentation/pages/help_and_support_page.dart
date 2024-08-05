@@ -35,6 +35,7 @@ class _HelpAndSupportPageState extends State<HelpAndSupportPage>
     return Scaffold(
       appBar: const CommonAppBar(
         title: 'Help & Support',
+
       ),
       body: SingleChildScrollView(
         child: Padding(

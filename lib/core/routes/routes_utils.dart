@@ -6,6 +6,7 @@ import 'package:pharm_flow/features/RegistrationProfile/presentation/pages/profi
 import 'package:pharm_flow/features/SignIn/presentation/pages/sign_in_screen.dart';
 import 'package:pharm_flow/features/SignIn/presentation/pages/verify_otp_screen.dart';
 import 'package:pharm_flow/features/brand/presentation/pages/brand_page.dart';
+import 'package:pharm_flow/features/cart/presentation/pages/cart_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_see_all_page.dart';
 import 'package:pharm_flow/features/community_resource/presentation/pages/blog_detail_page.dart';
@@ -240,6 +241,11 @@ class RoutesUtils {
         path: AppRoutes.manageBankPage,
         name: AppRoutes.manageBankPage,
         builder: (context, state) => const ManageBankPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.cartPage,
+        name: AppRoutes.cartPage,
+        builder: (context, state) => const CartPage(),
       ),
       GoRoute(
         path: AppRoutes.helpAndSupportPage,

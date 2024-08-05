@@ -43,6 +43,19 @@ class AppColors {
   static const Color pinkLight = Color(0xffF6EBE5);
   static const Color skyBlue = Color(0xffE9F6FF);
   static const Color green = Color(0xff018F36);
+  static const Color gradient1 = Color(0xff0F2027);
+  static const Color gradient2 = Color(0xff203A43);
+  static const Color gradient3 = Color(0xff2C5364);
+
+  static const Gradient primaryGradient = LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: [
+        gradient1,
+        gradient2,
+        gradient3,
+      ]);
+
 
   static Map<int, Color> _getSwatch(Color color) {
     final hslColor = HSLColor.fromColor(color);
