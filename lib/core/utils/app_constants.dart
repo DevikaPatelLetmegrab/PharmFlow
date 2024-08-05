@@ -156,13 +156,6 @@ class AppConstants {
     ChipModel(title: 'Placed', isSelected: true),
   ];
 
-  static List<ChipModel> faqList = [
-    ChipModel(title: 'All', isSelected: true),
-    ChipModel(title: 'Services', isSelected: false),
-    ChipModel(title: 'General', isSelected: false),
-    ChipModel(title: 'Account', isSelected: false),
-  ];
-
   static List<DrawerModel> drawerItems = [
     DrawerModel(
         assetImage: AppAssets.userOutlineIcon,
