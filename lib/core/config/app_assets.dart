@@ -84,6 +84,7 @@ class AppAssets {
   static String cameraIcon = 'assets/icon/camera.png';
   static String galleryIcon = 'assets/icon/gallery.png';
   static String closeCircleIcon = 'assets/icon/close-circle.png';
+  static String eyeIcon = 'assets/icon/eye.png';
 
   ///logo
 
