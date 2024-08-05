@@ -6,6 +6,7 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
+import 'package:pharm_flow/core/widget/app_icon_button.dart';
 import 'package:pharm_flow/core/widget/common_imageview.dart';
 import 'package:pharm_flow/core/widget/common_label.dart';
 import 'package:pharm_flow/core/widget/common_rating_bar.dart';
@@ -18,6 +19,9 @@ class CommonDoctorContainer extends StatelessWidget {
   final String? label;
   final String? title;
   final String? phoneNumber;
+  final bool isRate;
+  final String? trailingIcon;
+  final void Function()? onTap;
 
   const CommonDoctorContainer(
       {super.key,
@@ -26,7 +30,10 @@ class CommonDoctorContainer extends StatelessWidget {
       this.imageHeight = 80,
       this.imageWidth = 80,
       this.label,
+      this.isRate = true,
       this.title,
+      this.trailingIcon,
+      this.onTap,
       this.phoneNumber});
 
   @override
@@ -64,24 +71,26 @@ class CommonDoctorContainer extends StatelessWidget {
                 name,
                 style: context.x16.withBlack,
               ),
-              const Gap(AppDimens.space5),
-              IntrinsicHeight(
-                child: Row(
-                  children: [
-                    CommonRatingBar(rate: 5),
-                    const Gap(AppDimens.space5),
-                    const VerticalDivider(
-                      thickness: 2,
-                      color: AppColors.greyD9Color,
-                    ),
-                    const Gap(AppDimens.space5),
-                    Text(
-                      '20,100 Reviews',
-                      style: context.md14.withGrey78,
-                    ),
-                  ],
+              if (isRate) ...[
+                const Gap(AppDimens.space5),
+                IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      CommonRatingBar(rate: 5),
+                      const Gap(AppDimens.space5),
+                      const VerticalDivider(
+                        thickness: 2,
+                        color: AppColors.greyD9Color,
+                      ),
+                      const Gap(AppDimens.space5),
+                      Text(
+                        '20,100 Reviews',
+                        style: context.md14.withGrey78,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              ],
               const Gap(AppDimens.space5),
               if (phoneNumber != null) ...[
                 Row(
@@ -126,6 +135,12 @@ class CommonDoctorContainer extends StatelessWidget {
             ],
           ),
         ),
+        if (trailingIcon != null)
+          AppIconButton(
+            onTap: onTap,
+            imagePath: trailingIcon,
+            iconColor: AppColors.blackColor,
+          )
       ],
     );
   }

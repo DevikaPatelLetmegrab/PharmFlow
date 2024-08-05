@@ -203,18 +203,18 @@ class AppConstants {
       assetImage: AppAssets.starOutlineIcon,
       index: 7,
       title: 'My Reviews',
-      route: '',
+      route: AppRoutes.reviewPage,
     ),
     DrawerModel(
       assetImage: AppAssets.locationIcon,
       index: 8,
-      route: '',
+      route: AppRoutes.manageAddressPage,
       title: 'Manage Address',
     ),
     DrawerModel(
       assetImage: AppAssets.bankIcon,
       index: 9,
-      route: '',
+      route: AppRoutes.manageBankPage,
       title: 'Manage Bank',
     ),
     DrawerModel(
