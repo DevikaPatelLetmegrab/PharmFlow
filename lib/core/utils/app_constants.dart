@@ -155,6 +155,14 @@ class AppConstants {
     ChipModel(title: 'Replace', isSelected: false),
     ChipModel(title: 'Placed', isSelected: true),
   ];
+
+  static List<ChipModel> faqList = [
+    ChipModel(title: 'All', isSelected: true),
+    ChipModel(title: 'Services', isSelected: false),
+    ChipModel(title: 'General', isSelected: false),
+    ChipModel(title: 'Account', isSelected: false),
+  ];
+
   static List<DrawerModel> drawerItems = [
     DrawerModel(
         assetImage: AppAssets.userOutlineIcon,
@@ -213,7 +221,7 @@ class AppConstants {
       assetImage: AppAssets.supportIcon,
       index: 10,
       title: 'Help & Support',
-      route: '',
+      route: AppRoutes.helpAndSupportPage,
     ),
     DrawerModel(
       assetImage: AppAssets.securityIcon,

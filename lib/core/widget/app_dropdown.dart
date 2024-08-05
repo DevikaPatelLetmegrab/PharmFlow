@@ -90,8 +90,7 @@ class AppDropdown<T> extends StatelessWidget {
             textAlign: TextAlign.start,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: context.md14.withGrey78
-                .copyWith(fontWeight: hintTextWeight),
+            style: context.md14.withGrey78.copyWith(fontWeight: hintTextWeight),
           ),
           decoration: InputDecoration(
             isDense: true,
