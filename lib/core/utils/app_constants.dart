@@ -155,6 +155,7 @@ class AppConstants {
     ChipModel(title: 'Replace', isSelected: false),
     ChipModel(title: 'Placed', isSelected: true),
   ];
+
   static List<DrawerModel> drawerItems = [
     DrawerModel(
         assetImage: AppAssets.userOutlineIcon,
@@ -213,7 +214,7 @@ class AppConstants {
       assetImage: AppAssets.supportIcon,
       index: 10,
       title: 'Help & Support',
-      route: '',
+      route: AppRoutes.helpAndSupportPage,
     ),
     DrawerModel(
       assetImage: AppAssets.securityIcon,

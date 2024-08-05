@@ -6,7 +6,6 @@ import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/utils/squircle/squircle_container.dart';
-import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/round_icon.dart';
 import 'package:pharm_flow/features/my_booking/presentation/bloc/package_bloc.dart';
 import 'package:pharm_flow/features/my_booking/presentation/bloc/package_event.dart';

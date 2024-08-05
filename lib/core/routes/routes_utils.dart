@@ -10,6 +10,7 @@ import 'package:pharm_flow/features/cart/presentation/pages/cart_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_see_all_page.dart';
 import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
+import 'package:pharm_flow/features/help_and_support/presentation/pages/help_and_support_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/home_book_appointment/presentation/pages/home_book_appointment_page.dart';
@@ -244,6 +245,12 @@ class RoutesUtils {
         name: AppRoutes.cartPage,
         builder: (context, state) => const CartPage(),
       ),
+      ),
+      GoRoute(
+        path: AppRoutes.helpAndSupportPage,
+        name: AppRoutes.helpAndSupportPage,
+        builder: (context, state) => const HelpAndSupportPage(),
+      )
     ],
   );
 }
