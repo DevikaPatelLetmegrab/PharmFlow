@@ -115,6 +115,7 @@ class CommonDoctorContainer extends StatelessWidget {
               const Gap(AppDimens.space5),
               if (location != null) ...[
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AppAssetImage(
                       imagePath: AppAssets.locationIcon,
