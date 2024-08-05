@@ -22,6 +22,7 @@ class AppAssets {
   static String medicin = 'assets/images/medicin.png';
   static String medicine1 = 'assets/medicine.png';
   static String reviewMedicine1 = 'assets/review_medicine.png';
+  static String community = 'assets/images/community.png';
 
   ///icons
 
@@ -98,6 +99,7 @@ class AppAssets {
   static String editIcon = 'assets/icon/edit_icon.png';
   static String houseIcon = 'assets/icon/house.png';
   static String hdfcIcon = 'assets/icon/hdfc.png';
+  static String eyeIcon = 'assets/icon/eye.png';
 
   ///logo
 
