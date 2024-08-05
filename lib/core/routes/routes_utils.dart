@@ -31,6 +31,11 @@ import 'package:pharm_flow/features/new_launch/presentation/pages/new_launch_pag
 import 'package:pharm_flow/features/notification/presentation/pages/notification_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_page.dart';
 import 'package:pharm_flow/features/my_prescription/presentation/pages/upload_prescription_page.dart';
+import 'package:pharm_flow/features/privacy_policy/presentation/pages/medication_policy_page.dart';
+import 'package:pharm_flow/features/privacy_policy/presentation/pages/payment_policy_page.dart';
+import 'package:pharm_flow/features/privacy_policy/presentation/pages/policy_page.dart';
+import 'package:pharm_flow/features/privacy_policy/presentation/pages/prescription_policy_page.dart';
+import 'package:pharm_flow/features/privacy_policy/presentation/pages/privacy_policy_page.dart';
 import 'package:pharm_flow/features/review/presentation/pages/rating_review_page.dart';
 import 'package:pharm_flow/features/search/presentation/pages/search_page.dart';
 import 'package:pharm_flow/features/order/presentation/pages/order_details_page.dart';
@@ -243,7 +248,32 @@ class RoutesUtils {
         path: AppRoutes.helpAndSupportPage,
         name: AppRoutes.helpAndSupportPage,
         builder: (context, state) => const HelpAndSupportPage(),
-      )
+      ),
+      GoRoute(
+        path: AppRoutes.policy,
+        name: AppRoutes.policy,
+        builder: (context, state) => const PolicyPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.prescriptionPolicy,
+        name: AppRoutes.prescriptionPolicy,
+        builder: (context, state) => const PrescriptionPolicyPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.privacypolicy,
+        name: AppRoutes.privacypolicy,
+        builder: (context, state) => const PrivacyPolicyPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.medicationDispensingPolicy,
+        name: AppRoutes.medicationDispensingPolicy,
+        builder: (context, state) => const MedicationPolicyPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.paymentPolicy,
+        name: AppRoutes.paymentPolicy,
+        builder: (context, state) => const PaymentPolicyPage(),
+      ),
     ],
   );
 }

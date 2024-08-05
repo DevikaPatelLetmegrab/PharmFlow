@@ -37,4 +37,10 @@ abstract class AppRoutes {
   static const String addNewAddressPage = '/add_new_address_page';
   static const String manageBankPage = '/manage_bank_page';
   static const String helpAndSupportPage = '/help_and_support_page';
+  static const String policy = '/policy_page';
+  static const String prescriptionPolicy = '/prescription_policy_page';
+  static const String privacypolicy = '/privacy_policy_page';
+  static const String medicationDispensingPolicy =
+      '/medicationDispensingPolicy_policy_page';
+  static const String paymentPolicy = '/payment_policy_page';
 }

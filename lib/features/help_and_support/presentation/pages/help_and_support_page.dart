@@ -33,44 +33,34 @@ class _HelpAndSupportPageState extends State<HelpAndSupportPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CommonAppBar(
+      appBar: CommonAppBar(
         title: 'Help & Support',
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppDimens.space16),
-          child: Column(
-            children: [
-              TabBar(
-                controller: tabController,
-                unselectedLabelStyle: context.md14.withGrey78,
-                labelStyle: context.md14.withPrimary,
-                indicatorSize: TabBarIndicatorSize.tab,
-                indicatorWeight: 4,
-                dividerColor: AppColors.greyE6Color,
-                tabs: const [
-                  Tab(
-                    text: 'FAQ',
-                  ),
-                  Tab(
-                    text: 'Contact us',
-                  ),
-                ],
+        bottom: PreferredSize(
+          preferredSize: Size(context.getWidth, context.h(50)),
+          child: TabBar(
+            controller: tabController,
+            unselectedLabelStyle: context.md14.withGrey78,
+            labelStyle: context.md14.withPrimary,
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorWeight: 4,
+            dividerColor: AppColors.greyE6Color,
+            tabs: const [
+              Tab(
+                text: 'FAQ',
               ),
-              const Gap(AppDimens.space15),
-              SizedBox(
-                height: context.getHeight * 0.87,
-                child: TabBarView(
-                  controller: tabController,
-                  children: const [
-                    FaqTabview(),
-                    ContactUsTabview(),
-                  ],
-                ),
+              Tab(
+                text: 'Contact us',
               ),
             ],
           ),
         ),
+      ),
+      body: TabBarView(
+        controller: tabController,
+        children: const [
+          FaqTabview(),
+          ContactUsTabview(),
+        ],
       ),
     );
   }
