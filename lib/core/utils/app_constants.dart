@@ -155,6 +155,7 @@ class AppConstants {
     ChipModel(title: 'Replace', isSelected: false),
     ChipModel(title: 'Placed', isSelected: true),
   ];
+
   static List<DrawerModel> drawerItems = [
     DrawerModel(
         assetImage: AppAssets.userOutlineIcon,
@@ -165,7 +166,7 @@ class AppConstants {
       assetImage: AppAssets.shoppingCartIcon,
       index: 2,
       title: 'My Cart',
-      route: '',
+      route: AppRoutes.cartPage,
     ),
     DrawerModel(
       assetImage: AppAssets.noteIcon,
@@ -206,14 +207,14 @@ class AppConstants {
     DrawerModel(
       assetImage: AppAssets.bankIcon,
       index: 9,
-      route: '',
+      route: AppRoutes.manageBankPage,
       title: 'Manage Bank',
     ),
     DrawerModel(
       assetImage: AppAssets.supportIcon,
       index: 10,
       title: 'Help & Support',
-      route: '',
+      route: AppRoutes.helpAndSupportPage,
     ),
     DrawerModel(
       assetImage: AppAssets.securityIcon,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/widget/app_icon_button.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/features/wishlist/presentation/widgets/wishlist_item_widget.dart';
@@ -16,6 +18,9 @@ class WishlistPage extends StatelessWidget {
         title: 'Wishlist',
         actions: [
           AppIconButton(
+            onTap: (){
+              NavigationServices().pushName(AppRoutes.cartPage);
+            },
             imagePath: AppAssets.shoppingCartIcon,
             iconColor: AppColors.primary,
           )

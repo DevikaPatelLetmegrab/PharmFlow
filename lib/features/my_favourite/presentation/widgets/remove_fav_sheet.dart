@@ -59,7 +59,7 @@ class RemoveFavSheet extends StatelessWidget {
           ConfirmationButton(
             positiveText: 'Yes, Remove',
             negativeText: 'Cancel',
-            onPositiveClick: () {
+            onPositiveClick: () { 
               NavigationServices().pop();
             },
             onNegativeClick: () {
