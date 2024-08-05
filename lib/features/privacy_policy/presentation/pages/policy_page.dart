@@ -34,7 +34,7 @@ class _PolicyPageState extends State<PolicyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const CommonAppBar(
-          title: 'Policy',
+          title: 'Policies',
         ),
         body: Padding(
           padding: const EdgeInsets.all(AppDimens.space16),
