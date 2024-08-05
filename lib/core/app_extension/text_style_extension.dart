@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 
 extension TextStyleExtension on BuildContext {
+  TextStyle get s10 => Theme.of(this)
+      .textTheme
+      .headlineSmall!
+      .copyWith(fontSize: _getResponsiveFontSize(this, baseFontSize: 10));
+
+
+
   TextStyle get s12 => Theme.of(this)
       .textTheme
       .headlineSmall!
@@ -78,4 +85,8 @@ extension StyleExtension on TextStyle {
   TextStyle get redLineThrough => copyWith(
       decoration: TextDecoration.lineThrough,
       decorationColor: AppColors.errorRed);
+
+  TextStyle get primaryUnderLine => copyWith(
+      decoration: TextDecoration.underline,
+      decorationColor: AppColors.primary);
 }

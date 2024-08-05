@@ -14,6 +14,8 @@ class SquareIcon extends StatelessWidget {
     this.iconSize = 20,
     this.iconPadding = EdgeInsets.zero,
     this.iconColor,
+    this.height,
+    this.width,
     this.bgopacity = .2,
   });
 
@@ -22,6 +24,8 @@ class SquareIcon extends StatelessWidget {
   final Color borderColor;
   final Color? iconColor;
   final double radius;
+  final double? height;
+  final double? width;
   final double iconSize;
   final double bgopacity;
   final EdgeInsetsGeometry iconPadding;
@@ -29,8 +33,8 @@ class SquareIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.h(55),
-      width: context.w(55),
+      height:height?? context.h(55),
+      width: width??context.w(55),
       decoration: BoxDecoration(
           border: Border.all(color: borderColor),
           color: backgroundColor,

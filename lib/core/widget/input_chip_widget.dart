@@ -27,17 +27,17 @@ class _InputChipWidgetState extends State<InputChipWidget> {
   @override
   Widget build(BuildContext context) {
     return InputChip(
-      backgroundColor: widget.backgroundColor ?? AppColors.whiteColor,
+      backgroundColor: widget.backgroundColor,
       showCheckmark: widget.showCheckMark,
       side: widget.customBorderSide ??
-          BorderSide(
+          const BorderSide(
             color: AppColors.greyDAColor,
             width: 1,
           ),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppDimens.borderRadius15)),
       onSelected: (value) {},
-      labelPadding:const EdgeInsets.all(AppDimens.space8) ,
+      labelPadding: const EdgeInsets.all(AppDimens.space8),
       checkmarkColor: AppColors.whiteColor,
       selected: widget.isSelected,
       labelStyle: widget.isSelected

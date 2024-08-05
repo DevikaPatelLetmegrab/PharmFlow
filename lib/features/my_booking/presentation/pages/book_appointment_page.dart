@@ -20,12 +20,12 @@ class BookAppointmentPage extends StatelessWidget {
     return BlocProvider(
       create: (context) => PackageBloc(),
       child: Scaffold(
-        appBar: CommonAppBar(
+        appBar: const CommonAppBar(
           title: 'Book Appointment',
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(AppDimens.space16),
+            padding: const EdgeInsets.all(AppDimens.space16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -33,39 +33,42 @@ class BookAppointmentPage extends StatelessWidget {
                   'Date',
                   style: context.md14.withBlack,
                 ),
-                Gap(AppDimens.space15),
+                const Gap(AppDimens.space15),
                 SelectDateWidget(
                   list: AppConstants.dateList,
                 ),
-                Gap(AppDimens.space15),
+                const Gap(AppDimens.space15),
                 Text(
                   'Time',
                   style: context.md14.withBlack,
                 ),
-                Gap(AppDimens.space15),
+                const Gap(AppDimens.space15),
                 SelectDateWidget(
                   list: AppConstants.timeList,
                 ),
-                Gap(AppDimens.space15),
+                const Gap(AppDimens.space15),
                 Text(
                   'Select Duration',
                   style: context.md14.withBlack,
                 ),
-                Gap(AppDimens.space15),
+                const Gap(AppDimens.space15),
                 SelectDateWidget(
                   list: AppConstants.durationList,
                 ),
-                Gap(AppDimens.space15),
+                const Gap(AppDimens.space15),
                 Text(
                   'Select Package',
                   style: context.x16.withBlack,
                 ),
-                Gap(AppDimens.space15),
-                SelectPackageWidget(),
-                Gap(AppDimens.space30),
+                const Gap(AppDimens.space15),
+                const SelectPackageWidget(),
+                const Gap(AppDimens.space30),
                 ConfirmationButton(
                   positiveText: 'Next',
                   negativeText: 'Cancel',
+                  onNegativeClick: (){
+                    NavigationServices().pop();
+                  },
                   onPositiveClick: () {
                     NavigationServices().pushName(AppRoutes.patientDetailsForm);
                   },

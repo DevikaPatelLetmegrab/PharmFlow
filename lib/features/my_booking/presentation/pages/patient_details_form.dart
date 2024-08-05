@@ -39,9 +39,9 @@ class PatientDetailsForm extends StatelessWidget {
             AppTextFormField(
               hint: 'Enter Date of Birth',
               label: 'Date of Birth',
+              suffixIconSize: const BoxConstraints(maxHeight: AppDimens.imageSize20),
               suffixIcon: AppAssetImage(
                 imagePath: AppAssets.calendarLightIcon,
-                size: 16,
                 color: AppColors.blackColor,
               ),
             ),

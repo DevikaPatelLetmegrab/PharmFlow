@@ -20,6 +20,8 @@ class AppAssets {
   static String docCategories = 'assets/images/doctor_categories.png';
   static String labTest = 'assets/images/lab_test.png';
   static String medicin = 'assets/images/medicin.png';
+  static String medicine1 = 'assets/medicine.png';
+  static String reviewMedicine1 = 'assets/review_medicine.png';
   static String community = 'assets/images/community.png';
 
   ///icons
@@ -37,6 +39,8 @@ class AppAssets {
 
   static String calendarDarkIcon = 'assets/icon/calendar_dark.png';
   static String calendarLightIcon = 'assets/icon/calendar_light.png';
+  static String calendarIconBlue = 'assets/icon/calendar_tick_blue.png';
+  static String calendarIconGrey = 'assets/icon/calendar_tick_grey.png';
   static String shoppingCartIcon = 'assets/icon/shopping_cart.png';
   static String profileLightIcon = 'assets/icon/profile_light.png';
   static String profileDarkIcon = 'assets/icon/profile_dark.png';
@@ -76,7 +80,7 @@ class AppAssets {
   static String starOutlineIcon = 'assets/icon/star_outline.png';
   static String bagOutlineIcon = 'assets/icon/bag_outline.png';
   static String arrowRightIcon = 'assets/icon/arrow-right.png';
-  static String editIcon = 'assets/icon/edit.png';
+  static String edit = 'assets/icon/edit.png';
   static String verifyOutlineIcon = 'assets/icon/verify_outline.png';
   static String arrowDownIcon = 'assets/icon/arrow-down.png';
   static String orderLightIcon = 'assets/icon/order_light.png';
@@ -84,6 +88,17 @@ class AppAssets {
   static String cameraIcon = 'assets/icon/camera.png';
   static String galleryIcon = 'assets/icon/gallery.png';
   static String closeCircleIcon = 'assets/icon/close-circle.png';
+  static String noteTextIcon = 'assets/icon/note-text.png';
+  static String clockIcon = 'assets/icon/clock.png';
+  static String badFeedbackIcon = 'assets/icon/bad_feedback.png';
+  static String excellentFeedbackIcon = 'assets/icon/excellent_feedback.png';
+  static String goodFeedbackIcon = 'assets/icon/good_feedback.png';
+  static String mediumFeedbackIcon = 'assets/icon/medium_feedback.png';
+  static String poorFeedbackIcon = 'assets/icon/poor_feedback.png';
+  static String deleteIcon = 'assets/icon/delete_icon.png';
+  static String editIcon = 'assets/icon/edit_icon.png';
+  static String houseIcon = 'assets/icon/house.png';
+  static String hdfcIcon = 'assets/icon/hdfc.png';
   static String eyeIcon = 'assets/icon/eye.png';
 
   ///logo
@@ -98,6 +113,6 @@ class AppAssets {
   static String imageD = 'assets/imageD.png';
   static String image1 = 'assets/image1.png';
   static String image2 = 'assets/image2.png';
-  static String img = 'assets/img.png';
+  static String img = 'assets/medicine.png';
   static String prescription = 'assets/prescription.png';
 }
