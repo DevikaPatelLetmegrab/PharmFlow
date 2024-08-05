@@ -37,18 +37,6 @@ class CommonMedicineSummary extends StatelessWidget {
           ),
         ],
       ),
-      trailing: Column(
-        children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.remove_circle_outline_sharp))
-            ],
-          )
-        ],
-      ),
     );
   }
 }

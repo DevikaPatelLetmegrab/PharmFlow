@@ -245,7 +245,6 @@ class RoutesUtils {
         name: AppRoutes.cartPage,
         builder: (context, state) => const CartPage(),
       ),
-      ),
       GoRoute(
         path: AppRoutes.helpAndSupportPage,
         name: AppRoutes.helpAndSupportPage,
