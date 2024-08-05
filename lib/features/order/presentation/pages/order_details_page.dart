@@ -9,7 +9,7 @@ import 'package:pharm_flow/core/widget/confirmation_button.dart';
 import 'package:pharm_flow/features/order/presentation/widgets/cancel_order_sheet.dart';
 import 'package:pharm_flow/features/order/presentation/widgets/common_medicine_summary.dart';
 import 'package:pharm_flow/features/order/presentation/widgets/delivery_estimate.dart';
-import 'package:pharm_flow/features/order/presentation/widgets/payment_details.dart';
+import 'package:pharm_flow/core/widget/common_payment_details.dart';
 import 'package:pharm_flow/features/order/presentation/widgets/step_view.dart';
 
 class OrderDetailsPage extends StatelessWidget {
@@ -18,7 +18,7 @@ class OrderDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(
+      appBar: const CommonAppBar(
         title: 'Your Order',
       ),
       bottomNavigationBar: Padding(
@@ -33,19 +33,19 @@ class OrderDetailsPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: AppDimens.space16),
+        padding: const EdgeInsets.symmetric(horizontal: AppDimens.space16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            StepView(),
-            Gap(AppDimens.space12),
-            DeliveryEstimate(),
-            Gap(AppDimens.space16),
+            const StepView(),
+            const Gap(AppDimens.space12),
+            const DeliveryEstimate(),
+            const Gap(AppDimens.space16),
             Squircle(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Gap(AppDimens.space15),
+                  const Gap(AppDimens.space15),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: AppDimens.space18),
@@ -54,12 +54,12 @@ class OrderDetailsPage extends StatelessWidget {
                       style: context.md14.weigh500,
                     ),
                   ),
-                  CommonMedicineSummary(),
+                  const CommonMedicineSummary(),
                 ],
               ),
             ),
-            Gap(AppDimens.space16),
-            PaymentDetails()
+            const Gap(AppDimens.space16),
+            const CommonPaymentDetails()
           ],
         ),
       ),

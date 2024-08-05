@@ -4,7 +4,9 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 class RowOverview extends StatelessWidget {
   final String? title;
   final VoidCallback? ontap;
-  const RowOverview({super.key, this.title = '', this.ontap});
+  final Widget? subTitleWidget;
+  const RowOverview(
+      {super.key, this.title = '', this.ontap, this.subTitleWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,11 @@ class RowOverview extends StatelessWidget {
         ),
         InkWell(
           onTap: ontap,
-          child: Text(
-            'See All',
-            style: context.md14.withPrimary,
-          ),
+          child: subTitleWidget ??
+              Text(
+                'See All',
+                style: context.md14.withPrimary,
+              ),
         )
       ],
     );

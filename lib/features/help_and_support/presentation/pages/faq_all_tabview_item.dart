@@ -17,7 +17,6 @@ class FaqAllTabviewItem extends StatefulWidget {
 }
 
 class _FaqAllTabviewItemState extends State<FaqAllTabviewItem> {
-  var isSelect;
 
   @override
   Widget build(BuildContext context) {

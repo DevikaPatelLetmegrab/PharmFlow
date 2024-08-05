@@ -4,6 +4,8 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/widget/app_icon_button.dart';
+import 'package:pharm_flow/core/widget/app_popup_menu.dart';
 import 'package:pharm_flow/core/widget/square_icon.dart';
 
 class CommonMedicineSummary extends StatelessWidget {
@@ -22,20 +24,18 @@ class CommonMedicineSummary extends StatelessWidget {
         'Dr. Reckeweg R42 Haemovenin Drops',
         style: context.md14,
       ),
-      subtitle: IntrinsicHeight(
-        child: Row(
-          children: [
-            Text(
-              '₹ 139',
-              style: context.x16.weigh600,
-            ),
-             Gap(AppDimens.space10),
-            Text(
-              '₹ 200',
-              style: context.md14.weigh600.withRed.redLineThrough,
-            ),
-          ],
-        ),
+      subtitle: Row(
+        children: [
+          Text(
+            '₹ 139',
+            style: context.x16.weigh600,
+          ),
+          const Gap(AppDimens.space10),
+          Text(
+            '₹ 200',
+            style: context.md14.weigh600.withRed.redLineThrough,
+          ),
+        ],
       ),
     );
   }
