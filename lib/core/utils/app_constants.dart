@@ -166,7 +166,7 @@ class AppConstants {
       assetImage: AppAssets.shoppingCartIcon,
       index: 2,
       title: 'My Cart',
-      route: '',
+      route: AppRoutes.cartPage,
     ),
     DrawerModel(
       assetImage: AppAssets.noteIcon,

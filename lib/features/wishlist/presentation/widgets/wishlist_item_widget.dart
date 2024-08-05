@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
+import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/core/routes/navigation_services.dart';
 import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/app_asset_image.dart';
 import 'package:pharm_flow/core/widget/app_eleveted_button.dart';
@@ -70,6 +72,9 @@ class WishlistItemWidget extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: AppDimens.space20),
                 child: AppButton(
+                  onTap: () {
+                    NavigationServices().pushName(AppRoutes.cartPage);
+                  },
                   height: context.h(40),
                   borderRadius: BorderRadius.circular(AppDimens.borderRadius15),
                   width: context.getWidth,
