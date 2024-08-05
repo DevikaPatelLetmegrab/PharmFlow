@@ -17,7 +17,6 @@ class CategoriesListviewItem extends StatelessWidget {
           height: 80,
           width: 80,
         ),
-        Gap(AppDimens.space5),
         Text(
           'Pain Relief',
           style: context.s12,

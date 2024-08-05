@@ -9,6 +9,8 @@ import 'package:pharm_flow/features/brand/presentation/pages/brand_page.dart';
 import 'package:pharm_flow/features/cart/presentation/pages/cart_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_page.dart';
 import 'package:pharm_flow/features/categories/presentation/pages/categories_see_all_page.dart';
+import 'package:pharm_flow/features/community_resource/presentation/pages/blog_detail_page.dart';
+import 'package:pharm_flow/features/community_resource/presentation/pages/community_resource_page.dart';
 import 'package:pharm_flow/features/deal/presentation/pages/deal_page.dart';
 import 'package:pharm_flow/features/help_and_support/presentation/pages/help_and_support_page.dart';
 import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
@@ -249,7 +251,17 @@ class RoutesUtils {
         path: AppRoutes.helpAndSupportPage,
         name: AppRoutes.helpAndSupportPage,
         builder: (context, state) => const HelpAndSupportPage(),
-      )
+      ),
+      GoRoute(
+        path: AppRoutes.communityResourcePage,
+        name: AppRoutes.communityResourcePage,
+        builder: (context, state) => const CommunityResourcePage(),
+      ),
+      GoRoute(
+        path: AppRoutes.blogDetailPage,
+        name: AppRoutes.blogDetailPage,
+        builder: (context, state) => const BlogDetailPage(),
+      ),
     ],
   );
 }
