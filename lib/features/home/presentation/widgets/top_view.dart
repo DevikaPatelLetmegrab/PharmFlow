@@ -61,6 +61,9 @@ class TopView extends StatelessWidget {
                   AppIconButton(
                     imagePath: AppAssets.shoppingCartIcon,
                     iconColor: AppColors.blackColor,
+                    onTap: () {
+                      NavigationServices().pushName(AppRoutes.cartPage);
+                    },
                   ),
                 ],
               ),
@@ -85,4 +88,3 @@ class TopView extends StatelessWidget {
     );
   }
 }
- 
