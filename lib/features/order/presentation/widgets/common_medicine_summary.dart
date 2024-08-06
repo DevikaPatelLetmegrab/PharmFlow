@@ -18,8 +18,7 @@ class CommonMedicineSummary extends StatelessWidget {
       leading: SquareIcon(
           borderColor: AppColors.transparent,
           iconPadding: const EdgeInsets.all(AppDimens.space5),
-          iconPath: AppAssets.img,
-          backgroundColor: AppColors.greyECColor),
+          iconPath: AppAssets.img,),
       title: Text(
         'Dr. Reckeweg R42 Haemovenin Drops',
         style: context.md14,

@@ -14,8 +14,10 @@ import 'package:pharm_flow/core/widget/square_icon.dart';
 
 class AddressItem extends StatelessWidget {
   final bool isSelected;
+  final bool isTrailing;
 
-  const AddressItem({super.key, required this.isSelected});
+  const AddressItem(
+      {super.key, required this.isSelected, this.isTrailing = true});
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +36,7 @@ class AddressItem extends StatelessWidget {
                     height: context.h(40),
                     width: context.w(40),
                     radius: AppDimens.borderRadius10,
-                    iconPadding: const EdgeInsets.all(AppDimens.space8),
                     iconSize: AppDimens.imageSize20,
-                    backgroundColor: AppColors.greyF4Color,
                     borderColor: AppColors.transparent,
                     iconPath: AppAssets.houseIcon,
                   ),
@@ -44,51 +44,53 @@ class AddressItem extends StatelessWidget {
                     'Home Address',
                     style: context.x16,
                   ),
-                  trailing: AppPopupMenu(
-                    constraints:
-                        const BoxConstraints(maxHeight: AppDimens.space80),
-                    items: [
-                      PopupMenuItem(
-                        height: AppDimens.space30,
-                        child: Row(
-                          children: [
-                            AssetIcon(
-                              assetName: AppAssets.editIcon,
-                              size: AppDimens.imageSize20,
-                              color: AppColors.blackColor,
+                  trailing: (isTrailing)
+                      ? AppPopupMenu(
+                          constraints: const BoxConstraints(
+                              maxHeight: AppDimens.space80),
+                          items: [
+                            PopupMenuItem(
+                              height: AppDimens.space30,
+                              child: Row(
+                                children: [
+                                  AssetIcon(
+                                    assetName: AppAssets.editIcon,
+                                    size: AppDimens.imageSize20,
+                                    color: AppColors.blackColor,
+                                  ),
+                                  const Gap(AppDimens.space5),
+                                  Text(
+                                    'Edit Address',
+                                    style: context.x16.weigh400,
+                                  ),
+                                ],
+                              ),
                             ),
-                            const Gap(AppDimens.space5),
-                            Text(
-                              'Edit Address',
-                              style: context.x16.weigh400,
-                            ),
+                            PopupMenuItem(
+                              onTap: () {
+                                AppDialogs.confirmationDialog(
+                                    confirmationTitle:
+                                        'Do You Want to Remove this Address?');
+                              },
+                              height: AppDimens.space30,
+                              child: Row(
+                                children: [
+                                  AssetIcon(
+                                    assetName: AppAssets.closeCircleIcon,
+                                    size: AppDimens.imageSize20,
+                                    color: AppColors.blackColor,
+                                  ),
+                                  const Gap(AppDimens.space5),
+                                  Text(
+                                    'Delete Address',
+                                    style: context.x16.weigh400,
+                                  ),
+                                ],
+                              ),
+                            )
                           ],
-                        ),
-                      ),
-                      PopupMenuItem(
-                        onTap: () {
-                          AppDialogs.confirmationDialog(
-                              confirmationTitle:
-                                  'Do You Want to Remove this Address?');
-                        },
-                        height: AppDimens.space30,
-                        child: Row(
-                          children: [
-                            AssetIcon(
-                              assetName: AppAssets.closeCircleIcon,
-                              size: AppDimens.imageSize20,
-                              color: AppColors.blackColor,
-                            ),
-                            const Gap(AppDimens.space5),
-                            Text(
-                              'Delete Address',
-                              style: context.x16.weigh400,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                        )
+                      : null,
                 ),
                 const CommonItem(
                   title: 'Name',
@@ -128,5 +130,3 @@ class AddressItem extends StatelessWidget {
     );
   }
 }
-
-
