@@ -39,6 +39,7 @@ class CommonRow extends StatelessWidget {
                     curve: Curves.easeIn);
               },
               child: SquareIcon(
+                iconPadding: EdgeInsets.zero,
                 backgroundColor: AppColors.lightBlue,
                 iconPath: AppAssets.backArrow,
               ),

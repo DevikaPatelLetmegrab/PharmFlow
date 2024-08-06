@@ -19,7 +19,7 @@ class AppColors {
   static const Color red = Color(0xffEA202B);
 
   static MaterialColor primaryMaterialCo =
-      MaterialColor(0xffDD7258, _getSwatch(AppColors.primary));
+      MaterialColor(0xff015C91, _getSwatch(AppColors.primary));
 
   /// white color [white]
   static const Color white = Color(0xFFffffff);

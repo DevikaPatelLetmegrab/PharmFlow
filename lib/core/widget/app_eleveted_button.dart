@@ -167,8 +167,7 @@ class AppButton extends StatelessWidget {
   Color get defaultTextColor {
     return switch (buttonType) {
       ButtonType.elevatedWithIcon ||
-      ButtonType.elevated =>
-        AppColors.whiteColor,
+      ButtonType.elevated => AppColors.whiteColor,
       ButtonType.gradient => AppColors.white,
       ButtonType.outLineWithIcon || ButtonType.outline => AppColors.primary,
     };

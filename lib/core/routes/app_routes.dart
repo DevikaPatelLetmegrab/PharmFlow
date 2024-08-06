@@ -47,4 +47,5 @@ abstract class AppRoutes {
   static const String communityResourcePage = '/community_resource';
   static const String blogDetailPage = '/blog_detail_page';
   static const String nearByPage = '/near_by_page';
+  static const String checkoutPage = '/checkout_page';
 }

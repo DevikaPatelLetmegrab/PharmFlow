@@ -41,7 +41,7 @@ class _CartItemState extends State<CartItem> {
                     borderColor: AppColors.transparent,
                     iconPadding: const EdgeInsets.all(AppDimens.space5),
                     iconPath: AppAssets.img,
-                    backgroundColor: AppColors.greyECColor),
+                ),
                 const Gap(AppDimens.space10),
                 Expanded(
                   child: Column(
