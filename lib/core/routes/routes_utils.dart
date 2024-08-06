@@ -17,6 +17,7 @@ import 'package:pharm_flow/features/home/presentation/pages/home_page.dart';
 import 'package:pharm_flow/features/home/presentation/widgets/bottom_navigation_page.dart';
 import 'package:pharm_flow/features/home_book_appointment/presentation/pages/home_book_appointment_page.dart';
 import 'package:pharm_flow/features/manage_address/presentation/pages/add_new_address_page.dart';
+import 'package:pharm_flow/features/manage_address/presentation/pages/checkout_page.dart';
 import 'package:pharm_flow/features/manage_address/presentation/pages/manage_address_page.dart';
 import 'package:pharm_flow/features/manage_bank/presentation/pages/manage_bank_page.dart';
 import 'package:pharm_flow/features/my_appointment/presentation/pages/appointment_details_page.dart';
@@ -261,6 +262,11 @@ class RoutesUtils {
         path: AppRoutes.blogDetailPage,
         name: AppRoutes.blogDetailPage,
         builder: (context, state) => const BlogDetailPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.checkoutPage,
+        name: AppRoutes.checkoutPage,
+        builder: (context, state) => const CheckoutPage(),
       ),
     ],
   );

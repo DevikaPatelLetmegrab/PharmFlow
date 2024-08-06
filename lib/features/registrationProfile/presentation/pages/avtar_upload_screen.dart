@@ -37,6 +37,7 @@ class _AvtarUploadScreenState extends State<AvtarUploadScreen> {
                       NavigationServices().pop();
                     },
                     child: SquareIcon(
+                      iconPadding: EdgeInsets.zero,
                       backgroundColor: AppColors.lightBlue,
                       iconPath: AppAssets.backArrow,
                     ),
@@ -82,6 +83,7 @@ class _AvtarUploadScreenState extends State<AvtarUploadScreen> {
                       btnName: 'Go to Home');
                 },
                 child: SquareIcon(
+                  iconPadding: EdgeInsets.zero,
                   iconPath: AppAssets.cancelIcon,
                   backgroundColor: AppColors.pinkColor,
                   iconColor: AppColors.whiteColor,
