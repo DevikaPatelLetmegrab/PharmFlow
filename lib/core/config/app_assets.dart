@@ -104,6 +104,7 @@ class AppAssets {
   static String addIcon = 'assets/icon/add.png';
   static String eyeIcon = 'assets/icon/eye.png';
   static String buildingIcon = 'assets/icon/building.png';
+  static String directionIcon = 'assets/icon/direction.png';
 
   ///logo
 

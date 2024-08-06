@@ -38,7 +38,14 @@ abstract class AppRoutes {
   static const String manageBankPage = '/manage_bank_page';
   static const String cartPage = '/cart_page';
   static const String helpAndSupportPage = '/help_and_support_page';
+  static const String policy = '/policy_page';
+  static const String prescriptionPolicy = '/prescription_policy_page';
+  static const String privacypolicy = '/privacy_policy_page';
+  static const String medicationDispensingPolicy =
+      '/medicationDispensingPolicy_policy_page';
+  static const String paymentPolicy = '/payment_policy_page';
   static const String communityResourcePage = '/community_resource';
   static const String blogDetailPage = '/blog_detail_page';
+  static const String nearByPage = '/near_by_page';
   static const String checkoutPage = '/checkout_page';
 }

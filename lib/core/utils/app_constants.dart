@@ -10,6 +10,7 @@ import 'package:pharm_flow/core/model/package_model.dart';
 import 'package:pharm_flow/features/categories/data/models/sub_categories_model.dart';
 import 'package:pharm_flow/features/home/data/models/choose_model.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
+import 'package:pharm_flow/features/privacy_policy/data/models/privacy_list_model.dart';
 import 'package:pharm_flow/features/profile/data/models/drawer_model.dart';
 
 class AppConstants {
@@ -219,7 +220,7 @@ class AppConstants {
     DrawerModel(
       assetImage: AppAssets.securityIcon,
       index: 11,
-      route: '',
+      route: AppRoutes.policy,
       title: 'Privacy Policy',
     ),
     DrawerModel(
@@ -228,6 +229,21 @@ class AppConstants {
       route: '',
       title: 'Log Out',
     ),
+  ];
+
+  static List<PrivacyListModel> privacyList = [
+    PrivacyListModel(
+        index: 1,
+        title: 'Prescription Policy',
+        route: AppRoutes.prescriptionPolicy),
+    PrivacyListModel(
+        index: 2, title: 'Privacy Policy', route: AppRoutes.privacypolicy),
+    PrivacyListModel(
+        index: 3,
+        title: 'Medication Dispensing Policy',
+        route: AppRoutes.medicationDispensingPolicy),
+    PrivacyListModel(
+        index: 4, title: 'Payment Policy', route: AppRoutes.paymentPolicy),
   ];
 
   static List<ChooseModel> chooseList = [

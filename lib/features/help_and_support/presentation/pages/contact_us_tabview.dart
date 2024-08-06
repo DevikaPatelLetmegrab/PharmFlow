@@ -18,37 +18,40 @@ class _ContactUsTabviewState extends State<ContactUsTabview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const AppTextFormField(
-              label: 'Full Name',
-              hint: 'Full Name',
-            ),
-            const Gap(AppDimens.space10),
-            const AppTextFormField(
-              label: 'Mobile Number',
-              hint: 'Mobile Number',
-              suffixIconSize: BoxConstraints(maxHeight: 20),
-            ),
-            const Gap(AppDimens.space10),
-            const AppTextFormField(
-              label: 'Email Address',
-              hint: 'Email Address',
-              suffixIconSize: BoxConstraints(maxHeight: 20),
-            ),
-            const Gap(AppDimens.space10),
-            const AppTextFormField(
-              label: 'Message',
-              hint: 'wrtie here...',
-              maxLines: 5,
-            ),
-            const Gap(AppDimens.space30),
-            AppButton(
-                width: context.getWidth,
-                buttonType: ButtonType.elevated,
-                buttonName: 'Submit'),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(AppDimens.space16),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const AppTextFormField(
+                label: 'Full Name',
+                hint: 'Full Name',
+              ),
+              const Gap(AppDimens.space10),
+              const AppTextFormField(
+                label: 'Mobile Number',
+                hint: 'Mobile Number',
+                suffixIconSize: BoxConstraints(maxHeight: 20),
+              ),
+              const Gap(AppDimens.space10),
+              const AppTextFormField(
+                label: 'Email Address',
+                hint: 'Email Address',
+                suffixIconSize: BoxConstraints(maxHeight: 20),
+              ),
+              const Gap(AppDimens.space10),
+              const AppTextFormField(
+                label: 'Message',
+                hint: 'wrtie here...',
+                maxLines: 5,
+              ),
+              const Gap(AppDimens.space30),
+              AppButton(
+                  width: context.getWidth,
+                  buttonType: ButtonType.elevated,
+                  buttonName: 'Submit'),
+            ],
+          ),
         ),
       ),
     );

@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_assets.dart';
-import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/routes/app_routes.dart';
 import 'package:pharm_flow/core/routes/navigation_services.dart';
@@ -394,10 +393,13 @@ class HomePage extends StatelessWidget {
                       },
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(AppDimens.space15),
+                  Padding(
+                    padding: const EdgeInsets.all(AppDimens.space15),
                     child: RowOverview(
                       title: 'near by medical store',
+                      ontap: () {
+                        NavigationServices().pushName(AppRoutes.nearByPage);
+                      },
                     ),
                   ),
                   const Gap(AppDimens.space5),
