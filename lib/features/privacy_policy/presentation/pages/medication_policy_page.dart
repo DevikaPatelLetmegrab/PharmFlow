@@ -34,7 +34,7 @@ class _MedicationPolicyPageState extends State<MedicationPolicyPage> {
                       " Outlines the procedures for selecting the appropriate medication from the pharmacy's inventory based on the prescription and patient's needs, including checking for drug interactions or allergies."),
               Gap(AppDimens.space20),
               CommonRichText(
-                  title: '3. Medication Labeling',
+                  title: '3. Medication Labeling:',
                   subtitle:
                       ' Specifies the requirements for labeling medication containers, including patient name, medication name, dosage instructions, expiration date, and any auxiliary labels or warnings.'),
               Gap(AppDimens.space20),

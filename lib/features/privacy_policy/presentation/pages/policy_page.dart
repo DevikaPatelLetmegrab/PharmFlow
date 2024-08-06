@@ -43,8 +43,9 @@ class _PolicyPageState extends State<PolicyPage> {
               ListView.separated(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                separatorBuilder: (context, index) =>
-                    const Gap(AppDimens.space10),
+                separatorBuilder: (context, index) => const Divider(
+                  color: AppColors.greyF4Color,
+                ),
                 itemCount: list.length,
                 itemBuilder: (context, index) {
                   var item = list[index];

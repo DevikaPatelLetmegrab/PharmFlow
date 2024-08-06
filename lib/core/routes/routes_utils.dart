@@ -281,13 +281,17 @@ class RoutesUtils {
         path: AppRoutes.paymentPolicy,
         name: AppRoutes.paymentPolicy,
         builder: (context, state) => const PaymentPolicyPage(),
-        
       ),
       GoRoute(
         path: AppRoutes.blogDetailPage,
         name: AppRoutes.blogDetailPage,
         builder: (context, state) => const BlogDetailPage(),
       ),
+      GoRoute(
+        path: AppRoutes.communityResourcePage,
+        name: AppRoutes.communityResourcePage,
+        builder: (context, state) => const CommunityResourcePage(),
+      )
     ],
   );
 }
