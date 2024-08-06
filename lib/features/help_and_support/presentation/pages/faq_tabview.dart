@@ -38,7 +38,8 @@ class _FaqTabviewState extends State<FaqTabview>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Padding(
+        padding: const EdgeInsets.all(AppDimens.space16),
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
           child: Column(
@@ -49,20 +50,14 @@ class _FaqTabviewState extends State<FaqTabview>
               ),
               const Gap(AppDimens.space15),
               ButtonsTabBar(
-                radius: 10,
                 controller: tabController,
                 backgroundColor: AppColors.primary,
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: AppDimens.space30),
                 unselectedBackgroundColor: AppColors.greyF4Color,
                 unselectedLabelStyle: const TextStyle(
-                    color: AppColors.blackColor,
-                    fontSize: 14,
-                    fontFamily: 'Lexend'),
-                labelStyle: const TextStyle(
-                    color: AppColors.whiteColor,
-                    fontSize: 14,
-                    fontFamily: 'Lexend'),
+                  color: AppColors.blackColor,
+                ),
                 tabs: const [
                   Tab(
                     text: 'All',
