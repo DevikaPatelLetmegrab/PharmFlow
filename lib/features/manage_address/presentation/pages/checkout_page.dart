@@ -4,9 +4,11 @@ import 'package:pharm_flow/core/app_extension/text_style_extension.dart';
 import 'package:pharm_flow/core/config/app_colors.dart';
 import 'package:pharm_flow/core/config/app_dimension.dart';
 import 'package:pharm_flow/core/utils/app_bottomsheet_widget.dart';
+import 'package:pharm_flow/core/utils/app_size.dart';
 import 'package:pharm_flow/core/widget/common_app_bar.dart';
 import 'package:pharm_flow/features/manage_address/presentation/widgets/address_item.dart';
 import 'package:pharm_flow/features/manage_address/presentation/widgets/change_address_sheet.dart';
+import 'package:pharm_flow/features/manage_address/presentation/widgets/payment_methods_item.dart';
 
 class CheckoutPage extends StatelessWidget {
   const CheckoutPage({super.key});
@@ -18,8 +20,10 @@ class CheckoutPage extends StatelessWidget {
         title: 'Checkout',
       ),
       body: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: AppDimens.space16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
               contentPadding: EdgeInsets.zero,
@@ -44,7 +48,18 @@ class CheckoutPage extends StatelessWidget {
               ),
             ),
             const Gap(AppDimens.space10),
-            const AddressItem(isSelected: false,isTrailing: false,)
+            const AddressItem(
+              isSelected: false,
+              isTrailing: false,
+            ),
+            const Gap(AppDimens.space10),
+            Text(
+              'Payment Methods',
+              style: context.x16.weigh500,
+            ),
+            const Gap(AppDimens.space10),
+            SizedBox(
+                height: context.getHeight, child: const PaymentMethodsItem()),
           ],
         ),
       ),
