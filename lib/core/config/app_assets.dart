@@ -45,6 +45,10 @@ class AppAssets {
   static String shoppingCartIcon = 'assets/icon/shopping_cart.png';
   static String profileLightIcon = 'assets/icon/profile_light.png';
   static String profileDarkIcon = 'assets/icon/profile_dark.png';
+  static String walletIcon = 'assets/icon/wallets.png';
+  static String netBankingIcon = 'assets/icon/netbanking.png';
+  static String payOnDeliveryIcon = 'assets/icon/pay_on_delivery.png';
+  static String creditDebitIcon = 'assets/icon/credit_debit.png';
 
   static String backIcon = 'assets/icon/back.png';
   static String searchIcon = 'assets/icon/search.png';

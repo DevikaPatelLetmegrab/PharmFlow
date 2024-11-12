@@ -17,11 +17,11 @@ class AddNewAddressPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(
+      appBar: const CommonAppBar(
         title: 'Add New Address',
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: AppDimens.space16),
+        padding: const EdgeInsets.symmetric(horizontal: AppDimens.space16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -59,7 +59,7 @@ class AddNewAddressPage extends StatelessWidget {
               hint: 'Landmark',
             ),
             const Gap(AppDimens.space15),
-            Row(
+            const Row(
               children: [
                 Expanded(
                   child: AppDropdown(
@@ -69,11 +69,9 @@ class AddNewAddressPage extends StatelessWidget {
                 ),
                 Gap(AppDimens.space20),
                 Expanded(
-                  child: Expanded(
-                    child: AppDropdown(
-                      items: [],
-                      hintText: 'City',
-                    ),
+                  child: AppDropdown(
+                    items: [],
+                    hintText: 'City',
                   ),
                 )
               ],
